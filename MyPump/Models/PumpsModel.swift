@@ -14,9 +14,7 @@ class Pumps: Mappable {
     var username: String?
     var age: Int?
     var weight: Double?
-    var array: [Any]?
-    var dictionary: [String : Any] = [:]
-    var birthday: Date?
+
 
     required init?(map: Map) {
 
@@ -28,7 +26,6 @@ class Pumps: Mappable {
         username    <- map["username"]
         age         <- map["age"]
         weight      <- map["weight"]
-        array       <- map["arr"]
-        dictionary  <- map["dict"]
+
     }
 }
