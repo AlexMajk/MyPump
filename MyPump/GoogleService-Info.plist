@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>470797281908-ekq82hnpc419c0d54k1d05e5nh7cq2o8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.470797281908-ekq82hnpc419c0d54k1d05e5nh7cq2o8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA0fbGq9_5P9n-y07GYGYYp0z9PaVlPwQU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>470797281908</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.AlexMike.MyPump</string>
+	<key>PROJECT_ID</key>
+	<string>mypump-c4d75</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mypump-c4d75.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:470797281908:ios:2df41748da2712314c3f21</string>
+	<key>DATABASE_URL</key>
+	<string>https://mypump-c4d75-default-rtdb.firebaseio.com/</string>
+</dict>
+</plist>
