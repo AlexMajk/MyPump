@@ -10,21 +10,13 @@ import ObjectMapper
 
 
 class Pumps: Mappable {
-    var models: Any?
-    var username: String?
-    var age: Int?
-    var weight: Double?
-
-
+    var models: String?
+    
     required init?(map: Map) {
 
     }
 
     func mapping(map: Map) {
-        models     <- map["Brinkmann"]
-        username    <- map["username"]
-        age         <- map["age"]
-        weight      <- map["weight"]
-
+        models   <- map["1photo"]
     }
 }

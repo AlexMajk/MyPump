@@ -16,81 +16,36 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         var ref = Database.database().reference()
-        //ref.child("0/name").setValue("Mike")// изменяем данные
-        //ref.childByAutoId().setValue(["name":"Alex"])
-        // Do any additional setup after loading the view.
-        //        ref.observe(.childAdded, with: { snapshot in
-        //
-        //        })
-        ref.child("Marks/").observeSingleEvent(of: .value) { (dataSnapshot) in
-            <#code#>
-        }
+        ref.child("Marks/Brinkmann/Models/450b/Units/Compressor/photo").observeSingleEvent(of: .value) { (snapshot) in
             guard let data = snapshot.value  else {return}
             
-            guard let jsonData = try? JSONSerialization.data(withJSONObject: data, options: []) else {return}
-            let transactions = Mapper<Pumps>().map(JSONObject: jsonData)
-            
-          
-       
-            
-              
-
-//            do {
-//                // make sure this JSON is in the format we expect
+//            guard let jsonData = try? JSONSerialization.data(withJSONObject: data, options: []) else {return}
+//            let transactions = Mapper<Pumps>().map(JSONObject: jsonData)
 //
-////                let data = string.data(using: .utf8)
+//           let url = Mapper<Pumps>(context: context).map(JSONString)
 //
-//                if let downloadedJSON = try JSONDecoder().decode(Pumps.self, from: jsonData) {
-//                    // try to read out a string array
-//                    if let names = json["names"] as? [String] {
-//                        print(names)
-//                    }
-//                }
-//            } catch let error as NSError {
-//                print("Failed to load: \(error.localizedDescription)")
-//            }
+//            guard let data = notificationString.data(using: .utf8) else { return nil }
+            do {
+                if let jsonDictionary = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? Dictionary<String,Any> {
+                    guard let notification = NotificationModel(JSON: jsonDictionary) else { return nil }
+                    let userInfo = ["notification": notification]
+                    switch notification.type! {
+                    case .onfidoSuccess:
+                        updateUserStatus()
+                        NotificationCenter.default.post(name: ConstantNotifications.notificationReceived, object: nil, userInfo: userInfo)
+                    default:
+                        NotificationCenter.default.post(name: ConstantNotifications.notificationReceived, object: nil, userInfo: userInfo)
+                    }
+                    return notification
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+            return nil
             
             
-            
-            
-            print(data)
-            
-            //if let value = data["Mark"] as? String {
-//            let pumps = Pumps.init(Data: data)
-//            print(pumps.mark)
-//            self.arrayOfModels.append(pumps.mark)
-//            self.arrayOfModels.append(pumps.model)
-//            print(self.arrayOfModels.count)
-
             
         }
+        
     }
 }
-//class FirebaseTest {
-//
-//    var items: [GroceryItem] = []
-//
-//    let ref = Database.database().reference(withPath: "grocery-items")
-//
-//func viewDidLoad() {
-//    // 1
-//    ref.observe(.value, with: { snapshot in
-//      // 2
-//      var newItems: [GroceryItem] = []
-//
-//      // 3
-//      for child in snapshot.children {
-//        // 4
-//        if let snapshot = child as? DataSnapshot,
-//           let groceryItem = GroceryItem(snapshot: snapshot) {
-//          newItems.append(groceryItem)
-//        }
-//      }
-//
-//      // 5
-//      self.items = newItems
-//        print(self.items)
-//      //self.tableView.reloadData()
-//    })
-//    }
-//}

@@ -11,6 +11,7 @@ pod 'Firebase/Storage'
 pod 'Firebase/Database'
 pod 'Alamofire', '~> 5.2'
 pod 'ObjectMapper'
+pod 'Moya', '~> 14.0'
   target 'MyPumpTests' do
     inherit! :search_paths
     # Pods for testing
