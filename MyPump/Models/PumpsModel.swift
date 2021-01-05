@@ -20,7 +20,6 @@ class Pumps: Mappable {
 
     }
 
-    // Mappable
     func mapping(map: Map) {
         models     <- map["Brinkmann"]
         username    <- map["username"]
