@@ -17,9 +17,7 @@
 		2642F93325A1F0D5003CB42A /* MyPumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F93225A1F0D5003CB42A /* MyPumpUITests.swift */; };
 		265E517225A22C1A008B56D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265E517125A22C1A008B56D7 /* GoogleService-Info.plist */; };
 		26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */; };
-		26FDAC2D25A36A2B00AF16FF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC2C25A36A2B00AF16FF /* Model.swift */; };
 		26FDAC8A25A4E89B00AF16FF /* PumpsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* PumpsModel.swift */; };
-		26FDAC8F25A4EBA700AF16FF /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8E25A4EBA700AF16FF /* File.swift */; };
 		31D54C5ACA97702E6DCB6180 /* Pods_MyPumpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */; };
 		B38E83A4206319507097396D /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */; };
 		E8657E8D60107A49311E5068 /* Pods_MyPump_MyPumpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE975666C5C14E8E6FCB85A3 /* Pods_MyPump_MyPumpUITests.framework */; };
@@ -59,9 +57,7 @@
 		2642F93425A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265E517125A22C1A008B56D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		26FDAC2C25A36A2B00AF16FF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		26FDAC8925A4E89B00AF16FF /* PumpsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpsModel.swift; sourceTree = "<group>"; };
-		26FDAC8E25A4EBA700AF16FF /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPumpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C27FF0E4FAA9B8B5D72F81D /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
 		5690C67E9A192390EB8CA5DB /* Pods-MyPump-MyPumpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump-MyPumpUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -151,8 +147,7 @@
 			children = (
 				2642F91025A1F0D3003CB42A /* AppDelegate.swift */,
 				2642F91225A1F0D3003CB42A /* SceneDelegate.swift */,
-				26FDAC3125A36D6A00AF16FF /* Models */,
-				265EF04325A253B000290725 /* Controllers */,
+				9471E59E25A51DF800519C77 /* MVC */,
 				2642F91625A1F0D3003CB42A /* Main.storyboard */,
 				2642F91925A1F0D5003CB42A /* Assets.xcassets */,
 				2642F91B25A1F0D5003CB42A /* LaunchScreen.storyboard */,
@@ -192,11 +187,18 @@
 		26FDAC3125A36D6A00AF16FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				26FDAC2C25A36A2B00AF16FF /* Model.swift */,
 				26FDAC8925A4E89B00AF16FF /* PumpsModel.swift */,
-				26FDAC8E25A4EBA700AF16FF /* File.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9471E59E25A51DF800519C77 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				26FDAC3125A36D6A00AF16FF /* Models */,
+				265EF04325A253B000290725 /* Controllers */,
+			);
+			path = MVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -439,8 +441,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26FDAC2D25A36A2B00AF16FF /* Model.swift in Sources */,
-				26FDAC8F25A4EBA700AF16FF /* File.swift in Sources */,
 				26FDAC8A25A4E89B00AF16FF /* PumpsModel.swift in Sources */,
 				2642F91525A1F0D3003CB42A /* ViewController.swift in Sources */,
 				2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */,
