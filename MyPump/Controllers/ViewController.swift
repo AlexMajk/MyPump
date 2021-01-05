@@ -22,13 +22,16 @@ class ViewController: UIViewController {
         //        ref.observe(.childAdded, with: { snapshot in
         //
         //        })
-        ref.child("Marks/").observeSingleEvent(of: .value) { [] (snapshot) in
+        ref.child("Marks/").observeSingleEvent(of: .value) { (dataSnapshot) in
+            <#code#>
+        }
             guard let data = snapshot.value  else {return}
             
             guard let jsonData = try? JSONSerialization.data(withJSONObject: data, options: []) else {return}
             let transactions = Mapper<Pumps>().map(JSONObject: jsonData)
             
           
+       
             
               
 
