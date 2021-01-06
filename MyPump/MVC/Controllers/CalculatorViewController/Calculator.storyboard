@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e5M-Q4-x6T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e5M-Q4-x6T">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,18 +18,18 @@
                         <viewLayoutGuide key="safeArea" id="LIp-FO-kaP"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Каталог" image="externaldrive.badge.timemachine" catalog="system" selectedImage="externaldrive.badge.timemachine" id="aP3-WM-PaW"/>
+                    <tabBarItem key="tabBarItem" title="Каталог" image="externaldrive.badge.timemachine" catalog="system" selectedImage="cal" id="aP3-WM-PaW"/>
                     <navigationItem key="navigationItem" id="trY-Vx-xb0"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lih-3r-csi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="94" y="-29"/>
         </scene>
-        <!--Item-->
+        <!--Кальулятор-->
         <scene sceneID="tx9-RA-Oox">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e5M-Q4-x6T" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ecK-dK-rk6"/>
+                    <tabBarItem key="tabBarItem" title="Кальулятор" image="calendar" catalog="system" selectedImage="calendar" id="ecK-dK-rk6"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BOI-kf-0BU">
@@ -47,6 +47,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="cal" width="128" height="128"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="externaldrive.badge.timemachine" catalog="system" width="128" height="88"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
