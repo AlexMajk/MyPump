@@ -1,118 +1,216 @@
-
-# Created by https://www.toptal.com/developers/gitignore/api/macos,swift
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,swift
-
-### macOS ###
- General
+# Mac OS X Finder
 .DS_Store
-.AppleDouble
-.LSOverride
 
- Icon must end with two \r
-Icon
+# Private Keys
+*.pem
 
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-.com.apple.timemachine.donotpresent
-
- Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-### Swift ###
-# Xcode
-#
- gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
-
-## User settings
-xcuserdata/
-
-## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
-*.xcscmblueprint
-*.xccheckout
-
-## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
-build/
-DerivedData/
-*.moved-aside
-*.pbxuser
-!default.pbxuser
+# Xcode legacy
+*.mode1
 *.mode1v3
-!default.mode1v3
 *.mode2v3
-!default.mode2v3
+*.perspective
 *.perspectivev3
-!default.perspectivev3
+*.pbxuser
 
-## Obj-C/Swift specific
-*.hmap
+# Xcode
+xcuserdata/
+project.xcworkspace/
+DerivedData/
 
-## App packaging
-*.ipa
-*.dSYM.zip
-*.dSYM
+# build products
+build/
+*.[oa]
+!libcrypto-universal.a
+!libsolclient.a
+!libssl-universal.a
 
-## Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+# repositories
+.hg
+.svn
+CVS
 
-# Swift Package Manager
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
-# Packages/
-# Package.pins
-# Package.resolved
- *.xcodeproj
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+# automatic backup files
+*~.nib
+*.swp
+*~
+*(Autosaved).rtfd/
+Backup[ ]of[ ]*.pages/
+Backup[ ]of[ ]*.key/
+Backup[ ]of[ ]*.numbers/
 
-.build/
-
-# CocoaPods
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-# Pods/
-# Add this line if you want to avoid checking in source code from the Xcode workspace
-# *.xcworkspace
-
-# Carthage
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
-# Carthage/Checkouts
-
-Carthage/Build/
-
-# Accio dependency management
-Dependencies/
-.accio/
-
-# fastlane
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
-
-# Code Injection
-# After new code Injection tools there's a generated folder /iOSInjectionProject
-# https://github.com/johnno1962/injectionforxcode
-
-iOSInjectionProject/
-
-# End of https://www.toptal.com/developers/gitignore/api/macos,swift
+# Cocoapods
+Pods/
+bankpro.app.dSYM.zip
+bankpro.ipa
+*.lock
+bankpro/Info_BACKUP_5021.plist
+bankpro/Info_BASE_5021.plist
+bankpro/Info_LOCAL_5021.plist
+bankpro/Info_REMOTE_5021.plist
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-armv7_arm64/MeaCardData 2.framework/Info.plist
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-armv7_arm64/MeaCardData 2.framework/MeaCardData
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-armv7_arm64/MeaCardData 2.framework/Headers/McdCardData.h
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-armv7_arm64/MeaCardData 2.framework/Headers/MeaCardData.h
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-armv7_arm64/MeaCardData 2.framework/Modules/module.modulemap
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-i386_x86_64-simulator/MeaCardData 2.framework/Info.plist
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-i386_x86_64-simulator/MeaCardData 2.framework/MeaCardData
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-i386_x86_64-simulator/MeaCardData 2.framework/_CodeSignature/CodeResources
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-i386_x86_64-simulator/MeaCardData 2.framework/Headers/McdCardData.h
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-i386_x86_64-simulator/MeaCardData 2.framework/Headers/MeaCardData.h
+bankpro/Resource/Frameworks/MeaCardData.xcframework/ios-i386_x86_64-simulator/MeaCardData 2.framework/Modules/module.modulemap
+bankpro/Core/LightweightCharts/Classes/Implementations/API/Chart 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/AutoscaleInfoProvider 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/PriceFormat 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/TickMarkFormatter 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/Time 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/Data/SeriesData/BarData 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/Options/Basics/LineStyle 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/Options/ChartOptions/ChartOptions 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/Options/SeriesOptions/Options/AreaSeriesOptions 2.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/PriceFormatterApi 2.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/PriceLineApi 2.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/PriceScaleApi 2.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/SeriesApi 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestNewsTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestNewsTableViewCell 2.xib
+bankpro/MVC/Controllers/Invest/InvestChart/ChartToolTip/TooltipView 2.xib
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/Time 3.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/TogglableOptions 2.swift
+bankpro/Core/LightweightCharts/Classes/LightweightChartsModels/SeriesMarker/SeriesMarker 2.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/ChartApi 2.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/PriceFormatterApi 3.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/PriceLineApi 3.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/PriceScaleApi 3.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/SeriesApi 3.swift
+bankpro/Core/LightweightCharts/Classes/Protocols/TimeScaleApi 2.swift
+bankpro/Core/Managers/SolaceManager 2.swift
+bankpro/Core/Managers/NetworkManager/NetworkManager 2.swift
+bankpro/Core/Managers/NetworkManager/NetworkManager+InvestAPI 2.swift
+bankpro/Core/Network/InvestAPI 2.swift
+bankpro/Core/Protocols/CollectionViewContracts 2.swift
+bankpro/Core/Protocols/TableViewContracts 2.swift
+bankpro/Core/Utils/LockedDictionary 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/InvestChartPresenter 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/InvestChartsViewController 2.xib
+bankpro/MVC/Controllers/Invest/InvestChart/InvestChartViewController 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InformationTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestChartTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestChartTableViewCell 2.xib
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestMarketTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestMarketTableViewCell 2.xib
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestNewsTableViewCell 3.swift
+bankpro/MVC/Controllers/Invest/InvestChart/Cells/InvestNewsTableViewCell 3.xib
+bankpro/MVC/Controllers/Invest/InvestChart/ChartToolTip/TooltipView 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/ChartToolTip/TooltipView 3.xib
+bankpro/MVC/Controllers/Invest/InvestChart/HeaderTableView/InvestMarketHeaderView 2.swift
+bankpro/MVC/Controllers/Invest/InvestChart/HeaderTableView/InvestMarketHeaderView 2.xib
+bankpro/MVC/Controllers/Invest/InvestHistoryViewController/InvestHistoryHeaderView 2.swift
+bankpro/MVC/Controllers/Invest/InvestHistoryViewController/InvestHistoryHeaderView 2.xib
+bankpro/MVC/Controllers/Invest/InvestHistoryViewController/InvestHistoryTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/InvestHistoryViewController/InvestHistoryTableViewCell 2.xib
+bankpro/MVC/Controllers/Invest/InvestHistoryViewController/InvestHistoryViewController 2.swift
+bankpro/MVC/Controllers/Invest/InvestHistoryViewController/InvestHistoryViewController 2.xib
+bankpro/MVC/Controllers/Invest/InvestHistoryViewController/InvetsHistoryVCPresenter 2.swift
+bankpro/MVC/Controllers/Invest/InvestTabViewController/Invest 2.storyboard
+bankpro/MVC/Controllers/Invest/InvestTabViewController/InvestViewController 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/MarketsTab/MarketsTabVCPresenter 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/MarketsTab/MarketsTabViewController 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/MarketsTab/MarketsTabViewController 2.xib
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/MarketsTab/MarketsCell/MarketsCollectionViewCell 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/MarketsTab/MarketsCell/MarketsCollectionViewCell 2.xib
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/PortfolioTab/PortfolioTabVCPresenter 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/PortfolioTab/PortfolioTabViewController 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/PortfolioTab/PortfolioTabViewController 2.xib
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/PortfolioTab/Cell/PortfolioTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/PortfolioTab/Cell/PortfolioTableViewCell 2.xib
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/PortfolioTab/HeaderView/PortfolioHeaderView 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/InvestTabs/PortfolioTab/HeaderView/PortfolioHeaderView 2.xib
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/PortfolioInvest/PortfolioInvestVCPresenter 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/PortfolioInvest/PortfolioInvestViewController 2.swift
+bankpro/MVC/Controllers/Invest/PortfolioOverviewViewController/PortfolioInvest/PortfolioInvestViewController 2.xib
+bankpro/MVC/Controllers/Invest/StockDetails/StockDetailsPresenter 2.swift
+bankpro/MVC/Controllers/Invest/StockDetails/StockDetailsViewController 2.swift
+bankpro/MVC/Controllers/Invest/StockDetails/StockDetailsViewController 2.xib
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/CollectionReusableView 2.swift
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/CollectionReusableView 2.xib
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestFinancialTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestFinancialTableViewCell 2.xib
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestOverviewTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestOverviewTableViewCell 2.xib
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestStockDetailFinanceCollectionViewCell 2.swift
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestStockDetailFinanceCollectionViewCell 2.xib
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestStockDetailInformationTableViewCell 2.swift
+bankpro/MVC/Controllers/Invest/StockDetails/Cells/InvestStockDetailInformationTableViewCell 2.xib
+bankpro/MVC/Models/BankProErrorModel 2.swift
+bankpro/MVC/Models/FeeAmount 2.swift
+bankpro/MVC/Models/SuscriptionCost 2.swift
+bankpro/MVC/Models/AnaliticNew/CreatePortfolioVCPresenter 2.swift
+bankpro/MVC/Models/AnaliticNew/CreatePortfolioViewController 2.swift
+bankpro/MVC/Models/AnaliticNew/CreatePortfolioViewController 2.xib
+bankpro/MVC/Models/InvestAPIModels/InvestCurrenciesModel 2.swift
+bankpro/MVC/Models/InvestAPIModels/InvestPortfolioModel 2.swift
+bankpro/ObjC/ProtoModels/CommonMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/CommonMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/Edmessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/Edmessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/FdprotoMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/FdprotoMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/ModelMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/ModelMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/Nsmodel.pbobjc 2.h
+bankpro/ObjC/ProtoModels/Nsmodel.pbobjc 2.m
+bankpro/ObjC/ProtoModels/NsprotoMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/NsprotoMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/NsprotoService.pbobjc 2.h
+bankpro/ObjC/ProtoModels/NsprotoService.pbobjc 2.m
+bankpro/ObjC/ProtoModels/PerformanceCalculationProtoMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/PerformanceCalculationProtoMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/PortfolioWizardMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/PortfolioWizardMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/QxcommonMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/QxcommonMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/QxcommonModel.pbobjc 2.h
+bankpro/ObjC/ProtoModels/QxcommonModel.pbobjc 2.m
+bankpro/ObjC/ProtoModels/QxerrorCode.pbobjc 2.h
+bankpro/ObjC/ProtoModels/QxerrorCode.pbobjc 2.m
+bankpro/ObjC/ProtoModels/QxspreadBettingCommonModel.pbobjc 2.h
+bankpro/ObjC/ProtoModels/QxspreadBettingCommonModel.pbobjc 2.m
+bankpro/ObjC/ProtoModels/SessionToken.pbobjc 2.h
+bankpro/ObjC/ProtoModels/SessionToken.pbobjc 2.m
+bankpro/ObjC/ProtoModels/WiProtoMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/WiProtoMessages.pbobjc 2.m
+bankpro/ObjC/ProtoModels/WtsprotoMessages.pbobjc 2.h
+bankpro/ObjC/ProtoModels/WtsprotoMessages.pbobjc 2.m
+bankpro/ObjC/ProtoSymbolsManager/ProtoSymbolsManager 2.h
+bankpro/ObjC/ProtoSymbolsManager/ProtoSymbolsManager 2.m
+bankpro/ObjC/SolaceConnector/SolaceConnector 2.h
+bankpro/ObjC/SolaceConnector/SolaceConnector 2.m
+bankpro/ObjC/SolaceHelpers/EventCallbackProtocol 2.h
+bankpro/ObjC/SolaceHelpers/MessageReceiveCallbackProtocol 2.h
+bankpro/ObjC/SolaceHelpers/Parameter 2.h
+bankpro/ObjC/SolaceHelpers/Parameter 2.m
+bankpro/ObjC/SolaceHelpers/ParameterInterface 2.h
+bankpro/ObjC/SolaceHelpers/ParameterInterface 2.m
+bankpro/Resource/Assets.xcassets/Invest/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/ic_information.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/ic_information.imageset/info more 2.pdf
+bankpro/Resource/Assets.xcassets/Invest/ic_invest_unselected.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/ic_invest_unselected.imageset/Exclude 2.pdf
+bankpro/Resource/Assets.xcassets/Invest/invest_available.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/invest_available.imageset/invest_available 2.pdf
+bankpro/Resource/Assets.xcassets/Invest/invest_deposit.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/invest_deposit.imageset/deposit 2.pdf
+bankpro/Resource/Assets.xcassets/Invest/invest_history.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/invest_history.imageset/Frame-7 2.pdf
+bankpro/Resource/Assets.xcassets/Invest/invest_info.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/invest_info.imageset/info 2.pdf
+bankpro/Resource/Assets.xcassets/Invest/invest_withdrawal.imageset/add 2.pdf
+bankpro/Resource/Assets.xcassets/Invest/invest_withdrawal.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/Temp/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/Temp/image 17.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Invest/Temp/image 17.imageset/image 18.pdf
+bankpro/Resource/Assets.xcassets/Investments/Contents 2.json
+bankpro/Resource/Assets.xcassets/Investments/ic_investments_portfolio.imageset/Contents 2.json
+bankpro/Resource/Assets.xcassets/Investments/ic_investments_portfolio.imageset/portfolio 3.pdf
+bankpro/Resource/Localization/ru.lproj/Invest 2.strings
+solclient/solClientDeprecated 2.h
