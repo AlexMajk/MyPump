@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */; };
+		262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D059A25A6004B0028FFF1 /* NetworkManager.swift */; };
 		2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F91025A1F0D3003CB42A /* AppDelegate.swift */; };
 		2642F91325A1F0D3003CB42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F91225A1F0D3003CB42A /* SceneDelegate.swift */; };
-		2642F91525A1F0D3003CB42A /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F91425A1F0D3003CB42A /* CatalogViewController.swift */; };
-		2642F91825A1F0D3003CB42A /* Catalog.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91625A1F0D3003CB42A /* Catalog.storyboard */; };
+		2642F91825A1F0D3003CB42A /* MarkTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */; };
 		2642F91A25A1F0D5003CB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91925A1F0D5003CB42A /* Assets.xcassets */; };
 		2642F91D25A1F0D5003CB42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91B25A1F0D5003CB42A /* LaunchScreen.storyboard */; };
 		2642F92825A1F0D5003CB42A /* MyPumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F92725A1F0D5003CB42A /* MyPumpTests.swift */; };
@@ -53,11 +54,12 @@
 		08BA35FED6202D2182537694 /* Pods_MyPumpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPumpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A52C0304FD0336BE5F6DB41 /* Pods-MyPump-MyPumpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump-MyPumpUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests.release.xcconfig"; sourceTree = "<group>"; };
 		231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
+		262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewController.swift; sourceTree = "<group>"; };
+		262D059A25A6004B0028FFF1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		2642F90D25A1F0D3003CB42A /* MyPump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2642F91025A1F0D3003CB42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2642F91225A1F0D3003CB42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2642F91425A1F0D3003CB42A /* CatalogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
-		2642F91725A1F0D3003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Catalog.storyboard; sourceTree = "<group>"; };
+		2642F91725A1F0D3003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MarkTableViewController.storyboard; sourceTree = "<group>"; };
 		2642F91925A1F0D5003CB42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2642F91C25A1F0D5003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2642F91E25A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,18 +75,12 @@
 		35EBBE7CF228BB2BA87E55B4 /* Pods-MyPumpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPumpTests.release.xcconfig"; path = "Target Support Files/Pods-MyPumpTests/Pods-MyPumpTests.release.xcconfig"; sourceTree = "<group>"; };
 		3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPumpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4C27FF0E4FAA9B8B5D72F81D /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
-		5690C67E9A192390EB8CA5DB /* Pods-MyPump-MyPumpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump-MyPumpUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		94D426F525A535A8001DB1D7 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		94D426FD25A535BD001DB1D7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		94D4270725A535EC001DB1D7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		9FF336DE4B9201C97B8AF2A2 /* Pods-MyPumpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPumpTests.debug.xcconfig"; path = "Target Support Files/Pods-MyPumpTests/Pods-MyPumpTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A65760CA975B1CC9180E90D4 /* Pods-MyPumpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPumpTests.release.xcconfig"; path = "Target Support Files/Pods-MyPumpTests/Pods-MyPumpTests.release.xcconfig"; sourceTree = "<group>"; };
-		D5C75A076E8BE54AAC0C75BF /* Pods-MyPump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.debug.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.debug.xcconfig"; sourceTree = "<group>"; };
-		E2ECFAD220D26200AD662F58 /* Pods-MyPump-MyPumpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump-MyPumpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE4BFF660143DDBBCF03A05A /* Pods_MyPump_MyPumpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump_MyPumpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA31DEB024F1CDAF0C65CCCA /* Pods-MyPump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.debug.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.debug.xcconfig"; sourceTree = "<group>"; };
 		FE975666C5C14E8E6FCB85A3 /* Pods_MyPump_MyPumpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump_MyPumpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -122,19 +118,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		065EBE104A4E133D558E688A /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D5C75A076E8BE54AAC0C75BF /* Pods-MyPump.debug.xcconfig */,
-				4C27FF0E4FAA9B8B5D72F81D /* Pods-MyPump.release.xcconfig */,
-				E2ECFAD220D26200AD662F58 /* Pods-MyPump-MyPumpUITests.debug.xcconfig */,
-				5690C67E9A192390EB8CA5DB /* Pods-MyPump-MyPumpUITests.release.xcconfig */,
-				9FF336DE4B9201C97B8AF2A2 /* Pods-MyPumpTests.debug.xcconfig */,
-				A65760CA975B1CC9180E90D4 /* Pods-MyPumpTests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		101AF05AE45FE8AA12BB52D7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +127,14 @@
 			);
 			name = Frameworks;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		262D059925A600370028FFF1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				262D059A25A6004B0028FFF1 /* NetworkManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		2642F90425A1F0D3003CB42A = {
@@ -177,7 +168,6 @@
 				2642F92625A1F0D5003CB42A /* MyPumpTests */,
 				2642F93125A1F0D5003CB42A /* MyPumpUITests */,
 				2642F90E25A1F0D3003CB42A /* Products */,
-				065EBE104A4E133D558E688A /* Pods */,
 				101AF05AE45FE8AA12BB52D7 /* Frameworks */,
 			);
 			path = MyPump;
@@ -234,6 +224,7 @@
 		9471E59E25A51DF800519C77 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				262D059925A600370028FFF1 /* Managers */,
 				26FDAC3125A36D6A00AF16FF /* Models */,
 				265EF04325A253B000290725 /* Controllers */,
 			);
@@ -251,8 +242,8 @@
 		94D426E425A531D6001DB1D7 /* CatalogViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2642F91425A1F0D3003CB42A /* CatalogViewController.swift */,
-				2642F91625A1F0D3003CB42A /* Catalog.storyboard */,
+				2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */,
+				262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */,
 			);
 			path = CatalogViewController;
 			sourceTree = "<group>";
@@ -295,7 +286,6 @@
 				FF103F56716B964F93097220 /* Pods-MyPumpTests.debug.xcconfig */,
 				35EBBE7CF228BB2BA87E55B4 /* Pods-MyPumpTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -411,7 +401,7 @@
 				2642F91D25A1F0D5003CB42A /* LaunchScreen.storyboard in Resources */,
 				94D426FE25A535BD001DB1D7 /* Setting.storyboard in Resources */,
 				2642F91A25A1F0D5003CB42A /* Assets.xcassets in Resources */,
-				2642F91825A1F0D3003CB42A /* Catalog.storyboard in Resources */,
+				2642F91825A1F0D3003CB42A /* MarkTableViewController.storyboard in Resources */,
 				26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */,
 				94D426F625A535A8001DB1D7 /* Calculator.storyboard in Resources */,
 			);
@@ -543,8 +533,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */,
+				262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */,
 				26FDAC8A25A4E89B00AF16FF /* PumpsModel.swift in Sources */,
-				2642F91525A1F0D3003CB42A /* CatalogViewController.swift in Sources */,
+				262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */,
 				2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */,
 				2642F91325A1F0D3003CB42A /* SceneDelegate.swift in Sources */,
 				94D4270825A535EC001DB1D7 /* SettingViewController.swift in Sources */,
@@ -583,12 +574,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2642F91625A1F0D3003CB42A /* Catalog.storyboard */ = {
+		2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2642F91725A1F0D3003CB42A /* Base */,
 			);
-			name = Catalog.storyboard;
+			name = MarkTableViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		2642F91B25A1F0D5003CB42A /* LaunchScreen.storyboard */ = {
@@ -720,7 +711,7 @@
 		};
 		2642F93825A1F0D5003CB42A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5C75A076E8BE54AAC0C75BF /* Pods-MyPump.debug.xcconfig */;
+			baseConfigurationReference = FA31DEB024F1CDAF0C65CCCA /* Pods-MyPump.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -740,7 +731,7 @@
 		};
 		2642F93925A1F0D5003CB42A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C27FF0E4FAA9B8B5D72F81D /* Pods-MyPump.release.xcconfig */;
+			baseConfigurationReference = 231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -760,7 +751,7 @@
 		};
 		2642F93B25A1F0D5003CB42A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9FF336DE4B9201C97B8AF2A2 /* Pods-MyPumpTests.debug.xcconfig */;
+			baseConfigurationReference = FF103F56716B964F93097220 /* Pods-MyPumpTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -783,7 +774,7 @@
 		};
 		2642F93C25A1F0D5003CB42A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A65760CA975B1CC9180E90D4 /* Pods-MyPumpTests.release.xcconfig */;
+			baseConfigurationReference = 35EBBE7CF228BB2BA87E55B4 /* Pods-MyPumpTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -806,7 +797,7 @@
 		};
 		2642F93E25A1F0D5003CB42A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E2ECFAD220D26200AD662F58 /* Pods-MyPump-MyPumpUITests.debug.xcconfig */;
+			baseConfigurationReference = 0540361ADDF5631B49F162C4 /* Pods-MyPump-MyPumpUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -827,7 +818,7 @@
 		};
 		2642F93F25A1F0D5003CB42A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5690C67E9A192390EB8CA5DB /* Pods-MyPump-MyPumpUITests.release.xcconfig */;
+			baseConfigurationReference = 0A52C0304FD0336BE5F6DB41 /* Pods-MyPump-MyPumpUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

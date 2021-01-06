@@ -8,20 +8,20 @@
 import Foundation
 import ObjectMapper
 
-class Pumps: Mappable {
-    var photo1: String?
-    var photo2: String?
-    var photo3: String?
-    var photo4: String?
+class Model: Mappable {
+    var models: [String]?
+//{"data":{"photo":["photo1","photo2"]}}
     
     required init?(map: Map) {
 
     }
 
     func mapping(map: Map) {
-        photo1   <- map["1photo"]
-        photo2   <- map["2photo"]
-        photo3   <- map["3photo"]
-        photo4   <- map["4photo"]
+        models   <- map["models"]
+
     }
 }
+
+//class Photo: NSObject {
+//    var photo: String?
+//}
