@@ -17,8 +17,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="n6y-uG-aIm" kind="relationship" relationship="viewControllers" id="SDA-1m-DdD"/>
-                        <segue destination="F4n-oC-Gbu" kind="relationship" relationship="viewControllers" id="Vve-eR-8B5"/>
-                        <segue destination="LwL-6A-bGp" kind="relationship" relationship="viewControllers" id="YNv-Fg-1lc"/>
+                        <segue destination="NqU-qY-S8s" kind="relationship" relationship="viewControllers" id="3qB-HT-nlN"/>
+                        <segue destination="Rj4-hD-O0i" kind="relationship" relationship="viewControllers" id="d4I-1r-Si7"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tW5-Lc-0vO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -26,14 +26,24 @@
             <point key="canvasLocation" x="-526" y="-170"/>
         </scene>
         <!--Calculator-->
-        <scene sceneID="osd-HO-TOI">
+        <scene sceneID="8Km-WD-uQy">
             <objects>
-                <viewControllerPlaceholder storyboardName="Calculator" id="F4n-oC-Gbu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Gwz-ya-P2k"/>
+                <viewControllerPlaceholder storyboardName="Calculator" id="Rj4-hD-O0i" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6op-6k-jrY"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p6l-qm-9gv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fK2-qE-WK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="496" y="-250"/>
+            <point key="canvasLocation" x="452" y="-211"/>
+        </scene>
+        <!--Setting-->
+        <scene sceneID="W1e-zh-DJD">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Setting" id="NqU-qY-S8s" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="kcj-MJ-wks"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1my-fU-XIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="484" y="-72"/>
         </scene>
         <!--MarkTableViewController-->
         <scene sceneID="BVi-zb-dtG">
@@ -44,16 +54,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DBQ-fd-S1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="496" y="-445"/>
-        </scene>
-        <!--Setting-->
-        <scene sceneID="Mvm-le-web">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Setting" id="LwL-6A-bGp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="XGm-Uj-7k1"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x24-lM-QAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="496" y="-3"/>
         </scene>
     </scenes>
 </document>

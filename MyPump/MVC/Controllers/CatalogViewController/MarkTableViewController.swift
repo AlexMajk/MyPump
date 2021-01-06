@@ -38,7 +38,7 @@ class MarkTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! UITableViewCell
         
         cell.textLabel?.text = models?.models?[indexPath.row] ?? "!!!!!!"
         cell.imageView?.image = UIImage(named:"Brinkmann")
