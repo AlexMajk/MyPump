@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Каталог-->
+        <!--Setting View Controller-->
         <scene sceneID="Amc-6y-nsM">
             <objects>
                 <viewController id="gZf-vN-wer" customClass="SettingViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,18 +18,17 @@
                         <viewLayoutGuide key="safeArea" id="spF-Mf-rsz"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Каталог" image="externaldrive.badge.timemachine" catalog="system" selectedImage="externaldrive.badge.timemachine" id="U5q-SB-fUO"/>
                     <navigationItem key="navigationItem" id="sZd-Ub-giW"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u2q-a6-2qn" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="94" y="-29"/>
         </scene>
-        <!--Item-->
+        <!--руководство-->
         <scene sceneID="ceb-n4-0Xx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0vw-6r-gsY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="cdU-km-j10"/>
+                    <tabBarItem key="tabBarItem" title="руководство" image="doc" catalog="system" id="cdU-km-j10"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dDu-3u-pQm">
@@ -47,7 +46,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="externaldrive.badge.timemachine" catalog="system" width="128" height="88"/>
+        <image name="doc" catalog="system" width="115" height="128"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
