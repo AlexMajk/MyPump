@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0vw-6r-gsY">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Каталог-->
+        <scene sceneID="Amc-6y-nsM">
+            <objects>
+                <viewController id="gZf-vN-wer" customClass="SettingViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bRn-4J-eHC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="spF-Mf-rsz"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Каталог" image="externaldrive.badge.timemachine" catalog="system" selectedImage="externaldrive.badge.timemachine" id="U5q-SB-fUO"/>
+                    <navigationItem key="navigationItem" id="sZd-Ub-giW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u2q-a6-2qn" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="94" y="-29"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ceb-n4-0Xx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0vw-6r-gsY" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cdU-km-j10"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dDu-3u-pQm">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gZf-vN-wer" kind="relationship" relationship="rootViewController" id="xI8-Bc-p5E"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IXN-ev-jCA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-699" y="-29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="externaldrive.badge.timemachine" catalog="system" width="128" height="88"/>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

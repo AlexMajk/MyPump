@@ -1,6 +1,0 @@
-framework module Pods_MyPump {
-  umbrella header "Pods-MyPump-umbrella.h"
-
-  export *
-  module * { export * }
-}
