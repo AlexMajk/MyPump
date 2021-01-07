@@ -10,6 +10,7 @@ import Firebase
 import ObjectMapper
 class NetworkManager {
     
+    
     static func FetchModels(completion : @escaping(_ photoOfUnit:Model)->(Void)) {
         let ref = Database.database().reference()
         ref.child("Model").observeSingleEvent(of: .value) { (snapshot) in
