@@ -11,13 +11,16 @@ import FirebaseDatabase
 
 
 class MarkTableViewController: UITableViewController {
-    var models: Model?
-    
+    var marksDownloaded: Model?
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "MyPump" //??????? этот параметр действует и на tabBarItem, игнорируя его данные
+        self.tabBarItem.title = "Каталог"
+        self.tableView.separatorStyle = .none
+        self.tableView.backgroundColor = .white
         NetworkManager.FetchModels { (models) in
             DispatchQueue.main.async {
-                self.models = models
+                self.marksDownloaded = models
                 self.tableView.reloadData()
             }
         }
@@ -33,21 +36,33 @@ class MarkTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return models?.models?.count ?? 1
+        return marksDownloaded?.marks?.count ?? 1
     }
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! UITableViewCell
-        
-        cell.textLabel?.text = models?.models?[indexPath.row] ?? "!!!!!!"
-        cell.imageView?.image = UIImage(named:"Brinkmann")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MarkTableViewCell
+        let modelNameString = marksDownloaded?.marks?[indexPath.row] ?? ""
+        cell.markNameLabel.text = modelNameString
+        cell.markImage.image = UIImage(named:"\(modelNameString)")
         return cell
     }
 
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("hi")
+        print(marksDownloaded?.marks?[indexPath.row] ?? "")
     }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return marksDownloaded?.headerTitle
+    }
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView = UIView()
+//        headerView.backgroundColor = UIColor.white
+//        return headerView
+//    }
+//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 50
+//    }
     
 }
