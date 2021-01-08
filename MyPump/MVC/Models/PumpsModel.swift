@@ -9,7 +9,8 @@ import Foundation
 import ObjectMapper
 
 class Model: Mappable {
-    var models: [String]?
+    var marks: [String]?
+    var headerTitle: String?
 //{"data":{"photo":["photo1","photo2"]}}
     
     required init?(map: Map) {
@@ -17,7 +18,8 @@ class Model: Mappable {
     }
 
     func mapping(map: Map) {
-        models   <- map["models"]
+        marks   <- map["marks"]
+        headerTitle  <- map["headerTitle"]
 
     }
 }
