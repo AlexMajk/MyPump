@@ -10,6 +10,7 @@
 		262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */; };
 		262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D059A25A6004B0028FFF1 /* NetworkManager.swift */; };
 		262D061025A6670F0028FFF1 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262D060F25A6670F0028FFF1 /* Calculator.storyboard */; };
+		262D067F25A89A340028FFF1 /* MarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D067E25A89A340028FFF1 /* MarkTableViewCell.swift */; };
 		2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F91025A1F0D3003CB42A /* AppDelegate.swift */; };
 		2642F91325A1F0D3003CB42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F91225A1F0D3003CB42A /* SceneDelegate.swift */; };
 		2642F91825A1F0D3003CB42A /* MarkTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */; };
@@ -57,6 +58,7 @@
 		262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewController.swift; sourceTree = "<group>"; };
 		262D059A25A6004B0028FFF1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		262D060F25A6670F0028FFF1 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
+		262D067E25A89A340028FFF1 /* MarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewCell.swift; sourceTree = "<group>"; };
 		2642F90D25A1F0D3003CB42A /* MyPump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2642F91025A1F0D3003CB42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2642F91225A1F0D3003CB42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 				262D059A25A6004B0028FFF1 /* NetworkManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		262D067D25A89A1E0028FFF1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				262D067E25A89A340028FFF1 /* MarkTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		2642F90425A1F0D3003CB42A = {
@@ -224,6 +234,7 @@
 		9471E59E25A51DF800519C77 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
+				262D067D25A89A1E0028FFF1 /* Cells */,
 				262D059925A600370028FFF1 /* Managers */,
 				26FDAC3125A36D6A00AF16FF /* Models */,
 				265EF04325A253B000290725 /* Controllers */,
@@ -532,6 +543,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262D067F25A89A340028FFF1 /* MarkTableViewCell.swift in Sources */,
 				94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */,
 				262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */,
 				26FDAC8A25A4E89B00AF16FF /* PumpsModel.swift in Sources */,
