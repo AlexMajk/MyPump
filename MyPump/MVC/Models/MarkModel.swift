@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-class Model: Mappable {
+class Mark: Mappable {
     var marks: [String]?
     var headerTitle: String?
 //{"data":{"photo":["photo1","photo2"]}}
@@ -24,6 +24,21 @@ class Model: Mappable {
     }
 }
 
+class Model: Mappable {
+    var models: [String]?
+    var headerTitle: String?
+//{"data":{"photo":["photo1","photo2"]}}
+    
+    required init?(map: Map) {
+
+    }
+
+    func mapping(map: Map) {
+        models   <- map["brinkmannModels"]
+        headerTitle  <- map["headerTitle"]
+
+    }
+}
 //class Photo: NSObject {
 //    var photo: String?
 //}

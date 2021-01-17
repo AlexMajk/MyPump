@@ -9,60 +9,68 @@ import UIKit
 import ObjectMapper
 import FirebaseDatabase
 
-
 class MarkTableViewController: UITableViewController {
-    var marksDownloaded: Model?
+    var marksDownloaded:[String] = []
+    
     override func viewDidLoad() {
+        configureTableView()
         super.viewDidLoad()
-        self.title = "MyPump" //??????? этот параметр действует и на tabBarItem, игнорируя его данные
-        self.tabBarItem.title = "Каталог"
-        self.tableView.separatorStyle = .none
-        self.tableView.backgroundColor = .white
-        NetworkManager.FetchModels { (models) in
+        NetworkManager.FetchMarks { (marks) in
             DispatchQueue.main.async {
-                self.marksDownloaded = models
+                self.marksDownloaded = marks
                 self.tableView.reloadData()
             }
         }
-
     }
-
+    
+    func configureTableView() {
+        self.title = "MyPump" //??????? этот параметр действует и на tabBarItem, игнорируя его данные
+        self.tabBarItem.title = "Каталог"
+        self.tableView.separatorStyle = .none
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return marksDownloaded?.marks?.count ?? 1
+        return marksDownloaded.count 
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MarkTableViewCell
-        let modelNameString = marksDownloaded?.marks?[indexPath.row] ?? ""
-        cell.markNameLabel.text = modelNameString
-        cell.markImage.image = UIImage(named:"\(modelNameString)")
+        let markNameString = marksDownloaded
+        cell.markNameLabel.text = markNameString[indexPath.row]
+        cell.markImage.image = UIImage(named:"\(markNameString[indexPath.row])")
+        
         return cell
     }
-
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(marksDownloaded?.marks?[indexPath.row] ?? "")
+        let selectedRow = marksDownloaded[indexPath.row]
+        performSegue(withIdentifier: "get\(selectedRow)Models", sender: self)
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return marksDownloaded?.headerTitle
+        return "Выберите марку:"
     }
-//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-//        let headerView = UIView()
-//        headerView.backgroundColor = UIColor.white
-//        return headerView
-//    }
-//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-//        return 50
-//    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let modelsVC = segue.destination as? ModelTableViewController        else { return }
+        
+        switch segue.identifier {
+        
+        case "getBrinkmannModels":
+            modelsVC.getBrinkmannModels()
+            
+        case "getPutzmeisterModels":
+            modelsVC.getPutzmeristerModels()
+            
+        default:
+            break
+        }
+    }
 }
+

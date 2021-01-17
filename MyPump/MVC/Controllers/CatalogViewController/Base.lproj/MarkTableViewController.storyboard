@@ -14,7 +14,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="149" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PrZ-hr-FAc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="R4X-pm-sgv" customClass="MarkTableViewCell" customModule="MyPump" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="149"/>
@@ -48,10 +48,42 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="GJc-hQ-O3O"/>
+                    <connections>
+                        <segue destination="sSf-lt-wzZ" kind="showDetail" identifier="getBrinkmannModels" id="1FT-a6-kNz"/>
+                        <segue destination="sSf-lt-wzZ" kind="showDetail" identifier="getPutzmeisterModels" id="ake-mq-4xQ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hA-Ny-9Xi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="-29.464285714285712"/>
+        </scene>
+        <!--Model Table View Controller-->
+        <scene sceneID="7pd-fb-Ujm">
+            <objects>
+                <tableViewController modalPresentationStyle="fullScreen" id="sSf-lt-wzZ" customClass="ModelTableViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n67-m4-YSq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="j5v-L9-cF1">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j5v-L9-cF1" id="dDK-ab-Dcm">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sSf-lt-wzZ" id="Awz-TI-Rjo"/>
+                            <outlet property="delegate" destination="sSf-lt-wzZ" id="FTg-BM-gAM"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x86-TQ-gRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="857" y="-29"/>
         </scene>
         <!--Каталог-->
         <scene sceneID="Twc-WY-GAK">
@@ -74,10 +106,13 @@
             <point key="canvasLocation" x="-822" y="-29"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ake-mq-4xQ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
