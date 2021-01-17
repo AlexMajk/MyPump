@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2607522025AF8DEF009B710F /* ModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2607521F25AF8DEE009B710F /* ModelTableViewController.swift */; };
+		262AB5AF25B49B4B0077EA51 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262AB5AE25B49B4B0077EA51 /* Constants.swift */; };
 		262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */; };
 		262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D059A25A6004B0028FFF1 /* NetworkManager.swift */; };
 		262D061025A6670F0028FFF1 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262D060F25A6670F0028FFF1 /* Calculator.storyboard */; };
@@ -20,7 +22,7 @@
 		2642F93325A1F0D5003CB42A /* MyPumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F93225A1F0D5003CB42A /* MyPumpUITests.swift */; };
 		265E517225A22C1A008B56D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265E517125A22C1A008B56D7 /* GoogleService-Info.plist */; };
 		26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */; };
-		26FDAC8A25A4E89B00AF16FF /* PumpsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* PumpsModel.swift */; };
+		26FDAC8A25A4E89B00AF16FF /* MarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* MarkModel.swift */; };
 		31D54C5ACA97702E6DCB6180 /* Pods_MyPumpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */; };
 		7A2FA7C1062CA12988EF64C1 /* Pods_MyPumpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BA35FED6202D2182537694 /* Pods_MyPumpTests.framework */; };
 		94D426DD25A530C5001DB1D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */; };
@@ -55,6 +57,8 @@
 		08BA35FED6202D2182537694 /* Pods_MyPumpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPumpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A52C0304FD0336BE5F6DB41 /* Pods-MyPump-MyPumpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump-MyPumpUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests.release.xcconfig"; sourceTree = "<group>"; };
 		231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
+		2607521F25AF8DEE009B710F /* ModelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableViewController.swift; sourceTree = "<group>"; };
+		262AB5AE25B49B4B0077EA51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewController.swift; sourceTree = "<group>"; };
 		262D059A25A6004B0028FFF1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		262D060F25A6670F0028FFF1 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
@@ -74,7 +78,7 @@
 		2642F93425A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		265E517125A22C1A008B56D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		26FDAC8925A4E89B00AF16FF /* PumpsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpsModel.swift; sourceTree = "<group>"; };
+		26FDAC8925A4E89B00AF16FF /* MarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModel.swift; sourceTree = "<group>"; };
 		35EBBE7CF228BB2BA87E55B4 /* Pods-MyPumpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPumpTests.release.xcconfig"; path = "Target Support Files/Pods-MyPumpTests/Pods-MyPumpTests.release.xcconfig"; sourceTree = "<group>"; };
 		3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPumpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				262D059A25A6004B0028FFF1 /* NetworkManager.swift */,
+				262AB5AE25B49B4B0077EA51 /* Constants.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -216,7 +221,7 @@
 		26FDAC3125A36D6A00AF16FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				26FDAC8925A4E89B00AF16FF /* PumpsModel.swift */,
+				26FDAC8925A4E89B00AF16FF /* MarkModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 			children = (
 				2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */,
 				262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */,
+				2607521F25AF8DEE009B710F /* ModelTableViewController.swift */,
 			);
 			path = CatalogViewController;
 			sourceTree = "<group>";
@@ -546,7 +552,9 @@
 				262D067F25A89A340028FFF1 /* MarkTableViewCell.swift in Sources */,
 				94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */,
 				262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */,
-				26FDAC8A25A4E89B00AF16FF /* PumpsModel.swift in Sources */,
+				2607522025AF8DEF009B710F /* ModelTableViewController.swift in Sources */,
+				26FDAC8A25A4E89B00AF16FF /* MarkModel.swift in Sources */,
+				262AB5AF25B49B4B0077EA51 /* Constants.swift in Sources */,
 				262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */,
 				2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */,
 				2642F91325A1F0D3003CB42A /* SceneDelegate.swift in Sources */,
