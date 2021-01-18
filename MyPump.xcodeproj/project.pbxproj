@@ -225,8 +225,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2642F93725A1F0D5003CB42A /* Build configuration list for PBXNativeTarget "MyPump" */;
 			buildPhases = (
-				948939D625B5E9D00002E296 /* ShellScript */,
 				377E1841D0986EE845DB80E8 /* [CP] Check Pods Manifest.lock */,
+				948939D625B5E9D00002E296 /* ShellScript */,
 				2642F90925A1F0D3003CB42A /* Sources */,
 				2642F90A25A1F0D3003CB42A /* Frameworks */,
 				2642F90B25A1F0D3003CB42A /* Resources */,
@@ -315,7 +315,6 @@
 		};
 		948939D625B5E9D00002E296 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);

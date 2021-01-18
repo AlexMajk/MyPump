@@ -7,9 +7,9 @@ target 'MyPump' do
 
   # Pods for MyPump
 
-pod 'Firebase/Firestore'
-pod 'Firebase/Storage'
-pod 'Firebase/Database'
+  pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
 pod 'Alamofire', '~> 5.2'
 pod 'ObjectMapper'
 pod 'Moya', '~> 14.0'

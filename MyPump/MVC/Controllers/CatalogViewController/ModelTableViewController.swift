@@ -16,7 +16,7 @@ class ModelTableViewController: UITableViewController {
     }
 
     func getBrinkmannModels() {
-        NetworkManager.FetchModels(ref: Constants.FirebaseRef.brinkmannModelsRef) { (models) -> Void in
+        NetworkManager.FetchModels(ref: Constants.FirebaseRef.brinkmannModelsRef) { (models) in
             DispatchQueue.main.async {
                 self.modelsDownloaded = models
                 self.tableView.reloadData()
@@ -25,7 +25,7 @@ class ModelTableViewController: UITableViewController {
     }
 
     func getPutzmeristerModels() {
-        NetworkManager.FetchModels(ref: Constants.FirebaseRef.putzmeisterModelsRef) { (models) -> Void in
+        NetworkManager.FetchModels(ref: Constants.FirebaseRef.putzmeisterModelsRef) { (models) in
             DispatchQueue.main.async {
                 self.modelsDownloaded = models
                 self.tableView.reloadData()
