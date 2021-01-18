@@ -7,12 +7,11 @@
 
 import Foundation
 import ObjectMapper
-
 class Mark: Mappable {
     var marks: [String]?
     var headerTitle: String?
 //{"data":{"photo":["photo1","photo2"]}}
-    
+
     required init?(map: Map) {
 
     }
@@ -23,12 +22,11 @@ class Mark: Mappable {
 
     }
 }
-
 class Model: Mappable {
     var models: [String]?
     var headerTitle: String?
 //{"data":{"photo":["photo1","photo2"]}}
-    
+
     required init?(map: Map) {
 
     }

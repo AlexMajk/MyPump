@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,44 +18,17 @@
 		2642F91825A1F0D3003CB42A /* MarkTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */; };
 		2642F91A25A1F0D5003CB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91925A1F0D5003CB42A /* Assets.xcassets */; };
 		2642F91D25A1F0D5003CB42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91B25A1F0D5003CB42A /* LaunchScreen.storyboard */; };
-		2642F92825A1F0D5003CB42A /* MyPumpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F92725A1F0D5003CB42A /* MyPumpTests.swift */; };
-		2642F93325A1F0D5003CB42A /* MyPumpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F93225A1F0D5003CB42A /* MyPumpUITests.swift */; };
-		265E517225A22C1A008B56D7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 265E517125A22C1A008B56D7 /* GoogleService-Info.plist */; };
 		26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */; };
 		26FDAC8A25A4E89B00AF16FF /* MarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* MarkModel.swift */; };
-		31D54C5ACA97702E6DCB6180 /* Pods_MyPumpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */; };
-		7A2FA7C1062CA12988EF64C1 /* Pods_MyPumpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08BA35FED6202D2182537694 /* Pods_MyPumpTests.framework */; };
 		94D426DD25A530C5001DB1D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */; };
 		94D426FE25A535BD001DB1D7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426FD25A535BD001DB1D7 /* Setting.storyboard */; };
 		94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */; };
 		94D4270825A535EC001DB1D7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4270725A535EC001DB1D7 /* SettingViewController.swift */; };
 		9C14AF16CE3568066477CC4E /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */; };
 		B38E83A4206319507097396D /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */; };
-		C17641B84D375C10788D9208 /* Pods_MyPump_MyPumpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4BFF660143DDBBCF03A05A /* Pods_MyPump_MyPumpUITests.framework */; };
-		E8657E8D60107A49311E5068 /* Pods_MyPump_MyPumpUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE975666C5C14E8E6FCB85A3 /* Pods_MyPump_MyPumpUITests.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		2642F92425A1F0D5003CB42A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2642F90525A1F0D3003CB42A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2642F90C25A1F0D3003CB42A;
-			remoteInfo = MyPump;
-		};
-		2642F92F25A1F0D5003CB42A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2642F90525A1F0D3003CB42A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2642F90C25A1F0D3003CB42A;
-			remoteInfo = MyPump;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0540361ADDF5631B49F162C4 /* Pods-MyPump-MyPumpUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump-MyPumpUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		08BA35FED6202D2182537694 /* Pods_MyPumpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPumpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0A52C0304FD0336BE5F6DB41 /* Pods-MyPump-MyPumpUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump-MyPumpUITests.release.xcconfig"; path = "Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests.release.xcconfig"; sourceTree = "<group>"; };
 		231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
 		2607521F25AF8DEE009B710F /* ModelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableViewController.swift; sourceTree = "<group>"; };
 		262AB5AE25B49B4B0077EA51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -70,27 +43,15 @@
 		2642F91925A1F0D5003CB42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2642F91C25A1F0D5003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2642F91E25A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2642F92325A1F0D5003CB42A /* MyPumpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPumpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2642F92725A1F0D5003CB42A /* MyPumpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPumpTests.swift; sourceTree = "<group>"; };
-		2642F92925A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2642F92E25A1F0D5003CB42A /* MyPumpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPumpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2642F93225A1F0D5003CB42A /* MyPumpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPumpUITests.swift; sourceTree = "<group>"; };
-		2642F93425A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		265E517125A22C1A008B56D7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC8925A4E89B00AF16FF /* MarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModel.swift; sourceTree = "<group>"; };
-		35EBBE7CF228BB2BA87E55B4 /* Pods-MyPumpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPumpTests.release.xcconfig"; path = "Target Support Files/Pods-MyPumpTests/Pods-MyPumpTests.release.xcconfig"; sourceTree = "<group>"; };
-		3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPumpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		94D426FD25A535BD001DB1D7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		94D4270725A535EC001DB1D7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		EE4BFF660143DDBBCF03A05A /* Pods_MyPump_MyPumpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump_MyPumpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA31DEB024F1CDAF0C65CCCA /* Pods-MyPump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.debug.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.debug.xcconfig"; sourceTree = "<group>"; };
-		FE975666C5C14E8E6FCB85A3 /* Pods_MyPump_MyPumpUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump_MyPumpUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF103F56716B964F93097220 /* Pods-MyPumpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPumpTests.debug.xcconfig"; path = "Target Support Files/Pods-MyPumpTests/Pods-MyPumpTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,24 +64,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2642F92025A1F0D5003CB42A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				31D54C5ACA97702E6DCB6180 /* Pods_MyPumpTests.framework in Frameworks */,
-				7A2FA7C1062CA12988EF64C1 /* Pods_MyPumpTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2642F92B25A1F0D5003CB42A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8657E8D60107A49311E5068 /* Pods_MyPump_MyPumpUITests.framework in Frameworks */,
-				C17641B84D375C10788D9208 /* Pods_MyPump_MyPumpUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -128,8 +71,6 @@
 			isa = PBXGroup;
 			children = (
 				6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */,
-				FE975666C5C14E8E6FCB85A3 /* Pods_MyPump_MyPumpUITests.framework */,
-				3851885C17D4235D56B68F19 /* Pods_MyPumpTests.framework */,
 			);
 			name = Frameworks;
 			path = ..;
@@ -165,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				2642F90D25A1F0D3003CB42A /* MyPump.app */,
-				2642F92325A1F0D5003CB42A /* MyPumpTests.xctest */,
-				2642F92E25A1F0D5003CB42A /* MyPumpUITests.xctest */,
 			);
 			name = Products;
 			path = ..;
@@ -180,31 +119,10 @@
 				94D4270F25A53773001DB1D7 /* Resource */,
 				2642F91E25A1F0D5003CB42A /* Info.plist */,
 				26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */,
-				2642F92625A1F0D5003CB42A /* MyPumpTests */,
-				2642F93125A1F0D5003CB42A /* MyPumpUITests */,
 				2642F90E25A1F0D3003CB42A /* Products */,
 				101AF05AE45FE8AA12BB52D7 /* Frameworks */,
 			);
 			path = MyPump;
-			sourceTree = "<group>";
-		};
-		2642F92625A1F0D5003CB42A /* MyPumpTests */ = {
-			isa = PBXGroup;
-			children = (
-				2642F92725A1F0D5003CB42A /* MyPumpTests.swift */,
-				2642F92925A1F0D5003CB42A /* Info.plist */,
-			);
-			path = MyPumpTests;
-			sourceTree = "<group>";
-		};
-		2642F93125A1F0D5003CB42A /* MyPumpUITests */ = {
-			isa = PBXGroup;
-			children = (
-				265E517125A22C1A008B56D7 /* GoogleService-Info.plist */,
-				2642F93225A1F0D5003CB42A /* MyPumpUITests.swift */,
-				2642F93425A1F0D5003CB42A /* Info.plist */,
-			);
-			path = MyPumpUITests;
 			sourceTree = "<group>";
 		};
 		265EF04325A253B000290725 /* Controllers */ = {
@@ -230,8 +148,6 @@
 			isa = PBXGroup;
 			children = (
 				48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */,
-				EE4BFF660143DDBBCF03A05A /* Pods_MyPump_MyPumpUITests.framework */,
-				08BA35FED6202D2182537694 /* Pods_MyPumpTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -298,10 +214,6 @@
 			children = (
 				FA31DEB024F1CDAF0C65CCCA /* Pods-MyPump.debug.xcconfig */,
 				231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */,
-				0540361ADDF5631B49F162C4 /* Pods-MyPump-MyPumpUITests.debug.xcconfig */,
-				0A52C0304FD0336BE5F6DB41 /* Pods-MyPump-MyPumpUITests.release.xcconfig */,
-				FF103F56716B964F93097220 /* Pods-MyPumpTests.debug.xcconfig */,
-				35EBBE7CF228BB2BA87E55B4 /* Pods-MyPumpTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -313,11 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2642F93725A1F0D5003CB42A /* Build configuration list for PBXNativeTarget "MyPump" */;
 			buildPhases = (
+				948939D625B5E9D00002E296 /* ShellScript */,
 				377E1841D0986EE845DB80E8 /* [CP] Check Pods Manifest.lock */,
 				2642F90925A1F0D3003CB42A /* Sources */,
 				2642F90A25A1F0D3003CB42A /* Frameworks */,
 				2642F90B25A1F0D3003CB42A /* Resources */,
-				0F12874E30E81AAC56862169 /* [CP] Embed Pods Frameworks */,
+				CF63CDF559E97962B2FA29C7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -327,45 +240,6 @@
 			productName = MyPump;
 			productReference = 2642F90D25A1F0D3003CB42A /* MyPump.app */;
 			productType = "com.apple.product-type.application";
-		};
-		2642F92225A1F0D5003CB42A /* MyPumpTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2642F93A25A1F0D5003CB42A /* Build configuration list for PBXNativeTarget "MyPumpTests" */;
-			buildPhases = (
-				6316F99126D602FABEF5B292 /* [CP] Check Pods Manifest.lock */,
-				2642F91F25A1F0D5003CB42A /* Sources */,
-				2642F92025A1F0D5003CB42A /* Frameworks */,
-				2642F92125A1F0D5003CB42A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2642F92525A1F0D5003CB42A /* PBXTargetDependency */,
-			);
-			name = MyPumpTests;
-			productName = MyPumpTests;
-			productReference = 2642F92325A1F0D5003CB42A /* MyPumpTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2642F92D25A1F0D5003CB42A /* MyPumpUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2642F93D25A1F0D5003CB42A /* Build configuration list for PBXNativeTarget "MyPumpUITests" */;
-			buildPhases = (
-				64F9BC7211697689B656EBDF /* [CP] Check Pods Manifest.lock */,
-				2642F92A25A1F0D5003CB42A /* Sources */,
-				2642F92B25A1F0D5003CB42A /* Frameworks */,
-				2642F92C25A1F0D5003CB42A /* Resources */,
-				A4948AC302830D3FF0B93308 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2642F93025A1F0D5003CB42A /* PBXTargetDependency */,
-			);
-			name = MyPumpUITests;
-			productName = MyPumpUITests;
-			productReference = 2642F92E25A1F0D5003CB42A /* MyPumpUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -378,14 +252,6 @@
 				TargetAttributes = {
 					2642F90C25A1F0D3003CB42A = {
 						CreatedOnToolsVersion = 12.3;
-					};
-					2642F92225A1F0D5003CB42A = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 2642F90C25A1F0D3003CB42A;
-					};
-					2642F92D25A1F0D5003CB42A = {
-						CreatedOnToolsVersion = 12.3;
-						TestTargetID = 2642F90C25A1F0D3003CB42A;
 					};
 				};
 			};
@@ -403,8 +269,6 @@
 			projectRoot = "";
 			targets = (
 				2642F90C25A1F0D3003CB42A /* MyPump */,
-				2642F92225A1F0D5003CB42A /* MyPumpTests */,
-				2642F92D25A1F0D5003CB42A /* MyPumpUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -424,41 +288,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2642F92125A1F0D5003CB42A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2642F92C25A1F0D5003CB42A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				265E517225A22C1A008B56D7 /* GoogleService-Info.plist in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0F12874E30E81AAC56862169 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		377E1841D0986EE845DB80E8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,65 +313,39 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		6316F99126D602FABEF5B292 /* [CP] Check Pods Manifest.lock */ = {
+		948939D625B5E9D00002E296 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyPumpTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		64F9BC7211697689B656EBDF /* [CP] Check Pods Manifest.lock */ = {
+		CF63CDF559E97962B2FA29C7 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyPump-MyPumpUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A4948AC302830D3FF0B93308 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPump-MyPumpUITests/Pods-MyPump-MyPumpUITests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -562,36 +368,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2642F91F25A1F0D5003CB42A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2642F92825A1F0D5003CB42A /* MyPumpTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2642F92A25A1F0D5003CB42A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2642F93325A1F0D5003CB42A /* MyPumpUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2642F92525A1F0D5003CB42A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2642F90C25A1F0D3003CB42A /* MyPump */;
-			targetProxy = 2642F92425A1F0D5003CB42A /* PBXContainerItemProxy */;
-		};
-		2642F93025A1F0D5003CB42A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2642F90C25A1F0D3003CB42A /* MyPump */;
-			targetProxy = 2642F92F25A1F0D5003CB42A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */ = {
@@ -769,94 +546,6 @@
 			};
 			name = Release;
 		};
-		2642F93B25A1F0D5003CB42A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF103F56716B964F93097220 /* Pods-MyPumpTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4W7NWC566;
-				INFOPLIST_FILE = MyPumpTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlexMike.MyPumpTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPump.app/MyPump";
-			};
-			name = Debug;
-		};
-		2642F93C25A1F0D5003CB42A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35EBBE7CF228BB2BA87E55B4 /* Pods-MyPumpTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4W7NWC566;
-				INFOPLIST_FILE = MyPumpTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlexMike.MyPumpTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyPump.app/MyPump";
-			};
-			name = Release;
-		};
-		2642F93E25A1F0D5003CB42A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0540361ADDF5631B49F162C4 /* Pods-MyPump-MyPumpUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4W7NWC566;
-				INFOPLIST_FILE = MyPumpUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlexMike.MyPumpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyPump;
-			};
-			name = Debug;
-		};
-		2642F93F25A1F0D5003CB42A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A52C0304FD0336BE5F6DB41 /* Pods-MyPump-MyPumpUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W4W7NWC566;
-				INFOPLIST_FILE = MyPumpUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.AlexMike.MyPumpUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = MyPump;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -874,24 +563,6 @@
 			buildConfigurations = (
 				2642F93825A1F0D5003CB42A /* Debug */,
 				2642F93925A1F0D5003CB42A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2642F93A25A1F0D5003CB42A /* Build configuration list for PBXNativeTarget "MyPumpTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2642F93B25A1F0D5003CB42A /* Debug */,
-				2642F93C25A1F0D5003CB42A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2642F93D25A1F0D5003CB42A /* Build configuration list for PBXNativeTarget "MyPumpUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2642F93E25A1F0D5003CB42A /* Debug */,
-				2642F93F25A1F0D5003CB42A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

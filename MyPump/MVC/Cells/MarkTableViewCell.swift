@@ -8,8 +8,8 @@
 import UIKit
 
 class MarkTableViewCell: UITableViewCell {
-    
+
     @IBOutlet weak var markNameLabel: UILabel!
     @IBOutlet weak var markImage: UIImageView!
-    
+
 }

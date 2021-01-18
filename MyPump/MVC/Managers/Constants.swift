@@ -9,8 +9,8 @@ import Foundation
 import Firebase
 
 struct Constants {
-    struct firebaseRef {
-        
+    struct FirebaseRef {
+
         static let dbRoot = Database.database().reference()
         static let marksRef = dbRoot.child("Marks")
         static let brinkmannModelsRef = marksRef.child("Brinkmann").child("Models")
@@ -19,6 +19,6 @@ struct Constants {
         static let putzmeisterModelsRef = marksRef.child("Putzmeister").child("Models")
         static let putzmeisterM740Units = brinkmannModelsRef.child("Mixocret m740").child("Units")
         static let putzmeisterM760Units = brinkmannModelsRef.child("Mixocret m760").child("Units")
-        
+
     }
 }
