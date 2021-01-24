@@ -19,7 +19,7 @@ class TestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let markRef = Firestore.firestore().collection("marks")
     
     @IBAction func saveButton(_ sender: UIButton) {
-        getDatarequest()
+
 
     }
     
@@ -63,6 +63,7 @@ class TestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getDatarequest()
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
