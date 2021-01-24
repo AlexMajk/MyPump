@@ -12,15 +12,34 @@ import ObjectMapper
 class TestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
-    
+    var carsList = [Main1]()
     var mark = [MarkModel]()
     var partOfKey = ""
     let db = Firestore.firestore()
     let markRef = Firestore.firestore().collection("marks")
     
     @IBAction func saveButton(_ sender: UIButton) {
-        
+        getDatarequest()
+
     }
+    
+    func getDatarequest() {
+        let url = URL(string: "https://mypump-c4d75-default-rtdb.firebaseio.com/.json")!
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data.self else { return }
+            print("OKKKKKK")
+            let carsList1 = Mapper<Main1>().mapArray(JSONString: String(data: data, encoding: .utf8)!)
+            guard carsList1 != nil else {return}
+
+            DispatchQueue.main.async {
+                self.carsList = carsList1!
+                self.tableView.reloadData()
+            }
+
+        }
+        task.resume()
+    }
+    
     
     @IBAction func fetchdataButton(_ sender: UIButton) {
         markRef.getDocuments { (querySnapshot, error) in
@@ -50,13 +69,13 @@ class TestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mark.count
+        return carsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1")!
-        let currentMark = mark[indexPath.row]
-        cell.textLabel?.text = "\(currentMark.markName) \(currentMark.description)"
+        let currentMark = carsList[indexPath.row]
+        cell.textLabel?.text = "\(currentMark.markList?[0].name!)"
         return cell
     }
     
@@ -103,23 +122,6 @@ class TestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    public struct City: Codable {
-        
-        let name: String
-        let state: String?
-        let country: String?
-        let isCapital: Bool?
-        let population: Int64?
-        
-        enum CodingKeys: String, CodingKey {
-            case name
-            case state
-            case country
-            case isCapital = "capital"
-            case population
-        }
-    }
-    
 }
 //func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //    guard let modelsVC = segue.destination as? SecondTableViewController
@@ -135,3 +137,64 @@ class TestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 //        break
 //    }
 //}
+class Main1: Mappable {
+
+    var markList: [MarkList1]?
+
+    required init?(map: Map){
+    }
+
+    func mapping(map: Map) {
+        markList <- map["markList"]
+    }
+}
+
+class MarkList1: Mappable {
+
+    var description: String?
+    var modelList: [ModelList1]?
+    var name: String?
+    var photoLogo: String?
+
+    required init?(map: Map){
+    }
+
+    func mapping(map: Map) {
+        description <- map["description"]
+        modelList <- map["modelList"]
+        name <- map["name"]
+        photoLogo <- map["photoLogo"]
+    }
+}
+
+class ModelList1: Mappable {
+
+    var description: String?
+    var name: String?
+    var partList: [PartList1]?
+    var yearsOfRelease: String?
+
+    required init?(map: Map){
+    }
+
+    func mapping(map: Map) {
+        description <- map["description"]
+        name <- map["name"]
+        partList <- map["partList"]
+        yearsOfRelease <- map["years of release"]
+    }
+}
+
+class PartList1: Mappable {
+
+    var name: String?
+    var photo: [String]?
+
+    required init?(map: Map){
+    }
+
+    func mapping(map: Map) {
+        name <- map["name"]
+        photo <- map["photo"]
+    }
+} 

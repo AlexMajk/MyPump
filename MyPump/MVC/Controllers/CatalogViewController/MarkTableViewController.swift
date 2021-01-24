@@ -10,7 +10,8 @@ import ObjectMapper
 import FirebaseDatabase
 class MarkTableViewController: UITableViewController {
     var marksDownloaded: [String] = []
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
