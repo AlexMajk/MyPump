@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 54;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,8 @@
 		2642F91825A1F0D3003CB42A /* MarkTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */; };
 		2642F91A25A1F0D5003CB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91925A1F0D5003CB42A /* Assets.xcassets */; };
 		2642F91D25A1F0D5003CB42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91B25A1F0D5003CB42A /* LaunchScreen.storyboard */; };
+		26743F1725B760C3003FC6AE /* TestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26743F1625B760C3003FC6AE /* TestVC.swift */; };
+		2684885525BD77C60020F918 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684885425BD77C60020F918 /* SecondTableViewController.swift */; };
 		26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */; };
 		26FDAC8A25A4E89B00AF16FF /* MarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* MarkModel.swift */; };
 		94D426DD25A530C5001DB1D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */; };
@@ -43,6 +45,8 @@
 		2642F91925A1F0D5003CB42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2642F91C25A1F0D5003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2642F91E25A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26743F1625B760C3003FC6AE /* TestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestVC.swift; sourceTree = "<group>"; };
+		2684885425BD77C60020F918 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC8925A4E89B00AF16FF /* MarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModel.swift; sourceTree = "<group>"; };
 		48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,12 +132,22 @@
 		265EF04325A253B000290725 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2684885325BD77AA0020F918 /* TEST */,
 				94D426DB25A530AB001DB1D7 /* Tabbar */,
 				94D426E425A531D6001DB1D7 /* CatalogViewController */,
 				94D426EE25A53539001DB1D7 /* CalculatorViewController */,
 				94D426EF25A53552001DB1D7 /* SettingViewController */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2684885325BD77AA0020F918 /* TEST */ = {
+			isa = PBXGroup;
+			children = (
+				26743F1625B760C3003FC6AE /* TestVC.swift */,
+				2684885425BD77C60020F918 /* SecondTableViewController.swift */,
+			);
+			path = TEST;
 			sourceTree = "<group>";
 		};
 		26FDAC3125A36D6A00AF16FF /* Models */ = {
@@ -355,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				262D067F25A89A340028FFF1 /* MarkTableViewCell.swift in Sources */,
+				2684885525BD77C60020F918 /* SecondTableViewController.swift in Sources */,
 				94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */,
 				262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */,
 				2607522025AF8DEF009B710F /* ModelTableViewController.swift in Sources */,
@@ -363,6 +378,7 @@
 				262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */,
 				2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */,
 				2642F91325A1F0D3003CB42A /* SceneDelegate.swift in Sources */,
+				26743F1725B760C3003FC6AE /* TestVC.swift in Sources */,
 				94D4270825A535EC001DB1D7 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

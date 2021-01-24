@@ -19,13 +19,12 @@ class NetworkManager {
                 key.append(data.key)
             }
             completion(key)
-            //            guard let data = snapshot.value  else {return}
-            //            if let data = data as? [String:Any] {
-            //                if let marksJSON = Mapper<Mark>().map(JSONObject: data) {
-            //                    print(marksJSON.headerTitle ?? "")
-            //                    completion(marksJSON)
-            //                }
-            //            }
+                        guard let data = snapshot.value  else {return}
+                        if let data = data as? [String:Any] {
+                            if let marksJSON = Mapper<Mark>().map(JSONObject: data) {
+                                print(marksJSON.headerTitle ?? "")
+                            }
+                        }
         }
     }
     static func FetchModels(ref: DatabaseReference, completion : @escaping(_ array: [String]) -> Void) {
