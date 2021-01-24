@@ -76,7 +76,9 @@ class TestVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell1")!
         let currentMark = carsList[indexPath.row]
-        cell.textLabel?.text = "\(currentMark.markList?[0].name!)"
+        
+        
+        cell.textLabel?.text = "\(currentMark.markList![0].name!)"
         return cell
     }
     

@@ -22,16 +22,16 @@
 		2684885525BD77C60020F918 /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2684885425BD77C60020F918 /* SecondTableViewController.swift */; };
 		26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */; };
 		26FDAC8A25A4E89B00AF16FF /* MarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* MarkModel.swift */; };
+		78597C9B50E0A82A8805D775 /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99410BB3EBA606F2B2A383A9 /* Pods_MyPump.framework */; };
 		94D426DD25A530C5001DB1D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */; };
 		94D426FE25A535BD001DB1D7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426FD25A535BD001DB1D7 /* Setting.storyboard */; };
 		94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */; };
 		94D4270825A535EC001DB1D7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4270725A535EC001DB1D7 /* SettingViewController.swift */; };
-		9C14AF16CE3568066477CC4E /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */; };
-		B38E83A4206319507097396D /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
+		053F50A850914E590C4F3BFA /* Pods-MyPump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.debug.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.debug.xcconfig"; sourceTree = "<group>"; };
+		1559DAAF07261E9863B919A5 /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
 		2607521F25AF8DEE009B710F /* ModelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableViewController.swift; sourceTree = "<group>"; };
 		262AB5AE25B49B4B0077EA51 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewController.swift; sourceTree = "<group>"; };
@@ -49,13 +49,11 @@
 		2684885425BD77C60020F918 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC8925A4E89B00AF16FF /* MarkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkModel.swift; sourceTree = "<group>"; };
-		48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		94D426FD25A535BD001DB1D7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		94D4270725A535EC001DB1D7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		FA31DEB024F1CDAF0C65CCCA /* Pods-MyPump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.debug.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.debug.xcconfig"; sourceTree = "<group>"; };
+		99410BB3EBA606F2B2A383A9 /* Pods_MyPump.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyPump.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,23 +61,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B38E83A4206319507097396D /* Pods_MyPump.framework in Frameworks */,
-				9C14AF16CE3568066477CC4E /* Pods_MyPump.framework in Frameworks */,
+				78597C9B50E0A82A8805D775 /* Pods_MyPump.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		101AF05AE45FE8AA12BB52D7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6F357AD64FC021FA21CE8B43 /* Pods_MyPump.framework */,
-			);
-			name = Frameworks;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		262D059925A600370028FFF1 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -102,7 +90,7 @@
 			children = (
 				2642F90F25A1F0D3003CB42A /* MyPump */,
 				F96B59425C11AB570AF8CF64 /* Pods */,
-				4D98B3010865E4612165FEB1 /* Frameworks */,
+				B90447658D7F67CFE4106562 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,7 +112,6 @@
 				2642F91E25A1F0D5003CB42A /* Info.plist */,
 				26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */,
 				2642F90E25A1F0D3003CB42A /* Products */,
-				101AF05AE45FE8AA12BB52D7 /* Frameworks */,
 			);
 			path = MyPump;
 			sourceTree = "<group>";
@@ -156,14 +143,6 @@
 				26FDAC8925A4E89B00AF16FF /* MarkModel.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		4D98B3010865E4612165FEB1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				48427FCC161EFAB7158F21E0 /* Pods_MyPump.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		9471E59E25A51DF800519C77 /* MVC */ = {
@@ -223,11 +202,19 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		B90447658D7F67CFE4106562 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				99410BB3EBA606F2B2A383A9 /* Pods_MyPump.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F96B59425C11AB570AF8CF64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				FA31DEB024F1CDAF0C65CCCA /* Pods-MyPump.debug.xcconfig */,
-				231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */,
+				053F50A850914E590C4F3BFA /* Pods-MyPump.debug.xcconfig */,
+				1559DAAF07261E9863B919A5 /* Pods-MyPump.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -239,12 +226,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2642F93725A1F0D5003CB42A /* Build configuration list for PBXNativeTarget "MyPump" */;
 			buildPhases = (
-				377E1841D0986EE845DB80E8 /* [CP] Check Pods Manifest.lock */,
+				C21B91C0547BA3513EF53ABE /* [CP] Check Pods Manifest.lock */,
 				948939D625B5E9D00002E296 /* ShellScript */,
 				2642F90925A1F0D3003CB42A /* Sources */,
 				2642F90A25A1F0D3003CB42A /* Frameworks */,
 				2642F90B25A1F0D3003CB42A /* Resources */,
-				CF63CDF559E97962B2FA29C7 /* [CP] Embed Pods Frameworks */,
+				04EE73FE165A7DDDECEF8530 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -305,26 +292,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		377E1841D0986EE845DB80E8 /* [CP] Check Pods Manifest.lock */ = {
+		04EE73FE165A7DDDECEF8530 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MyPump-checkManifestLockResult.txt",
+				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		948939D625B5E9D00002E296 /* ShellScript */ = {
@@ -344,21 +326,26 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
-		CF63CDF559E97962B2FA29C7 /* [CP] Embed Pods Frameworks */ = {
+		C21B91C0547BA3513EF53ABE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyPump-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyPump/Pods-MyPump-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -523,7 +510,7 @@
 		};
 		2642F93825A1F0D5003CB42A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FA31DEB024F1CDAF0C65CCCA /* Pods-MyPump.debug.xcconfig */;
+			baseConfigurationReference = 053F50A850914E590C4F3BFA /* Pods-MyPump.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -543,7 +530,7 @@
 		};
 		2642F93925A1F0D5003CB42A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 231D560AAC7703BBA2B37100 /* Pods-MyPump.release.xcconfig */;
+			baseConfigurationReference = 1559DAAF07261E9863B919A5 /* Pods-MyPump.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
