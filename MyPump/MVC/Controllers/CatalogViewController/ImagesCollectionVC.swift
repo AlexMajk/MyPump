@@ -11,7 +11,6 @@ import FirebaseFirestore
 import FirebaseStorage
 class ImagesCollectionVC: UICollectionViewController {
 
-    var array = [UIImage]()
     var agregateTitle: String?
     var partListImageRef = [String]()
     var selectedImageForShowDetail : UIImage?
@@ -28,7 +27,7 @@ class ImagesCollectionVC: UICollectionViewController {
     
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
-        backButton.title = "goBack"
+        backButton.title = "к выбору узла"
         title = agregateTitle
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
@@ -50,10 +49,11 @@ extension ImagesCollectionVC: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell4", for: indexPath) as! ImagesCollectionViewCell
-        cell.activateIndicator()
         let storage = Storage.storage()
         let imageRef = storage.reference(forURL:"\(partListImageRef[indexPath.row])")
-        cell.imageFromCell.loadImageUsingCashWithStorageReference(reference: imageRef)
+        cell.loadImageUsingCashWithStorageReference(reference: imageRef)
+
+//        cell.imageFromCell.loadImageUsingCashWithStorageReference(reference: imageRef)
         return cell
     }
     // КАК ВКЛЮЧИТЬ АКТИВИТИ ИНДИКАТОР

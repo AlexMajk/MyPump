@@ -12,6 +12,17 @@ class PartsTableViewController: UITableViewController {
     var downloadedParts = [PartList]()
     var selectedPartsUrls = [String]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationController()
+    }
+    
+    private func configureNavigationController() {
+        let backButton = UIBarButtonItem()
+        backButton.title = "к выбору модели"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

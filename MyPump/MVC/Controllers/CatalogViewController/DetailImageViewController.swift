@@ -11,7 +11,18 @@ class DetailImageViewController: UIViewController {
 
     var imageScrollView: ScrollViewManager!
     var image: UIImage?
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationController()
+    }
+    
+    private func configureNavigationController() {
+        let backButton = UIBarButtonItem()
+        backButton.title = "к выбору схемы"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imageScrollView = ScrollViewManager(frame: view.bounds)

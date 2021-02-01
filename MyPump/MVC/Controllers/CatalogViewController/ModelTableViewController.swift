@@ -11,6 +11,18 @@ class ModelTableViewController: UITableViewController {
     var modelsDownloaded = [ModelList]()
     var partsDownloaded = [PartList]()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationController()
+    }
+    
+    private func configureNavigationController() {
+        let backButton = UIBarButtonItem()
+//        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Chalkduster", size: 20)!]
+        backButton.title = "к выбору марки"
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
