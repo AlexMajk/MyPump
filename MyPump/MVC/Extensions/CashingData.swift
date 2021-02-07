@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import FirebaseStorage
 //
-let imageCashe = NSCache<AnyObject, AnyObject>()
+//let imageCashe = NSCache<AnyObject, AnyObject>()
 //
 //extension UIImageView {
 //    func loadImageUsingCashWithStorageReference(reference: StorageReference){

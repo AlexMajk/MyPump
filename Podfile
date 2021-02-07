@@ -14,6 +14,7 @@ pod 'Alamofire', '~> 5.2'
 pod 'ObjectMapper'
 pod 'Moya', '~> 14.0'
 pod 'SwiftLint'
+pod 'Kingfisher', '~> 6.0'
 
 
 end

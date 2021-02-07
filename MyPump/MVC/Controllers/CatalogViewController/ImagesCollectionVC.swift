@@ -49,18 +49,25 @@ extension ImagesCollectionVC: UICollectionViewDelegateFlowLayout {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell4", for: indexPath) as! ImagesCollectionViewCell
-        let storage = Storage.storage()
-        let imageRef = storage.reference(forURL:"\(partListImageRef[indexPath.row])")
-        cell.loadImageUsingCashWithStorageReference(reference: imageRef)
-
+        
+        cell.configure(url: partListImageRef[indexPath.row])
+        
+        
+        
+//        let storage = Storage.storage()
+//        let imageRef = storage.reference(forURL:"\(partListImageRef[indexPath.row])")
+//        cell.loadImageUsingCashWithStorageReference(reference: imageRef)
+//
 //        cell.imageFromCell.loadImageUsingCashWithStorageReference(reference: imageRef)
         return cell
     }
+
+    
     // КАК ВКЛЮЧИТЬ АКТИВИТИ ИНДИКАТОР
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let storage = Storage.storage()
-        let imageRef = storage.reference(forURL:"\(partListImageRef[indexPath.row])")
-        self.selectedImageForShowDetail = imageCashe.object(forKey: imageRef) as? UIImage
+//        let storage = Storage.storage()
+//        let imageRef = storage.reference(forURL:"\(partListImageRef[indexPath.row])")
+//        self.selectedImageForShowDetail = imageCashe.object(forKey: imageRef) as? UIImage
         performSegue(withIdentifier: "getDetailVC", sender: self)
         
     }

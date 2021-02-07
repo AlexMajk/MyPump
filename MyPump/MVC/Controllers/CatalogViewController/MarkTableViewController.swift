@@ -18,7 +18,8 @@ class MarkTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
-        NetworkManager.FetchData(url: url) { (data) in
+        NetworkManager.FetchData(url: url) { [weak self] (data) in
+            guard let self = self else { return }
             DispatchQueue.main.async {
                 self.jsonFromFirebase = data
                 self.downloadedMarkList = data[0].markList!

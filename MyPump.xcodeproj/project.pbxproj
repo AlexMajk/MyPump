@@ -94,8 +94,8 @@
 		262D067D25A89A1E0028FFF1 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				262D067E25A89A340028FFF1 /* MarkTableViewCell.swift */,
 				263D0D6E25C5B6A400F0173A /* ImagesCollectionViewCell.swift */,
+				262D067E25A89A340028FFF1 /* MarkTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
