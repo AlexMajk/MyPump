@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import FirebaseStorage
 import Kingfisher
 
 class ImagesCollectionViewCell: UICollectionViewCell {
@@ -14,13 +13,27 @@ class ImagesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageFromCell: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    let storage = Storage.storage()
+    let fbManager = FBDataManager.shared
     
     func configure(url: String) {
-        storage.reference(forURL: url ).downloadURL { (url, error) in
-            if let url = url {
-                self.imageFromCell.kf.setImage(with: url)
-            }
+        self.activityIndicator.startAnimating()
+        self.activityIndicator.isHidden = false
+        fbManager.getDownload(url: url) { [weak self](url) in
+            guard let self = self else { return }
+            self.imageFromCell.kf.setImage(
+                with: url,
+                options: [
+                    .loadDiskFileSynchronously,
+                    .cacheOriginalImage,
+                    .transition(.fade(0.25)),
+                ],
+                progressBlock: { receivedSize, totalSize in
+                },
+                completionHandler: { result in
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                })
+        } failure: { (error) in
         }
     }
 }

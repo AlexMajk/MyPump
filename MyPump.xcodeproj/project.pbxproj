@@ -30,6 +30,7 @@
 		26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */; };
 		26FDAC8A25A4E89B00AF16FF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* DataModel.swift */; };
 		78597C9B50E0A82A8805D775 /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99410BB3EBA606F2B2A383A9 /* Pods_MyPump.framework */; };
+		94AE8BC325D09DFD003B0ED0 /* FireBaseDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94AE8BC225D09DFD003B0ED0 /* FireBaseDataManager.swift */; };
 		94D426DD25A530C5001DB1D7 /* Tabbar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */; };
 		94D426FE25A535BD001DB1D7 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94D426FD25A535BD001DB1D7 /* Setting.storyboard */; };
 		94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */; };
@@ -63,6 +64,7 @@
 		2684885425BD77C60020F918 /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 		26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC8925A4E89B00AF16FF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		94AE8BC225D09DFD003B0ED0 /* FireBaseDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseDataManager.swift; sourceTree = "<group>"; };
 		94D426DC25A530C5001DB1D7 /* Tabbar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Tabbar.storyboard; sourceTree = "<group>"; };
 		94D426FD25A535BD001DB1D7 /* Setting.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Setting.storyboard; sourceTree = "<group>"; };
 		94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			children = (
 				262D059A25A6004B0028FFF1 /* NetworkManager.swift */,
 				262AB5AE25B49B4B0077EA51 /* Constants.swift */,
+				94AE8BC225D09DFD003B0ED0 /* FireBaseDataManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -353,7 +356,8 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+			shellScript = "
+";
 		};
 		C21B91C0547BA3513EF53ABE /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -398,6 +402,7 @@
 				262AB5AF25B49B4B0077EA51 /* Constants.swift in Sources */,
 				263D0D6325C4858600F0173A /* PartsTableViewController.swift in Sources */,
 				262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */,
+				94AE8BC325D09DFD003B0ED0 /* FireBaseDataManager.swift in Sources */,
 				263D0D6825C5B4F300F0173A /* ScrollViewManager.swift in Sources */,
 				2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */,
 				2642F91325A1F0D3003CB42A /* SceneDelegate.swift in Sources */,

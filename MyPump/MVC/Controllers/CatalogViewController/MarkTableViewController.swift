@@ -53,8 +53,6 @@ class MarkTableViewController: UITableViewController {
         cell.markNameLabel.text = arrayOfMarks.name
         cell.markImage.image = UIImage(named: "\(arrayOfMarks.name!)")
         return cell
-        
-        
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
