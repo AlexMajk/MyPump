@@ -18,8 +18,8 @@ class ImagesCollectionViewCell: UICollectionViewCell {
     func configure(url: String) {
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
-        fbManager.getDownload(url: url) { [weak self](url) in
-            guard let self = self else { return }
+//        fbManager.getDownload(url: url) { [weak self](url) in
+            guard let url = URL(string: url) else { return }
             self.imageFromCell.kf.setImage(
                 with: url,
                 options: [
@@ -33,7 +33,7 @@ class ImagesCollectionViewCell: UICollectionViewCell {
                     self.activityIndicator.stopAnimating()
                     self.activityIndicator.isHidden = true
                 })
-        } failure: { (error) in
-        }
+//        } failure: { (error) in
+//        }
     }
 }
