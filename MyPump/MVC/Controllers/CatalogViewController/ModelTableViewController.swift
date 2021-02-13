@@ -41,8 +41,10 @@ class ModelTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath)
-        cell.textLabel?.text = modelsDownloaded[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! ModelTableViewCell
+        cell.modelNameLabel.text = modelsDownloaded[indexPath.row].name
+        cell.modelNameLabel.textColor = .white
+        cell.modelDescriptionLabel.text = modelsDownloaded[indexPath.row].description
         
         return cell
     }

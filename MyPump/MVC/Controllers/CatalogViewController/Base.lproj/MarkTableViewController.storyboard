@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -14,7 +15,7 @@
             <objects>
                 <tableViewController id="aX1-FX-6MD" customClass="MarkTableViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="3" rowHeight="149" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PrZ-hr-FAc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
@@ -25,20 +26,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="149"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-E8-745">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KMJ-E8-745">
                                             <rect key="frame" x="190" y="11" width="224" height="127"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eHs-cU-958">
-                                            <rect key="frame" x="20" y="51" width="162" height="53"/>
+                                            <rect key="frame" x="20" y="44" width="162" height="53"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="ArialHebrew" family="Arial Hebrew" pointSize="25"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Maq-IZ-2K9">
+                                            <rect key="frame" x="20" y="86" width="162" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="KMJ-E8-745" secondAttribute="trailing" id="9S4-gO-9za"/>
+                                        <constraint firstAttribute="bottom" secondItem="KMJ-E8-745" secondAttribute="bottom" constant="11" id="Q2O-Qn-mZB"/>
+                                        <constraint firstItem="KMJ-E8-745" firstAttribute="leading" secondItem="ic6-Bz-jBp" secondAttribute="leading" constant="190" id="Rqf-QU-ShI"/>
+                                        <constraint firstItem="KMJ-E8-745" firstAttribute="top" secondItem="ic6-Bz-jBp" secondAttribute="top" constant="11" id="d9I-lH-RUn"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="markDescriptionLabel" destination="Maq-IZ-2K9" id="UF9-dF-ecX"/>
                                     <outlet property="markImage" destination="KMJ-E8-745" id="UwQ-J6-vgf"/>
                                     <outlet property="markNameLabel" destination="eHs-cU-958" id="3nq-hX-bQk"/>
                                 </connections>
@@ -63,17 +77,60 @@
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="sSf-lt-wzZ" customClass="ModelTableViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="n67-m4-YSq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell2" id="j5v-L9-cF1">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="Cell2" rowHeight="74" id="j5v-L9-cF1" customClass="ModelTableViewCell" customModule="MyPump" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="j5v-L9-cF1" id="dDK-ab-Dcm">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7Q-e2-vr6">
+                                            <rect key="frame" x="20" y="11" width="220" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="220" id="Zld-DX-2c9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YFH-iV-zQK">
+                                            <rect key="frame" x="20" y="42" width="220" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="220" id="amd-n1-gie"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greaterthan" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gFY-b6-B4h">
+                                            <rect key="frame" x="374" y="30" width="20" height="13.5"/>
+                                            <color key="tintColor" systemColor="systemRedColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="GsK-Aw-LQY"/>
+                                                <constraint firstAttribute="height" constant="20" id="xlN-a0-ah1"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Q7Q-e2-vr6" firstAttribute="top" secondItem="dDK-ab-Dcm" secondAttribute="topMargin" id="05p-kv-fFc"/>
+                                        <constraint firstItem="YFH-iV-zQK" firstAttribute="top" secondItem="Q7Q-e2-vr6" secondAttribute="bottom" constant="10" id="2Jk-xr-yBF"/>
+                                        <constraint firstItem="gFY-b6-B4h" firstAttribute="trailing" secondItem="dDK-ab-Dcm" secondAttribute="trailingMargin" id="3H2-rn-WpD"/>
+                                        <constraint firstItem="gFY-b6-B4h" firstAttribute="centerY" secondItem="dDK-ab-Dcm" secondAttribute="centerY" id="3ee-5b-gWX"/>
+                                        <constraint firstItem="Q7Q-e2-vr6" firstAttribute="leading" secondItem="dDK-ab-Dcm" secondAttribute="leadingMargin" id="7Pk-eU-6ue"/>
+                                        <constraint firstItem="YFH-iV-zQK" firstAttribute="leading" secondItem="dDK-ab-Dcm" secondAttribute="leadingMargin" id="8Ul-Il-o6E"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="YFH-iV-zQK" secondAttribute="bottom" id="QcW-gl-BYa"/>
+                                        <constraint firstItem="gFY-b6-B4h" firstAttribute="trailing" secondItem="dDK-ab-Dcm" secondAttribute="trailingMargin" id="ZP7-aI-EMO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="goToNextVcImage" destination="gFY-b6-B4h" id="k34-nt-kNI"/>
+                                    <outlet property="modelDescriptionLabel" destination="YFH-iV-zQK" id="15P-yH-OVl"/>
+                                    <outlet property="modelNameLabel" destination="Q7Q-e2-vr6" id="gVv-yI-CIP"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -88,24 +145,40 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x86-TQ-gRm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="-29"/>
+            <point key="canvasLocation" x="856.52173913043487" y="-29.464285714285712"/>
         </scene>
         <!--Parts Table View Controller-->
         <scene sceneID="IL3-DQ-nIs">
             <objects>
                 <tableViewController id="mOR-4M-li3" customClass="PartsTableViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kJB-IO-ApR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell3" id="8cX-59-F8d">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell3" id="8cX-59-F8d" customClass="PartsTableViewCell" customModule="MyPump" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8cX-59-F8d" id="xXS-su-DF3">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="greaterthan" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="brb-oY-qHm">
+                                            <rect key="frame" x="374" y="15" width="20" height="13.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="20" id="JjH-c5-i9W"/>
+                                                <constraint firstAttribute="width" constant="20" id="s9o-Oh-fps"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="brb-oY-qHm" firstAttribute="centerY" secondItem="xXS-su-DF3" secondAttribute="centerY" id="8qd-Y0-25F"/>
+                                        <constraint firstItem="brb-oY-qHm" firstAttribute="trailing" secondItem="xXS-su-DF3" secondAttribute="trailingMargin" id="wqW-CY-DUO"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="goToNextVcImage" destination="brb-oY-qHm" id="yi1-EG-owO"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -120,14 +193,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0I-uc-dqo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1665" y="-29"/>
+            <point key="canvasLocation" x="1663.7681159420292" y="-29.464285714285712"/>
         </scene>
         <!--Images CollectionVC-->
         <scene sceneID="1Pa-d3-mRI">
             <objects>
                 <collectionViewController id="LSr-HB-2jz" customClass="ImagesCollectionVC" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="JBd-Tl-5C9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lYV-Qd-XqS">
@@ -188,108 +261,40 @@
             <objects>
                 <viewController id="J3w-Jx-grm" customClass="DetailImageViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bSd-Pn-kN8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JiZ-Ab-ow7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="BTB-mm-hLJ"/>
+                    <navigationItem key="navigationItem" id="BTB-mm-hLJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="4bD-b0-2nQ">
+                            <connections>
+                                <action selector="actionButtonTapped:" destination="J3w-Jx-grm" id="NDn-Zg-6wD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ecA-9z-ZJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3183" y="-29"/>
         </scene>
-        <!--TestVC-->
-        <scene sceneID="GHY-5c-zMo">
-            <objects>
-                <viewController id="Lfe-sj-o3h" customClass="TestVC" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="e4h-vc-fU7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ype-lt-oJr">
-                                <rect key="frame" x="184" y="332" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="saveButton:" destination="Lfe-sj-o3h" eventType="touchUpInside" id="Kgf-oi-D1b"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CW0-Md-Ygr">
-                                <rect key="frame" x="188" y="396" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Fetch"/>
-                                <connections>
-                                    <action selector="fetchdataButton:" destination="Lfe-sj-o3h" eventType="touchUpInside" id="SJm-xw-gFv"/>
-                                </connections>
-                            </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wXt-BA-CmT">
-                                <rect key="frame" x="20" y="451" width="374" height="411"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell1" id="WIF-2F-eQ1">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WIF-2F-eQ1" id="ADD-nn-u9r">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="2jZ-LU-vfK"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <connections>
-                        <outlet property="tableView" destination="wXt-BA-CmT" id="eVB-gZ-bDK"/>
-                        <segue destination="GkJ-JE-qDY" kind="show" identifier="getModels" id="CaL-da-fKt"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A32-4i-GWP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-388.40579710144931" y="-749.33035714285711"/>
-        </scene>
-        <!--Second Table View Controller-->
-        <scene sceneID="maV-J1-ZRK">
-            <objects>
-                <tableViewController modalPresentationStyle="fullScreen" id="GkJ-JE-qDY" customClass="SecondTableViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="a3Z-Y1-wbj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YIp-Up-8uC">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YIp-Up-8uC" id="0QH-j2-rxW">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GkJ-JE-qDY" id="uyB-oN-mi9"/>
-                            <outlet property="delegate" destination="GkJ-JE-qDY" id="F6P-Pe-Ej0"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" id="pRp-q6-tTS"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1bI-C5-FLP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="380" y="-749"/>
-        </scene>
         <!--Каталог-->
         <scene sceneID="Twc-WY-GAK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jDw-CM-oh3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Каталог" image="car" catalog="system" selectedImage="car" id="t8w-km-7VR"/>
+                    <tabBarItem key="tabBarItem" title="Каталог" image="car" catalog="system" id="t8w-km-7VR">
+                        <imageReference key="selectedImage" image="car" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qeg-cQ-AcX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Qeg-cQ-AcX" colorLabel="IBBuiltInLabel-Yellow">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" systemColor="systemYellowColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -303,8 +308,15 @@
     </scenes>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
+        <image name="greaterthan" catalog="system" width="128" height="111"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -1,17 +1,12 @@
-//
-//  ImagesCollectionViewCollectionViewController.swift
-//  MyPump
-//
-//  Created by Александр Майко on 30.01.2021.
-//
+
 
 import UIKit
+import Kingfisher
 
 class ImagesCollectionVC: UICollectionViewController {
-
+    
     var agregateTitle: String?
     var partListImageRef = [String]()
-    var selectedImageForShowDetail : UIImage?
     let itemsPerRow: CGFloat = 2 //вынесли из метода, так как здесь удобнее вносить изменения
     let sectionsInsets = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10) // аналогично
     
@@ -39,31 +34,30 @@ class ImagesCollectionVC: UICollectionViewController {
         return cell
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let detailImageVC = segue.destination as? DetailImageViewController
-//        else { return }
-//        switch segue.identifier {
-//        case "getDetailVC":
-//            detailImageVC.image = selectedImageForShowDetail
-//        default:
-//            break
-//        }
-//    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "getDetailVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailImageVC = segue.destination as? DetailImageViewController
+        else { return }
+        switch segue.identifier {
+        case "getDetailVC":
+            let indexPathFromSelectedItem = collectionView.indexPathsForSelectedItems?.first
+            let cell = collectionView.cellForItem(at: indexPathFromSelectedItem!) as? ImagesCollectionViewCell
+            detailImageVC.image = cell?.imageFromCell.image
+        default:
+            break
+        }
+    }
     
     deinit {
         print("deinit")
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "getDetailVC", sender: self)
     }
 }
 
 extension ImagesCollectionVC: UICollectionViewDelegateFlowLayout {
     
-    
-    // КАК ВКЛЮЧИТЬ АКТИВИТИ ИНДИКАТОР
-
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let paddingWidth = sectionsInsets.left * (itemsPerRow + 1)

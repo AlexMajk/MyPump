@@ -18,6 +18,9 @@ class MarkTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        //self.tableView.separatorColor = UIColor.red
         NetworkManager.FetchData(url: url) { [weak self] (data) in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -32,9 +35,15 @@ class MarkTableViewController: UITableViewController {
     }
     
     func configureTableView() {
-        self.title = "MyPump" //??????? этот параметр действует и на tabBarItem, игнорируя его данные
+        self.navigationItem.title = "My pump"
         self.tabBarItem.title = "Каталог"
-        self.tableView.separatorStyle = .none
+//        self.tableView.separatorStyle = .none
+        self.tableView.backgroundColor = UIColor.lightGray
+        self.tableView.separatorStyle = UITableViewCell.SeparatorStyle.singleLine
+//        navigationController?.navigationBar.barTintColor = UIColor.gray
+//        tabBarController?.tabBar.barTintColor = UIColor.gray
+//        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+
     }
     
     // MARK: - Table view data source
@@ -49,8 +58,11 @@ class MarkTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MarkTableViewCell
+        //cell.backgroundColor = UIColor.clear
         let arrayOfMarks = downloadedMarkList[indexPath.row]
         cell.markNameLabel.text = arrayOfMarks.name
+        cell.markNameLabel.textColor = .white
+        cell.markDescriptionLabel.text = arrayOfMarks.description
         cell.markImage.image = UIImage(named: "\(arrayOfMarks.name!)")
         return cell
     }
@@ -62,9 +74,9 @@ class MarkTableViewController: UITableViewController {
         performSegue(withIdentifier: "getModels", sender: self)
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Выберите марку:"
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        return "Выберите марку:"
+//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let modelsVC = segue.destination as? ModelTableViewController        else { return }
