@@ -18,7 +18,6 @@ class ModelTableViewController: UITableViewController {
     
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
-//        navigationItem.leftBarButtonItem?.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Chalkduster", size: 20)!]
         backButton.title = "к выбору марки"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }

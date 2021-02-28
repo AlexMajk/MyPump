@@ -12,7 +12,6 @@ import Alamofire
 import FirebaseStorage
 
 class NetworkManager {
-
 //    static func sendRequest(url: String, completion : @escaping(_ courses1: [Course])->()) {
 //        guard let url = URL(string: url) else { return }
 //        AF.request(url, method: .get).validate().responseJSON { (response) in //встроеный метод request отправояет запрос, а responseJSON говорит о том, что ответ нам нужен в формате JSON, validate говорит о том, что свойство success будет срабатывать только при условии получения кода от 200 до 299
@@ -29,9 +28,9 @@ class NetworkManager {
 //            }
 //        }
 //    }
-    
-    static func FetchData(url: String, completion : @escaping(_ : [Main])->()) {
-        guard let url = URL(string: url) else { return }
+    static func FirstLaunchFetchData(completion : @escaping(_ : [Main])->()) {
+        let baseUrl = "https://mypump-c4d75-default-rtdb.firebaseio.com/.json"
+        guard let url = URL(string: baseUrl ) else {return}
         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data.self else { return }
             guard let downloadedMarks = Mapper<Main>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else {return}
@@ -40,37 +39,37 @@ class NetworkManager {
         }
         task.resume()
     }
-  static  func fetchDataWithAlamofire(url: String,  completion: @escaping (_ image: UIImage)->()){
-        
-        AF.request(url).responseData { (responseData) in
-            switch responseData.result {
-            
-            case .success(let data):
-                guard let image = UIImage(data: data) else { return }
-                completion(image)
-                
-            case .failure(let error):
-                print(error)
-                
-            }
-        }
-        
-    }
-    
-    static func downloadImage(url: String, completion: @escaping (_ image: UIImage)->()) {
-        guard let url = URL(string: url) else { return }
-        let session = URLSession.shared
-        
-        session.dataTask(with: url) { (data, response, error) in
-            if let data = data, let image = UIImage(data: data) {
-                DispatchQueue.main.async {
-                    completion(image)
-    
-
-                }
-            }
-        } .resume()
-    }
+//  static  func fetchDataWithAlamofire(url: String,  completion: @escaping (_ image: UIImage)->()){
+//        
+//        AF.request(url).responseData { (responseData) in
+//            switch responseData.result {
+//            
+//            case .success(let data):
+//                guard let image = UIImage(data: data) else { return }
+//                completion(image)
+//                
+//            case .failure(let error):
+//                print(error)
+//                
+//            }
+//        }
+//        
+//    }
+//    
+//    static func downloadImage(url: String, completion: @escaping (_ image: UIImage)->()) {
+//        guard let url = URL(string: url) else { return }
+//        let session = URLSession.shared
+//        
+//        session.dataTask(with: url) { (data, response, error) in
+//            if let data = data, let image = UIImage(data: data) {
+//                DispatchQueue.main.async {
+//                    completion(image)
+//    
+//
+//                }
+//            }
+//        } .resume()
+//    }
     
     
 //    static func FetchMarks(completion : @escaping(_ array: [String]) -> Void) {

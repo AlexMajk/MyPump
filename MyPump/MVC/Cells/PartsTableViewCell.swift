@@ -12,7 +12,7 @@ class PartsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.goToNextVcImage.tintColor = ColorsScheme.col1
+        self.goToNextVcImage.tintColor = AppColors.detailsColor
         // Initialization code
     }
 

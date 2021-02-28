@@ -10,11 +10,11 @@ import Kingfisher
 
 class DetailImageViewController: UIViewController {
     
-    @IBAction func actionButtonTapped(_ sender: Any) {
-        print("Button tapped")
-        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
-        present(shareController, animated: true, completion: nil)
-    }
+//    @IBAction func actionButtonTapped(_ sender: Any) {
+//        print("Button tapped")
+//        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+//        present(shareController, animated: true, completion: nil)
+//    }
     
     var imageScrollView: ScrollViewManager!
     var image: UIImage?

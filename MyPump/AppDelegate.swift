@@ -13,16 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        UINavigationBar.appearance().barTintColor = UIColor.darkGray
-        UINavigationBar.appearance().tintColor = ColorsScheme.col1
+        UINavigationBar.appearance().barTintColor = AppColors.mainThemeColor
+        UINavigationBar.appearance().tintColor = AppColors.detailsColor
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        UITabBar.appearance().tintColor = ColorsScheme.col1
+        UITabBar.appearance().tintColor = AppColors.detailsColor
         UITabBar.appearance().unselectedItemTintColor = UIColor.white
-        UITabBar.appearance().barTintColor = UIColor.darkGray
-        UITableView.appearance().backgroundColor = UIColor.lightGray
+        UITabBar.appearance().barTintColor = AppColors.mainThemeColor
+        UITableView.appearance().backgroundColor = AppColors.secondThemeColor
         UITableViewCell.appearance().backgroundColor = UIColor.clear
-        //        UICollectionView.appearance().backgroundColor = UIColor.lightGray
-        // Override point for customization after application launch.
         return true
     }
 

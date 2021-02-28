@@ -24,7 +24,7 @@ class MarkList: Mappable, Decodable {
     var description: String?
     var modelList: [ModelList]?
     var name: String?
-    var photoLogo: String?
+    var imageLogoUrl: String?
     
     required init?(map: Map){
     }
@@ -33,7 +33,7 @@ class MarkList: Mappable, Decodable {
         description <- map["description"]
         modelList <- map["modelList"]
         name <- map["name"]
-        photoLogo <- map["photoLogo"]
+        imageLogoUrl <- map["photoLogo"]
     }
 }
 

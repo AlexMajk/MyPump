@@ -43,15 +43,21 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="eIv-n7-BY1">
+                                            <rect key="frame" x="292" y="64.5" width="20" height="20"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="KMJ-E8-745" secondAttribute="trailing" id="9S4-gO-9za"/>
                                         <constraint firstAttribute="bottom" secondItem="KMJ-E8-745" secondAttribute="bottom" constant="11" id="Q2O-Qn-mZB"/>
-                                        <constraint firstItem="KMJ-E8-745" firstAttribute="leading" secondItem="ic6-Bz-jBp" secondAttribute="leading" constant="190" id="Rqf-QU-ShI"/>
+                                        <constraint firstItem="eIv-n7-BY1" firstAttribute="centerY" secondItem="KMJ-E8-745" secondAttribute="centerY" id="RmZ-zJ-zAr"/>
                                         <constraint firstItem="KMJ-E8-745" firstAttribute="top" secondItem="ic6-Bz-jBp" secondAttribute="top" constant="11" id="d9I-lH-RUn"/>
+                                        <constraint firstItem="eIv-n7-BY1" firstAttribute="leading" secondItem="KMJ-E8-745" secondAttribute="trailing" constant="-122" id="jCy-uj-jPR"/>
+                                        <constraint firstItem="KMJ-E8-745" firstAttribute="leading" secondItem="ic6-Bz-jBp" secondAttribute="leading" constant="190" id="md6-YR-mPA"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="eIv-n7-BY1" id="lTc-mz-uw1"/>
                                     <outlet property="markDescriptionLabel" destination="Maq-IZ-2K9" id="UF9-dF-ecX"/>
                                     <outlet property="markImage" destination="KMJ-E8-745" id="UwQ-J6-vgf"/>
                                     <outlet property="markNameLabel" destination="eHs-cU-958" id="3nq-hX-bQk"/>
