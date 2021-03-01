@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2607522025AF8DEF009B710F /* ModelTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2607521F25AF8DEE009B710F /* ModelTableViewController.swift */; };
-		262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */; };
+		262D058B25A5DD3A0028FFF1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D058925A5DD3A0028FFF1 /* MainViewController.swift */; };
 		262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D059A25A6004B0028FFF1 /* NetworkManager.swift */; };
 		262D061025A6670F0028FFF1 /* Calculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 262D060F25A6670F0028FFF1 /* Calculator.storyboard */; };
 		262D067F25A89A340028FFF1 /* MarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262D067E25A89A340028FFF1 /* MarkTableViewCell.swift */; };
@@ -19,7 +19,7 @@
 		263D0D7825C71ACB00F0173A /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263D0D7725C71ACB00F0173A /* DetailImageViewController.swift */; };
 		2642F91125A1F0D3003CB42A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F91025A1F0D3003CB42A /* AppDelegate.swift */; };
 		2642F91325A1F0D3003CB42A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2642F91225A1F0D3003CB42A /* SceneDelegate.swift */; };
-		2642F91825A1F0D3003CB42A /* MarkTableViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */; };
+		2642F91825A1F0D3003CB42A /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91625A1F0D3003CB42A /* MainViewController.storyboard */; };
 		2642F91A25A1F0D5003CB42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91925A1F0D5003CB42A /* Assets.xcassets */; };
 		2642F91D25A1F0D5003CB42A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2642F91B25A1F0D5003CB42A /* LaunchScreen.storyboard */; };
 		2686CC7225D7E3F50014366E /* ModelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2686CC7125D7E3F50014366E /* ModelTableViewCell.swift */; };
@@ -39,7 +39,7 @@
 		053F50A850914E590C4F3BFA /* Pods-MyPump.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.debug.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.debug.xcconfig"; sourceTree = "<group>"; };
 		1559DAAF07261E9863B919A5 /* Pods-MyPump.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyPump.release.xcconfig"; path = "Target Support Files/Pods-MyPump/Pods-MyPump.release.xcconfig"; sourceTree = "<group>"; };
 		2607521F25AF8DEE009B710F /* ModelTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableViewController.swift; sourceTree = "<group>"; };
-		262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewController.swift; sourceTree = "<group>"; };
+		262D058925A5DD3A0028FFF1 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		262D059A25A6004B0028FFF1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		262D060F25A6670F0028FFF1 /* Calculator.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calculator.storyboard; sourceTree = "<group>"; };
 		262D067E25A89A340028FFF1 /* MarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkTableViewCell.swift; sourceTree = "<group>"; };
@@ -51,7 +51,7 @@
 		2642F90D25A1F0D3003CB42A /* MyPump.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPump.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2642F91025A1F0D3003CB42A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2642F91225A1F0D3003CB42A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2642F91725A1F0D3003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MarkTableViewController.storyboard; sourceTree = "<group>"; };
+		2642F91725A1F0D3003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainViewController.storyboard; sourceTree = "<group>"; };
 		2642F91925A1F0D5003CB42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2642F91C25A1F0D5003CB42A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2642F91E25A1F0D5003CB42A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				94D426DB25A530AB001DB1D7 /* Tabbar */,
-				94D426E425A531D6001DB1D7 /* CatalogViewController */,
+				94D426E425A531D6001DB1D7 /* MainViewController */,
 				94D426EE25A53539001DB1D7 /* CalculatorViewController */,
 				94D426EF25A53552001DB1D7 /* SettingViewController */,
 			);
@@ -179,17 +179,17 @@
 			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		94D426E425A531D6001DB1D7 /* CatalogViewController */ = {
+		94D426E425A531D6001DB1D7 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */,
-				262D058925A5DD3A0028FFF1 /* MarkTableViewController.swift */,
+				2642F91625A1F0D3003CB42A /* MainViewController.storyboard */,
+				262D058925A5DD3A0028FFF1 /* MainViewController.swift */,
 				2607521F25AF8DEE009B710F /* ModelTableViewController.swift */,
 				263D0D6225C4858600F0173A /* PartsTableViewController.swift */,
 				263D0D6B25C5B5E900F0173A /* ImagesCollectionVC.swift */,
 				263D0D7725C71ACB00F0173A /* DetailImageViewController.swift */,
 			);
-			path = CatalogViewController;
+			path = MainViewController;
 			sourceTree = "<group>";
 		};
 		94D426EE25A53539001DB1D7 /* CalculatorViewController */ = {
@@ -301,7 +301,7 @@
 				2642F91D25A1F0D5003CB42A /* LaunchScreen.storyboard in Resources */,
 				94D426FE25A535BD001DB1D7 /* Setting.storyboard in Resources */,
 				2642F91A25A1F0D5003CB42A /* Assets.xcassets in Resources */,
-				2642F91825A1F0D3003CB42A /* MarkTableViewController.storyboard in Resources */,
+				2642F91825A1F0D3003CB42A /* MainViewController.storyboard in Resources */,
 				26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */,
 				262D061025A6670F0028FFF1 /* Calculator.storyboard in Resources */,
 			);
@@ -380,7 +380,7 @@
 				263D0D6F25C5B6A400F0173A /* ImagesCollectionViewCell.swift in Sources */,
 				94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */,
 				2686CC7225D7E3F50014366E /* ModelTableViewCell.swift in Sources */,
-				262D058B25A5DD3A0028FFF1 /* MarkTableViewController.swift in Sources */,
+				262D058B25A5DD3A0028FFF1 /* MainViewController.swift in Sources */,
 				2607522025AF8DEF009B710F /* ModelTableViewController.swift in Sources */,
 				263D0D6C25C5B5E900F0173A /* ImagesCollectionVC.swift in Sources */,
 				26CF176B25D90FD5007A6B6A /* UINavigationControllerExtension.swift in Sources */,
@@ -398,12 +398,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2642F91625A1F0D3003CB42A /* MarkTableViewController.storyboard */ = {
+		2642F91625A1F0D3003CB42A /* MainViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2642F91725A1F0D3003CB42A /* Base */,
 			);
-			name = MarkTableViewController.storyboard;
+			name = MainViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		2642F91B25A1F0D5003CB42A /* LaunchScreen.storyboard */ = {

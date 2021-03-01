@@ -7,8 +7,7 @@ class ImagesCollectionVC: UICollectionViewController {
     
     var agregateTitle: String?
     var partListImageRef = [String]()
-    let itemsPerRow: CGFloat = 2 //вынесли из метода, так как здесь удобнее вносить изменения
-    let sectionsInsets = UIEdgeInsets(top: 20, left: 10, bottom: 20, right: 10) // аналогично
+
     
     override func viewDidLoad() {
     }
@@ -57,12 +56,30 @@ class ImagesCollectionVC: UICollectionViewController {
 }
 
 extension ImagesCollectionVC: UICollectionViewDelegateFlowLayout {
-    
+
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let paddingWidth = sectionsInsets.left * (itemsPerRow + 1)
-        let itemWidth = (collectionView.frame.width - paddingWidth) / itemsPerRow
-        let itemHight = itemWidth
-        return CGSize(width: itemWidth, height: itemHight)
+        let itemsPerRow: CGFloat = 2 //ячеек на ряд
+        let paddingWidth = 5 * (itemsPerRow + 1)
+        let avilableWith = collectionView.frame.width - paddingWidth // доступная ширина для нашего использования
+        let itemWidth = avilableWith / itemsPerRow
+////        let itemHight = itemWidth
+//        let itemHight =
+        return CGSize(width: itemWidth, height: (itemWidth + 20))
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+        
+    }
+
+
 }

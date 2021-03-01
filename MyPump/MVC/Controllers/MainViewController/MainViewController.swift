@@ -10,7 +10,7 @@ import ObjectMapper
 import FirebaseDatabase
 import FirebaseStorage
 
-class MarkTableViewController: UITableViewController {
+class MainViewController: UITableViewController {
     var downloadedMarkList = [MarkList]()
     var selectedMark = [ModelList]()
     

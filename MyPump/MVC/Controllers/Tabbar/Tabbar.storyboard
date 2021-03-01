@@ -16,7 +16,6 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="n6y-uG-aIm" kind="relationship" relationship="viewControllers" id="SDA-1m-DdD"/>
                         <segue destination="NqU-qY-S8s" kind="relationship" relationship="viewControllers" id="3qB-HT-nlN"/>
                         <segue destination="Rj4-hD-O0i" kind="relationship" relationship="viewControllers" id="d4I-1r-Si7"/>
                     </connections>
@@ -44,16 +43,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1my-fU-XIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="484" y="-72"/>
-        </scene>
-        <!--MarkTableViewController-->
-        <scene sceneID="BVi-zb-dtG">
-            <objects>
-                <viewControllerPlaceholder storyboardName="MarkTableViewController" id="n6y-uG-aIm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Opg-9a-Nui"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DBQ-fd-S1s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="496" y="-445"/>
         </scene>
     </scenes>
 </document>
