@@ -9,65 +9,63 @@ import Foundation
 import ObjectMapper
 class Main: Mappable, Decodable {
     
-    var markList: [MarkList]?
+    var catalogueMainList: [CatalogueMainList]?
     
     required init?(map: Map){
     }
     
     func mapping(map: Map) {
-        markList <- map["markList"]
+        catalogueMainList <- map["catalogueMainList"]
     }
 }
 
-class MarkList: Mappable, Decodable {
+class CatalogueMainList: Mappable, Decodable {
     
+    var mainListTitle: String?
     var description: String?
-    var modelList: [ModelList]?
-    var name: String?
-    var imageLogoUrl: String?
+    var catalogueMainListImageUrl : String?
+    var catalogueSecondList: [CatalogueSecondList]?
     
     required init?(map: Map){
     }
     
     func mapping(map: Map) {
+        mainListTitle <- map["mainListTitle"]
         description <- map["description"]
-        modelList <- map["modelList"]
-        name <- map["name"]
-        imageLogoUrl <- map["photoLogo"]
+        catalogueMainListImageUrl <- map["catalogueMainListImageUrl"]
+        catalogueSecondList <- map["catalogueSecondList"]
+        
     }
 }
 
-class ModelList: Mappable, Decodable {
+class CatalogueSecondList: Mappable, Decodable {
     
+    var secondListTitle: String?
     var description: String?
-    var name: String?
-    var partList: [PartList]?
-    var yearsOfRelease: String?
+    var catalogueSecondListImageUrl: String?
+    var catalogueThirdList: [CatalogueThirdList]?
     
     required init?(map: Map){
     }
     
     func mapping(map: Map) {
+        secondListTitle <- map["secondListTitle"]
         description <- map["description"]
-        name <- map["name"]
-        partList <- map["partList"]
-        yearsOfRelease <- map["years of release"]
+        catalogueSecondListImageUrl <- map["catalogueSecondListImageUrl"]
+        catalogueThirdList <- map["catalogueThirdList"]
     }
 }
 
-class PartList: Mappable, Decodable {
+class CatalogueThirdList: Mappable, Decodable {
     
-    var name: String?
+    var thirdListTitle: String?
     var photo: [String]?
     
     required init?(map: Map){
     }
     
     func mapping(map: Map) {
-        name <- map["name"]
+        thirdListTitle <- map["thirdListTitle"]
         photo <- map["photo"]
     }
-//class Photo: NSObject {
-//    var photo: String?
-//}
 }

@@ -9,8 +9,8 @@ import UIKit
 
 class PartsTableViewController: UITableViewController {
 
-    var downloadedParts = [PartList]()
-    var selectedPartsUrls = [String]()
+    var downloadedItems = [CatalogueThirdList]()
+    var selectedItemsUrls = [String]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -37,19 +37,19 @@ class PartsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return downloadedParts.count
+        return downloadedItems.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath)
-        cell.textLabel?.text = downloadedParts[indexPath.row].name
+        cell.textLabel?.text = downloadedItems[indexPath.row].thirdListTitle
         
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedPartsUrls = downloadedParts[indexPath.row].photo!
+        self.selectedItemsUrls = downloadedItems[indexPath.row].photo!
         performSegue(withIdentifier: "getImagesVC", sender: self)
     }
     
@@ -61,7 +61,7 @@ class PartsTableViewController: UITableViewController {
         switch segue.identifier {
         
         case "getImagesVC":
-            imagesVC.partListImageRef = selectedPartsUrls
+            imagesVC.partListImageRef = selectedItemsUrls
             
         default:
             break

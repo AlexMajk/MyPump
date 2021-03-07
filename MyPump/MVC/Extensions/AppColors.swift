@@ -12,7 +12,7 @@ import UIKit
 class AppColors {
     static let detailsColor = UIColor(hex:"#ffc500")
     static let mainThemeColor = UIColor(hex: "#2f4f4f")
-    static let secondThemeColor = UIColor(hex: "#9aa19e")
+    static let secondThemeColor = UIColor(hex: "#FFFFFF")
 }
 
 extension UIColor {

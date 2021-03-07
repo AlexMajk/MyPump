@@ -12,6 +12,7 @@ class ImagesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageFromCell: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var ImageNameLabel: UILabel!
     
 //    let fbManager = FBDataManager.shared
     

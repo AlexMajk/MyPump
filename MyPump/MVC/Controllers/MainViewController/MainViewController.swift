@@ -11,8 +11,8 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class MainViewController: UITableViewController {
-    var downloadedMarkList = [MarkList]()
-    var selectedMark = [ModelList]()
+    var downloadedCatalogueMainList = [CatalogueMainList]()
+    var selectedCatalogueMainItem = [CatalogueSecondList]()
     
     
     override func viewDidLoad() {
@@ -20,7 +20,7 @@ class MainViewController: UITableViewController {
         NetworkManager.FirstLaunchFetchData() { [weak self] (data) in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.downloadedMarkList = data[0].markList!
+                self.downloadedCatalogueMainList = data[0].catalogueMainList!
                 self.tableView.reloadData()
             }
         }
@@ -54,29 +54,29 @@ class MainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return downloadedMarkList.count
+        return downloadedCatalogueMainList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let arrayOfMarks = downloadedMarkList[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MarkTableViewCell
-        cell.configureCell(data: arrayOfMarks)
+        let arrayOfItems = downloadedCatalogueMainList[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MainTableViewCell
+        cell.configureCell(data: arrayOfItems)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard downloadedMarkList[indexPath.row].modelList != nil else {return}
-        self.selectedMark = downloadedMarkList[indexPath.row].modelList!
-        performSegue(withIdentifier: "getModels", sender: self)
+        guard downloadedCatalogueMainList[indexPath.row].catalogueSecondList != nil else {return}
+        self.selectedCatalogueMainItem = downloadedCatalogueMainList[indexPath.row].catalogueSecondList!
+        performSegue(withIdentifier: "getSecondVC", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let modelsVC = segue.destination as? ModelTableViewController        else { return }
+        guard let secondVC = segue.destination as? SecondTableViewController        else { return }
         
         switch segue.identifier {
         
-        case "getModels":
-            modelsVC.modelsDownloaded = selectedMark
+        case "getSecondVC":
+            secondVC.downloadedCatalogueSecondList = selectedCatalogueMainItem
             
         default:
             break

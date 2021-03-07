@@ -16,33 +16,44 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="NqU-qY-S8s" kind="relationship" relationship="viewControllers" id="3qB-HT-nlN"/>
-                        <segue destination="Rj4-hD-O0i" kind="relationship" relationship="viewControllers" id="d4I-1r-Si7"/>
+                        <segue destination="tn4-Ef-p6i" kind="relationship" relationship="viewControllers" id="hGx-tL-Nfa"/>
+                        <segue destination="qFT-LN-I5M" kind="relationship" relationship="viewControllers" id="2uF-Us-TwH"/>
+                        <segue destination="NzP-LI-R7g" kind="relationship" relationship="viewControllers" id="xIB-Ox-Xd5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tW5-Lc-0vO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-526" y="-170"/>
         </scene>
-        <!--Calculator-->
-        <scene sceneID="8Km-WD-uQy">
+        <!--MainViewController-->
+        <scene sceneID="fie-h5-EJi">
             <objects>
-                <viewControllerPlaceholder storyboardName="Calculator" id="Rj4-hD-O0i" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6op-6k-jrY"/>
+                <viewControllerPlaceholder storyboardName="MainViewController" id="tn4-Ef-p6i" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="VUB-kI-ZKa"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fK2-qE-WK9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZx-P5-6TQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="452" y="-211"/>
+            <point key="canvasLocation" x="492" y="-355"/>
+        </scene>
+        <!--Calculator-->
+        <scene sceneID="fJJ-b6-e18">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Calculator" id="qFT-LN-I5M" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="TsV-Gf-cey"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YNB-Qx-4zp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="483" y="-253"/>
         </scene>
         <!--Setting-->
-        <scene sceneID="W1e-zh-DJD">
+        <scene sceneID="Pes-WN-f0V">
             <objects>
-                <viewControllerPlaceholder storyboardName="Setting" id="NqU-qY-S8s" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="kcj-MJ-wks"/>
+                <viewControllerPlaceholder storyboardName="Setting" id="NzP-LI-R7g" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hRb-SZ-GKQ"/>
                 </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1my-fU-XIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hqF-2t-mG9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="484" y="-72"/>
+            <point key="canvasLocation" x="385" y="-144"/>
         </scene>
     </scenes>
 </document>

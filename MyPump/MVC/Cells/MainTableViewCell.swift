@@ -8,23 +8,23 @@
 import UIKit
 import Kingfisher
 
-class MarkTableViewCell: UITableViewCell {
+class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var markNameLabel: UILabel!
     @IBOutlet weak var markDescriptionLabel: UILabel!
     @IBOutlet weak var markImage: UIImageView!
 
-    func configureCell(data: MarkList) {
+    func configureCell(data: CatalogueMainList) {
         self.markNameLabel.textColor = .white
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
-        guard let markName = data.name else {return}
+        guard let markName = data.mainListTitle else {return}
         self.markNameLabel.text = markName
         guard let markDescription = data.description else {return}
         self.markDescriptionLabel.text = markDescription
 
-        guard let url = URL(string: data.imageLogoUrl!) else { return }
+        guard let url = URL(string: data.catalogueMainListImageUrl!) else { return }
         DispatchQueue.main.async {
             self.markImage.kf.setImage(
                 with: url,
