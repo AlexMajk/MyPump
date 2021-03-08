@@ -300,6 +300,7 @@ PODS:
   - nanopb/decode (2.30906.0)
   - nanopb/encode (2.30906.0)
   - ObjectMapper (4.2.0)
+  - PageMaster (1.0)
   - PromisesObjC (1.2.12)
   - SwiftLint (0.42.0)
 
@@ -311,6 +312,7 @@ DEPENDENCIES:
   - Kingfisher (~> 6.0)
   - Moya (~> 14.0)
   - ObjectMapper
+  - PageMaster
   - SwiftLint
 
 SPEC REPOS:
@@ -334,6 +336,7 @@ SPEC REPOS:
     - Moya
     - nanopb
     - ObjectMapper
+    - PageMaster
     - PromisesObjC
     - SwiftLint
 
@@ -357,9 +360,10 @@ SPEC CHECKSUMS:
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   nanopb: 1bf24dd71191072e120b83dd02d08f3da0d65e53
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  PageMaster: 129433773a1df1b0f0b5d6059b063671ab78f12b
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: 550fb63aa96ef4155a2c3413166832a8e13ed552
+PODFILE CHECKSUM: e39b80229e29346845829cc98e8d1e29432738cf
 
 COCOAPODS: 1.10.0

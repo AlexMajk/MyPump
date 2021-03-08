@@ -71,7 +71,8 @@ class MainViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let secondVC = segue.destination as? SecondTableViewController        else { return }
+        guard let secondVC = segue.destination as? SecondTableViewController
+        else { return }
         
         switch segue.identifier {
         
