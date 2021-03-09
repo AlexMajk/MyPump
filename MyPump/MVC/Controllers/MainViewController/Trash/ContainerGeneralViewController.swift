@@ -7,6 +7,7 @@
 
 import UIKit
 import PageMaster
+import SideMenu
 
 struct MarksPumps {
     var backgroundColor: UIColor
@@ -18,6 +19,7 @@ class ContainerGeneralViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    var menu: SideMenuNavigationController?
     private var selectedCurrencyIndex = 0
     
     let marksPumpsList = [MarksPumps(backgroundColor: .red,
@@ -38,7 +40,20 @@ class ContainerGeneralViewController: UIViewController {
         super.viewDidLoad()
         setupPageMaster()
         setupCollectionViewUI()
-        // Do any additional setup after loading the view.
+        setupUIView()
+        let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
+        let sideMenuViewController = storyboard.instantiateViewController(identifier: "SideMenuViewController") as! SideMenuViewController
+        menu = SideMenuNavigationController(rootViewController: sideMenuViewController)
+        menu?.blurEffectStyle = .dark
+        
+        menu?.leftSide = true
+        SideMenuManager.default.leftMenuNavigationController = menu
+        SideMenuManager.default.addPanGestureToPresent(toView: self.view)
+    }
+    
+    
+    private func setupUIView() {
+        self.title = "Бетононасосы"
     }
     
     private func setupPageMaster() {
@@ -59,6 +74,11 @@ class ContainerGeneralViewController: UIViewController {
         self.pageMaster.didMove(toParent: self)
     }
     
+    @IBAction func MenuButtonPressed(_ sender: UIBarButtonItem) {
+        
+        
+        present(menu!, animated: true)
+    }
     private func setupCollectionViewUI() {
         collectionView.register(UINib(nibName: "MarkPumpsCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MarkPumpsCollectionViewCell")
     }
@@ -96,3 +116,4 @@ extension ContainerGeneralViewController: PageMasterDelegate {
         }
     }
 }
+

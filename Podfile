@@ -10,11 +10,12 @@ target 'MyPump' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'
   pod 'Firebase/Database'
-pod 'Alamofire', '~> 5.2'
-pod 'ObjectMapper'
-pod 'Moya', '~> 14.0'
-pod 'SwiftLint'
-pod 'Kingfisher', '~> 6.0'
-pod 'PageMaster'
+  pod 'Alamofire', '~> 5.2'
+  pod 'ObjectMapper'
+  pod 'Moya', '~> 14.0'
+  pod 'SwiftLint'
+  pod 'Kingfisher', '~> 6.0'
+  pod 'PageMaster'
+  pod 'SideMenu'
 
 end

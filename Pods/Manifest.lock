@@ -302,6 +302,7 @@ PODS:
   - ObjectMapper (4.2.0)
   - PageMaster (1.0)
   - PromisesObjC (1.2.12)
+  - SideMenu (6.5.0)
   - SwiftLint (0.42.0)
 
 DEPENDENCIES:
@@ -313,6 +314,7 @@ DEPENDENCIES:
   - Moya (~> 14.0)
   - ObjectMapper
   - PageMaster
+  - SideMenu
   - SwiftLint
 
 SPEC REPOS:
@@ -338,6 +340,7 @@ SPEC REPOS:
     - ObjectMapper
     - PageMaster
     - PromisesObjC
+    - SideMenu
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -362,8 +365,9 @@ SPEC CHECKSUMS:
   ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
   PageMaster: 129433773a1df1b0f0b5d6059b063671ab78f12b
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
   SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
 
-PODFILE CHECKSUM: e39b80229e29346845829cc98e8d1e29432738cf
+PODFILE CHECKSUM: 5c7168f3160b13b7d6ef1d65d9dcaff6d0b1e3da
 
 COCOAPODS: 1.10.0

@@ -66,6 +66,38 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionType = tableSections[section]
+        switch sectionType {
+        case .photo:
+            return UIView()
+        case .description:
+            return UIView()
+        case .moreInformation:
+            return UIView()
+        case .otherInformation:
+            return UIView()
+        case .pumpsModelList:
+            return ModelsListPumpsHeaderView.configure()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        let sectionType = tableSections[section]
+        switch sectionType {
+        case .photo:
+            return 0
+        case .description:
+            return 0
+        case .moreInformation:
+            return 0
+        case .otherInformation:
+            return 0
+        case .pumpsModelList:
+            return 40
+        }
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return tableSections.count
     }
