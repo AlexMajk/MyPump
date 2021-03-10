@@ -8,12 +8,10 @@
 import UIKit
 
 class ModelsListPumpsHeaderView: UIView {
-   
-    class func configure() -> ModelsListPumpsHeaderView {
-        let header = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
-        return header
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+     func setTitleLabel(title: String){
+        titleLabel.text = title
     }
-
-    
-    
 }

@@ -15,6 +15,7 @@ class MarkPumpsViewController: UIViewController {
         case pumpsModelList
         case description
         case otherInformation
+        case accessoriesPumps
     }
     
     var tableSections: [SectionType] = []
@@ -23,7 +24,7 @@ class MarkPumpsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableSections = [.photo, .moreInformation, .pumpsModelList]
+        tableSections = [.photo, .moreInformation, .pumpsModelList, .accessoriesPumps]
         
         tableView.register(UINib(nibName: "MarkImageTableViewCell", bundle: nil), forCellReuseIdentifier: "MarkImageTableViewCell")
         tableView.register(UINib(nibName: "ReadMoreTableViewCell", bundle: nil), forCellReuseIdentifier: "ReadMoreTableViewCell")
@@ -47,6 +48,8 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
             return 1
         case .pumpsModelList:
             return 60
+        case .accessoriesPumps:
+            return 60
         }
     }
     
@@ -63,6 +66,8 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
             return 1
         case .pumpsModelList:
             return 7
+        case .accessoriesPumps:
+            return 20
         }
     }
     
@@ -78,7 +83,13 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         case .otherInformation:
             return UIView()
         case .pumpsModelList:
-            return ModelsListPumpsHeaderView.configure()
+            let headerView = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
+            headerView.setTitleLabel(title: "Модельный ряд")
+            return headerView
+        case .accessoriesPumps:
+            let headerView = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
+            headerView.setTitleLabel(title: "Запчасти / комплектующие")
+            return headerView
         }
     }
     
@@ -94,6 +105,8 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         case .otherInformation:
             return 0
         case .pumpsModelList:
+            return 40
+        case .accessoriesPumps:
             return 40
         }
     }
@@ -120,12 +133,15 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         case .pumpsModelList:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ModelsPupmTableViewCell", for: indexPath) as! ModelsPupmTableViewCell
             return cell
+        case .accessoriesPumps:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ModelsPupmTableViewCell", for: indexPath) as! ModelsPupmTableViewCell
+            return cell
         }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        let vc = PumpsDetailViewController(name: "")
+        navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
 }

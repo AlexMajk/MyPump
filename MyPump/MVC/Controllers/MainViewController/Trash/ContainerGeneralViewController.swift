@@ -30,6 +30,12 @@ class ContainerGeneralViewController: UIViewController {
                                      Description: "Good Pumps"),
                           MarksPumps(backgroundColor: .green,
                                      name: "BMS",
+                                     Description: "Good Pumps"),
+                          MarksPumps(backgroundColor: .red,
+                                     name: "Другие запчасти",
+                                     Description: "Good Pumps"),
+                          MarksPumps(backgroundColor: .red,
+                                     name: "Видео Руководство",
                                      Description: "Good Pumps")]
     
     @IBOutlet weak var containerView: UIView!
@@ -59,13 +65,17 @@ class ContainerGeneralViewController: UIViewController {
     private func setupPageMaster() {
         self.pageMaster.pageDelegate = self
         var vcList: [UIViewController] = []
+        let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
        
-        for pumps in marksPumpsList {
-            
-            let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
+        for _ in 0 ... marksPumpsList.count - 3 {
             let vc = storyboard.instantiateViewController(identifier: "MarkPumpsViewController") as! MarkPumpsViewController
             vcList.append(vc)
         }
+        let vc = storyboard.instantiateViewController(identifier: "OtherAccessoriesViewController") as! OtherAccessoriesViewController
+        vcList.append(vc)
+        
+        let watchVc = storyboard.instantiateViewController(identifier: "WatchViewController") as! WatchViewController
+        vcList.append(watchVc)
         
         self.pageMaster.setup(vcList)
         self.addChild(self.pageMaster)

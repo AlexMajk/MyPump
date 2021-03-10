@@ -28,6 +28,9 @@
                 <constraint firstItem="E2W-YM-bZ8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="mP4-0P-W8e"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="E2W-YM-bZ8" id="cqc-Hh-fdq"/>
+            </connections>
             <point key="canvasLocation" x="-212.31884057971016" y="-216.96428571428569"/>
         </view>
     </objects>

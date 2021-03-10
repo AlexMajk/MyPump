@@ -34,6 +34,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="lSa-bI-jOi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="55y-LK-KTj"/>
                     <constraint firstItem="lSa-bI-jOi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="GWg-2e-WVS"/>
@@ -42,6 +43,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <point key="canvasLocation" x="130" y="86"/>
         </tableViewCell>
     </objects>

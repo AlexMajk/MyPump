@@ -9,15 +9,20 @@ import UIKit
 
 class SideMenuViewController: UIViewController {
     
-    var menuList = ["продукция", "запчасти", "сервис и услуги", "где купить", "новости", "О компании", "контакты", "Предложение об улучшении приложения"]
+    var menuList = ["продукция",
+                    "запчасти",
+                    "сервис и услуги",
+                    "где купить",
+                    "новости",
+                    "О компании",
+                    "контакты",
+                    "Предложение об улучшении приложения"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
-
 }
 
 extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
@@ -30,6 +35,4 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = menuList[indexPath.row]
         return cell
     }
-    
-    
 }
