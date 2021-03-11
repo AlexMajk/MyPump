@@ -18,22 +18,42 @@ class MarkPumpsViewController: UIViewController {
         case accessoriesPumps
     }
     
-    var tableSections: [SectionType] = []
+    private var timer: Timer?
+    private var tableSections: [SectionType] = []
+    private var isShowModels = true
+    private var isShowAccessories = true
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSections = [.photo, .moreInformation, .pumpsModelList, .accessoriesPumps]
-        
         tableView.register(UINib(nibName: "MarkImageTableViewCell", bundle: nil), forCellReuseIdentifier: "MarkImageTableViewCell")
         tableView.register(UINib(nibName: "ReadMoreTableViewCell", bundle: nil), forCellReuseIdentifier: "ReadMoreTableViewCell")
         tableView.register(UINib(nibName: "ModelsPupmTableViewCell", bundle: nil), forCellReuseIdentifier: "ModelsPupmTableViewCell")
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if timer == nil {
+            timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(targetTimer), userInfo: nil, repeats: true)
+        }
+    }
+    
+    var count = 0
+    @objc func targetTimer() {
+        count += 1
+        tableView.reloadData()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer?.invalidate()
+        timer = nil
+    }
 }
 
 extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let sectionType = tableSections[indexPath.section]
@@ -65,30 +85,26 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         case .otherInformation:
             return 1
         case .pumpsModelList:
-            return 7
+            return isShowModels ? 7 : 0
         case .accessoriesPumps:
-            return 20
+            return isShowAccessories ? 10 : 0
         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionType = tableSections[section]
+        let headerView = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
+        headerView.delegate = self
         switch sectionType {
-        case .photo:
-            return UIView()
-        case .description:
-            return UIView()
-        case .moreInformation:
-            return UIView()
-        case .otherInformation:
-            return UIView()
+        case .photo, .description, .moreInformation, .otherInformation:
+            return nil
         case .pumpsModelList:
-            let headerView = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
             headerView.setTitleLabel(title: "Модельный ряд")
+            headerView.setSectionInTableView(section: section)
             return headerView
         case .accessoriesPumps:
-            let headerView = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
             headerView.setTitleLabel(title: "Запчасти / комплектующие")
+            headerView.setSectionInTableView(section: section)
             return headerView
         }
     }
@@ -96,17 +112,9 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         let sectionType = tableSections[section]
         switch sectionType {
-        case .photo:
+        case .photo, .description, .moreInformation, .otherInformation:
             return 0
-        case .description:
-            return 0
-        case .moreInformation:
-            return 0
-        case .otherInformation:
-            return 0
-        case .pumpsModelList:
-            return 40
-        case .accessoriesPumps:
+        case .pumpsModelList, .accessoriesPumps:
             return 40
         }
     }
@@ -120,6 +128,7 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         switch sectionType {
         case .photo:
             let cell = tableView.dequeueReusableCell(withIdentifier: "MarkImageTableViewCell", for: indexPath) as! MarkImageTableViewCell
+            cell.configure(number: count % 2)
             return cell
         case .moreInformation:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReadMoreTableViewCell", for: indexPath) as! ReadMoreTableViewCell
@@ -143,5 +152,17 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         tableView.deselectRow(at: indexPath, animated: true)
         let vc = PumpsDetailViewController(name: "")
         navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+extension MarkPumpsViewController: ModelsListPumpsHeaderViewDelegate {
+    func hiddenButtonPressed(section: Int) {
+        if section == 2 {
+            isShowModels = !isShowModels
+            tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+        } else if section == 3 {
+            isShowAccessories = !isShowAccessories
+            tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+        }
     }
 }

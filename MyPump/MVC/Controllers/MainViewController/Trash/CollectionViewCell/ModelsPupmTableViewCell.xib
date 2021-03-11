@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -24,7 +25,7 @@
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xoY-gA-wob">
-                        <rect key="frame" x="16" y="10" width="50" height="49"/>
+                        <rect key="frame" x="40" y="10" width="50" height="49"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Brinkmann" translatesAutoresizingMaskIntoConstraints="NO" id="SD7-sp-H1H">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="49"/>
@@ -40,28 +41,39 @@
                             <constraint firstItem="SD7-sp-H1H" firstAttribute="top" secondItem="xoY-gA-wob" secondAttribute="top" id="o0J-Qi-oBs"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БЕТОНОНАСОС BSA 1004 E" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvs-DI-c56">
-                        <rect key="frame" x="76" y="10" width="234" height="49"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="1" green="1" blue="0.2537992295" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="БЕТОНОНАСОС BSA 1004 E" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvs-DI-c56">
+                        <rect key="frame" x="100" y="10" width="210" height="49"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZRe-yN-7hT">
+                        <rect key="frame" x="16" y="26.5" width="16" height="16"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="16" id="5vS-gb-YCf"/>
+                            <constraint firstAttribute="height" constant="16" id="Wr9-nA-VJy"/>
+                        </constraints>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" red="0.51907641270000004" green="0.54840004279999999" blue="0.55733625860000002" alpha="1" colorSpace="calibratedRGB"/>
                 <constraints>
                     <constraint firstItem="xoY-gA-wob" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0p0-hu-Ry7"/>
                     <constraint firstAttribute="bottom" secondItem="xoY-gA-wob" secondAttribute="bottom" constant="10" id="CoF-Mr-TTB"/>
+                    <constraint firstItem="ZRe-yN-7hT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="OMF-LN-ePA"/>
                     <constraint firstItem="tvs-DI-c56" firstAttribute="leading" secondItem="xoY-gA-wob" secondAttribute="trailing" constant="10" id="RfM-Ot-I0r"/>
                     <constraint firstItem="3wn-M9-03B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="SnP-nQ-Nqn"/>
+                    <constraint firstItem="ZRe-yN-7hT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="VR1-j6-2Nr"/>
                     <constraint firstAttribute="bottom" secondItem="tvs-DI-c56" secondAttribute="bottom" constant="10" id="d0x-4E-e1z"/>
                     <constraint firstAttribute="trailing" secondItem="3wn-M9-03B" secondAttribute="trailing" id="dUi-FQ-fZ1"/>
                     <constraint firstItem="tvs-DI-c56" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="inr-AE-gV9"/>
                     <constraint firstAttribute="bottom" secondItem="3wn-M9-03B" secondAttribute="bottom" id="kgg-vT-6pV"/>
-                    <constraint firstItem="xoY-gA-wob" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="pA6-El-gR8"/>
+                    <constraint firstItem="xoY-gA-wob" firstAttribute="leading" secondItem="ZRe-yN-7hT" secondAttribute="trailing" constant="8" id="vwK-bw-3Ue"/>
                     <constraint firstAttribute="trailing" secondItem="tvs-DI-c56" secondAttribute="trailing" constant="10" id="xr9-m0-BL7"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.51907641270000004" green="0.54840004279999999" blue="0.55733625860000002" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
                 <outlet property="pictureImageView" destination="SD7-sp-H1H" id="jh1-Yn-fxw"/>
                 <outlet property="titleModelPumps" destination="tvs-DI-c56" id="Sq2-Ez-2L6"/>
@@ -71,5 +83,8 @@
     </objects>
     <resources>
         <image name="Brinkmann" width="2184" height="1456"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

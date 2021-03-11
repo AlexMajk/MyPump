@@ -16,38 +16,35 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lSa-bI-jOi">
-                        <rect key="frame" x="40" y="52" width="240" height="120"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Brinkmann" translatesAutoresizingMaskIntoConstraints="NO" id="aso-w9-vh2">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="120"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="aso-w9-vh2" firstAttribute="top" secondItem="lSa-bI-jOi" secondAttribute="top" id="2eH-az-dGs"/>
-                            <constraint firstAttribute="width" secondItem="lSa-bI-jOi" secondAttribute="height" multiplier="16:8" id="4ia-8u-97A"/>
-                            <constraint firstAttribute="bottom" secondItem="aso-w9-vh2" secondAttribute="bottom" id="6aW-uF-p3i"/>
-                            <constraint firstItem="aso-w9-vh2" firstAttribute="leading" secondItem="lSa-bI-jOi" secondAttribute="leading" id="A5f-HI-iTM"/>
-                            <constraint firstAttribute="trailing" secondItem="aso-w9-vh2" secondAttribute="trailing" id="OEB-i2-60E"/>
-                        </constraints>
-                    </view>
+                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-ys-U98">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
+                        <color key="backgroundColor" red="0.37998103189999999" green="0.4167420999" blue="0.32650396640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="KNE-eJ-fim">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <connections>
+                            <outlet property="dataSource" destination="-1" id="kAJ-Dp-WA9"/>
+                            <outlet property="delegate" destination="-1" id="FpS-Na-JZd"/>
+                        </connections>
+                    </collectionView>
                 </subviews>
-                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" red="0.37998103189999999" green="0.4167420999" blue="0.32650396640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
-                    <constraint firstItem="lSa-bI-jOi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="55y-LK-KTj"/>
-                    <constraint firstItem="lSa-bI-jOi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="GWg-2e-WVS"/>
-                    <constraint firstAttribute="trailing" secondItem="lSa-bI-jOi" secondAttribute="trailing" constant="40" id="ZDf-gs-DlM"/>
-                    <constraint firstItem="lSa-bI-jOi" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="mex-Er-e6l"/>
+                    <constraint firstAttribute="bottom" secondItem="Ugg-ys-U98" secondAttribute="bottom" id="39m-PI-Yzw"/>
+                    <constraint firstItem="Ugg-ys-U98" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Mf0-Sc-bK0"/>
+                    <constraint firstAttribute="trailing" secondItem="Ugg-ys-U98" secondAttribute="trailing" id="xOl-es-XIc"/>
+                    <constraint firstItem="Ugg-ys-U98" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="yg8-0n-tLO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="collectionView" destination="Ugg-ys-U98" id="efr-lq-oz2"/>
+            </connections>
             <point key="canvasLocation" x="130" y="86"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="Brinkmann" width="2184" height="1456"/>
-    </resources>
 </document>
