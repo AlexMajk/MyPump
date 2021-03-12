@@ -9,7 +9,7 @@ import UIKit
 
 class MarkPumpsViewController: UIViewController {
     
-    enum SectionType {
+    enum SectionType: Int {
         case photo
         case moreInformation
         case pumpsModelList
@@ -28,7 +28,7 @@ class MarkPumpsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSections = [.photo, .moreInformation, .pumpsModelList, .accessoriesPumps]
-        tableView.register(UINib(nibName: "MarkImageTableViewCell", bundle: nil), forCellReuseIdentifier: "MarkImageTableViewCell")
+        tableView.register(UINib(nibName: String(describing: MarkImageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MarkImageTableViewCell.self))
         tableView.register(UINib(nibName: "ReadMoreTableViewCell", bundle: nil), forCellReuseIdentifier: "ReadMoreTableViewCell")
         tableView.register(UINib(nibName: "ModelsPupmTableViewCell", bundle: nil), forCellReuseIdentifier: "ModelsPupmTableViewCell")
     }
@@ -127,9 +127,12 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         let sectionType = tableSections[indexPath.section]
         switch sectionType {
         case .photo:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "MarkImageTableViewCell", for: indexPath) as! MarkImageTableViewCell
-            cell.configure(number: count % 2)
+            if let cell = tableView.dequeueReusableCell(withIdentifier:String(describing: MarkImageTableViewCell.self), for: indexPath) as? MarkImageTableViewCell {
+            cell.configure(number: count)
             return cell
+            } else {
+               return UITableViewCell()
+            }
         case .moreInformation:
             let cell = tableView.dequeueReusableCell(withIdentifier: "ReadMoreTableViewCell", for: indexPath) as! ReadMoreTableViewCell
             return cell
@@ -157,12 +160,17 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MarkPumpsViewController: ModelsListPumpsHeaderViewDelegate {
     func hiddenButtonPressed(section: Int) {
-        if section == 2 {
-            isShowModels = !isShowModels
-            tableView.reloadSections(IndexSet(integer: section), with: .automatic)
-        } else if section == 3 {
+        
+        let sectionType = tableSections[section]
+        switch sectionType {
+        case.accessoriesPumps:
             isShowAccessories = !isShowAccessories
-            tableView.reloadSections(IndexSet(integer: section), with: .automatic)
+        case .pumpsModelList:
+            isShowModels = !isShowModels
+        default:
+            break
         }
+        
+        tableView.reloadSections(IndexSet(integer: section), with: .automatic)
     }
 }

@@ -15,7 +15,7 @@ class MarkPumpsCollectionViewCell: UICollectionViewCell {
 
     func configure(title: String, isSelected: Bool) {
         titleLabel.text = title
-        separatorView.backgroundColor = isSelected ? #colorLiteral(red: 0.9994722009, green: 0.9867805839, blue: 0.3154735565, alpha: 1) : .clear
+        separatorView.backgroundColor = isSelected ? #colorLiteral(red: 1, green: 0.7725490196, blue: 0, alpha: 1) : .clear
         titleLabel.textColor = isSelected ? .white : .black
         titleLabel.font = isSelected ? titleLabel.font.withSize(20) : titleLabel.font.withSize(16)
     }

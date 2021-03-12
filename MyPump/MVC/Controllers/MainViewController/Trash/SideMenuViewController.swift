@@ -33,6 +33,7 @@ extension SideMenuViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "menuCell", for: indexPath)
         cell.textLabel?.text = menuList[indexPath.row]
+        cell.textLabel?.textColor = .white
         return cell
     }
 }
