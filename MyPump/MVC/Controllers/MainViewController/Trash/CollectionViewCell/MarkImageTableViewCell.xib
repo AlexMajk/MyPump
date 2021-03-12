@@ -18,7 +18,7 @@
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Ugg-ys-U98">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
-                        <color key="backgroundColor" red="0.37998103189999999" green="0.4167420999" blue="0.32650396640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="KNE-eJ-fim">
                             <size key="itemSize" width="128" height="128"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,7 +31,7 @@
                         </connections>
                     </collectionView>
                 </subviews>
-                <color key="backgroundColor" red="0.37998103189999999" green="0.4167420999" blue="0.32650396640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Ugg-ys-U98" secondAttribute="bottom" id="39m-PI-Yzw"/>
                     <constraint firstItem="Ugg-ys-U98" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Mf0-Sc-bK0"/>

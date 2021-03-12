@@ -39,7 +39,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-xP-RoA">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="122"/>
-                                        <mutableString key="text">Средней мощности, оснащен прямоточной гидравлической системой FFH замкнутого типа, которая позволяет добиваться высокой производительности при высокой нагрузке. Благодаря мощному электродвигателю насос подходит для работ в тоннелях и при необходимости может быть установлен на рельсовое транспортное средство. Активно используются на Заводах по изготовлению железно-бетонных изделий. Обеспечивает подачу бетона с фракцией 25- 40 мм на высоту до 100-120 метров или по горизонту до 200- 250 метров.</mutableString>
+                                        <string key="text">Средней мощности, оснащен прямоточной гидравлической системой FFH замкнутого типа, которая позволяет добиваться высокой производительности при высокой нагрузке. Благодаря мощному электродвигателю насос подходит для работ в тоннелях и при необходимости может быть установлен на рельсовое транспортное средство. Активно используются на Заводах по изготовлению железно-бетонных изделий. Обеспечивает подачу бетона с фракцией 25- 40 мм на высоту до 100-120 метров или по горизонту до 200- 250 метров.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -73,7 +73,7 @@
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.37998103189999999" green="0.4167420999" blue="0.32650396640000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="bxC-P1-XIQ" secondAttribute="bottom" constant="10" id="DX4-go-k3N"/>
                 <constraint firstItem="bxC-P1-XIQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Tc0-jM-OE1"/>

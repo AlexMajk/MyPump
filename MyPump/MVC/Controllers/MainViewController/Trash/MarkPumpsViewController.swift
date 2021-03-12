@@ -99,11 +99,11 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
         case .photo, .description, .moreInformation, .otherInformation:
             return nil
         case .pumpsModelList:
-            headerView.setTitleLabel(title: "Модельный ряд")
+            headerView.setTitleLabel(title: "Модельный ряд", isShowCell: isShowModels)
             headerView.setSectionInTableView(section: section)
             return headerView
         case .accessoriesPumps:
-            headerView.setTitleLabel(title: "Запчасти / комплектующие")
+            headerView.setTitleLabel(title: "Запчасти / комплектующие", isShowCell: isShowAccessories)
             headerView.setSectionInTableView(section: section)
             return headerView
         }

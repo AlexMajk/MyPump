@@ -32,9 +32,9 @@ extension OtherAccessoriesViewController: UITableViewDataSource, UITableViewDele
         let headerView = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
         switch sectionType{
         case .hosesType:
-            headerView.setTitleLabel(title: "Шланги")
+            headerView.setTitleLabel(title: "Шланги", isShowCell: true)
         case .couplingType:
-            headerView.setTitleLabel(title: "Муфты")
+            headerView.setTitleLabel(title: "Муфты", isShowCell: true)
         }
         return headerView
     }

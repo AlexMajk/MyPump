@@ -23,7 +23,7 @@ extension WatchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UINib(nibName: "ModelsListPumpsHeaderView", bundle: .main).instantiate(withOwner: nil, options: nil).first as! ModelsListPumpsHeaderView
-        headerView.setTitleLabel(title: "Запчасти / комплектующие")
+        headerView.setTitleLabel(title: "Запчасти / комплектующие", isShowCell: true)
         return headerView
     }
     

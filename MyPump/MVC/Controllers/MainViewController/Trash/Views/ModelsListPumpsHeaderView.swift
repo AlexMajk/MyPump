@@ -13,12 +13,15 @@ protocol ModelsListPumpsHeaderViewDelegate: class {
 
 class ModelsListPumpsHeaderView: UIView {
     
+    @IBOutlet weak var showButton: UIButton!
+    
     weak var delegate: ModelsListPumpsHeaderViewDelegate?
     var section = 0
     
     @IBOutlet weak var titleLabel: UILabel!
     
-     func setTitleLabel(title: String){
+    func setTitleLabel(title: String, isShowCell: Bool){
+        isShowCell ? showButton.setTitle("Свернуть", for: .normal) : showButton.setTitle("Развернуть", for: .normal)
         titleLabel.text = title
     }
     
