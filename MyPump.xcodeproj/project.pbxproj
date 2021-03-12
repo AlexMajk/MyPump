@@ -206,8 +206,10 @@
 		94636DB725FB8A20008B35FE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				94636DEB25FB966E008B35FE /* ContainerGeneralViewController */,
 				94636DDA25FB8EF3008B35FE /* SideViewController */,
 				94636DD925FB8EDD008B35FE /* MarkPumpViewController */,
+				942294F025F8A5B600911800 /* PumpsDetailViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,6 +217,8 @@
 		94636DD925FB8EDD008B35FE /* MarkPumpViewController */ = {
 			isa = PBXGroup;
 			children = (
+				94755F1125F6C36E008A3DB3 /* CollectionViewCell */,
+				94755F4325F6E76E008A3DB3 /* Views */,
 				94636DB825FB8A3D008B35FE /* MarkPumpViewController.xib */,
 				94636DBB25FB8A56008B35FE /* MarkPumpViewController.swift */,
 			);
@@ -240,6 +244,15 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		94636DEB25FB966E008B35FE /* ContainerGeneralViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2642F91625A1F0D3003CB42A /* MainViewController.storyboard */,
+				94755F0B25F57FC4008A3DB3 /* ContainerGeneralViewController.swift */,
+			);
+			path = ContainerGeneralViewController;
+			sourceTree = "<group>";
+		};
 		9471E59E25A51DF800519C77 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,18 +263,6 @@
 				265EF04325A253B000290725 /* Controllers */,
 			);
 			path = MVC;
-			sourceTree = "<group>";
-		};
-		94755F0A25F57F8E008A3DB3 /* Trash */ = {
-			isa = PBXGroup;
-			children = (
-				94636DB725FB8A20008B35FE /* Controllers */,
-				942294F025F8A5B600911800 /* PumpsDetailViewController */,
-				94755F4325F6E76E008A3DB3 /* Views */,
-				94755F1125F6C36E008A3DB3 /* CollectionViewCell */,
-				94755F0B25F57FC4008A3DB3 /* ContainerGeneralViewController.swift */,
-			);
-			path = Trash;
 			sourceTree = "<group>";
 		};
 		94755F1125F6C36E008A3DB3 /* CollectionViewCell */ = {
@@ -301,8 +302,7 @@
 		94D426E425A531D6001DB1D7 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
-				94755F0A25F57F8E008A3DB3 /* Trash */,
-				2642F91625A1F0D3003CB42A /* MainViewController.storyboard */,
+				94636DB725FB8A20008B35FE /* Controllers */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
