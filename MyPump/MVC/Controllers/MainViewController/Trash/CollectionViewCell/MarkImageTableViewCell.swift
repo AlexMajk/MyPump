@@ -21,7 +21,10 @@ class MarkImageTableViewCell: UITableViewCell {
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(UINib(nibName: "MarkImageItemCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MarkImageItemCollectionViewCell")
+        
+        
+        
+        collectionView.register(UINib(nibName: String(describing: MarkImageItemCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: MarkImageItemCollectionViewCell.self))
     }
     
     func configure(number: Int) {
@@ -52,7 +55,7 @@ extension MarkImageTableViewCell: UICollectionViewDelegate, UICollectionViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MarkImageItemCollectionViewCell", for: indexPath) as! MarkImageItemCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: MarkImageItemCollectionViewCell.self), for: indexPath) as! MarkImageItemCollectionViewCell
         return cell
     }
     
