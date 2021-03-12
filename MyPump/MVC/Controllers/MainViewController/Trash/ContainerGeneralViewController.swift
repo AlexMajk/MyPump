@@ -11,7 +11,8 @@ import SideMenu
 
 struct MarksPumps {
     var name: String
-    var Description: String
+    var description: String
+    var screenType: ScreenType
 }
 
 class ContainerGeneralViewController: UIViewController {
@@ -22,15 +23,17 @@ class ContainerGeneralViewController: UIViewController {
     private var menu: SideMenuNavigationController?
     private var selectedCurrencyIndex = 0
     private let marksPumpsList = [MarksPumps(name: "putzmeister",
-                                             Description: "Good Pumps"),
+                                             description: "Good Pumps",
+                                             screenType: .pumpsScreen),
                                   MarksPumps(name: "Brinkmann",
-                                             Description: "Good Pumps"),
+                                             description: "Good Pumps",
+                                            screenType: .pumpsScreen),
                                   MarksPumps(name: "BMS",
-                                             Description: "Good Pumps"),
+                                             description: "Good Pumps",
+                                             screenType: .pumpsScreen),
                                   MarksPumps(name: "Другие запчасти",
-                                             Description: "Good Pumps")
-//                                  MarksPumps(name: "Видео Руководство",
-//                                             Description: "Good Pumps")
+                                             description: "Good Pumps",
+                                             screenType: .other)
     ]
     
     private let pageMaster = PageMaster([])
@@ -62,15 +65,11 @@ class ContainerGeneralViewController: UIViewController {
         var vcList: [UIViewController] = []
         let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
         
-        for _ in 0 ... marksPumpsList.count - 2 {
+        for pumps in marksPumpsList {
             let vc = storyboard.instantiateViewController(identifier: "MarkPumpsViewController") as! MarkPumpsViewController
+            vc.markPumps = pumps
             vcList.append(vc)
         }
-        let vc = storyboard.instantiateViewController(identifier: "OtherAccessoriesViewController") as! OtherAccessoriesViewController
-        vcList.append(vc)
-        
-//        let watchVc = storyboard.instantiateViewController(identifier: "WatchViewController") as! WatchViewController
-//        vcList.append(watchVc)
         
         self.pageMaster.setup(vcList)
         self.addChild(self.pageMaster)

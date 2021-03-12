@@ -29,14 +29,13 @@
 		26FDAC2525A310CF00AF16FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */; };
 		26FDAC8A25A4E89B00AF16FF /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26FDAC8925A4E89B00AF16FF /* DataModel.swift */; };
 		78597C9B50E0A82A8805D775 /* Pods_MyPump.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 99410BB3EBA606F2B2A383A9 /* Pods_MyPump.framework */; };
-		942294CC25F8461400911800 /* OtherAccessoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942294CB25F8461400911800 /* OtherAccessoriesViewController.swift */; };
-		942294CF25F84CE300911800 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942294CE25F84CE300911800 /* WatchViewController.swift */; };
 		942294D325F84DA000911800 /* WatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942294D125F84DA000911800 /* WatchTableViewCell.swift */; };
 		942294D425F84DA000911800 /* WatchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942294D225F84DA000911800 /* WatchTableViewCell.xib */; };
 		942294F225F8A5E100911800 /* PumpsDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942294F125F8A5E100911800 /* PumpsDetailViewController.xib */; };
 		942294F525F8A5FC00911800 /* PumpsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942294F425F8A5FC00911800 /* PumpsDetailViewController.swift */; };
 		94636D4925FABA3E008B35FE /* MarkImageItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94636D4725FABA3E008B35FE /* MarkImageItemCollectionViewCell.swift */; };
 		94636D4A25FABA3E008B35FE /* MarkImageItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94636D4825FABA3E008B35FE /* MarkImageItemCollectionViewCell.xib */; };
+		94636DB225FB7523008B35FE /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94636DB125FB7522008B35FE /* SectionType.swift */; };
 		94755F0C25F57FC4008A3DB3 /* ContainerGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94755F0B25F57FC4008A3DB3 /* ContainerGeneralViewController.swift */; };
 		94755F0F25F6C06E008A3DB3 /* MarkPumpsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94755F0E25F6C06E008A3DB3 /* MarkPumpsViewController.swift */; };
 		94755F1425F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94755F1225F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.swift */; };
@@ -82,14 +81,13 @@
 		26CF176A25D90FD5007A6B6A /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		26FDAC2425A310CF00AF16FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		26FDAC8925A4E89B00AF16FF /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		942294CB25F8461400911800 /* OtherAccessoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAccessoriesViewController.swift; sourceTree = "<group>"; };
-		942294CE25F84CE300911800 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 		942294D125F84DA000911800 /* WatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchTableViewCell.swift; sourceTree = "<group>"; };
 		942294D225F84DA000911800 /* WatchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchTableViewCell.xib; sourceTree = "<group>"; };
 		942294F125F8A5E100911800 /* PumpsDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PumpsDetailViewController.xib; sourceTree = "<group>"; };
 		942294F425F8A5FC00911800 /* PumpsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PumpsDetailViewController.swift; sourceTree = "<group>"; };
 		94636D4725FABA3E008B35FE /* MarkImageItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkImageItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		94636D4825FABA3E008B35FE /* MarkImageItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkImageItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		94636DB125FB7522008B35FE /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
 		94755F0B25F57FC4008A3DB3 /* ContainerGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerGeneralViewController.swift; sourceTree = "<group>"; };
 		94755F0E25F6C06E008A3DB3 /* MarkPumpsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkPumpsViewController.swift; sourceTree = "<group>"; };
 		94755F1225F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkPumpsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -210,6 +208,14 @@
 			path = PumpsDetailViewController;
 			sourceTree = "<group>";
 		};
+		94636DB025FB7509008B35FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				94636DB125FB7522008B35FE /* SectionType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9471E59E25A51DF800519C77 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,14 +231,13 @@
 		94755F0A25F57F8E008A3DB3 /* Trash */ = {
 			isa = PBXGroup;
 			children = (
+				94636DB025FB7509008B35FE /* Model */,
 				942294F025F8A5B600911800 /* PumpsDetailViewController */,
 				94755F4325F6E76E008A3DB3 /* Views */,
 				94755F1125F6C36E008A3DB3 /* CollectionViewCell */,
 				94755F0B25F57FC4008A3DB3 /* ContainerGeneralViewController.swift */,
 				94755F0E25F6C06E008A3DB3 /* MarkPumpsViewController.swift */,
-				942294CB25F8461400911800 /* OtherAccessoriesViewController.swift */,
 				94755F5625F6F0E3008A3DB3 /* SideMenuViewController.swift */,
-				942294CE25F84CE300911800 /* WatchViewController.swift */,
 			);
 			path = Trash;
 			sourceTree = "<group>";
@@ -480,17 +485,16 @@
 				262D067F25A89A340028FFF1 /* MainTableViewCell.swift in Sources */,
 				26CF176425D7EA8B007A6B6A /* PartsTableViewCell.swift in Sources */,
 				2686CC7525D7E4CC0014366E /* AppColors.swift in Sources */,
+				94636DB225FB7523008B35FE /* SectionType.swift in Sources */,
 				94755F0F25F6C06E008A3DB3 /* MarkPumpsViewController.swift in Sources */,
 				263D0D6F25C5B6A400F0173A /* ImagesCollectionViewCell.swift in Sources */,
 				94D4270325A535DB001DB1D7 /* CalculatorViewController.swift in Sources */,
-				942294CF25F84CE300911800 /* WatchViewController.swift in Sources */,
 				2686CC7225D7E3F50014366E /* SecondTableViewCell.swift in Sources */,
 				94755F1425F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.swift in Sources */,
 				262D058B25A5DD3A0028FFF1 /* MainViewController.swift in Sources */,
 				94755F2625F6E1B8008A3DB3 /* ModelsPupmTableViewCell.swift in Sources */,
 				2607522025AF8DEF009B710F /* SecondTableViewController.swift in Sources */,
 				94755F1925F6D7A5008A3DB3 /* MarkImageTableViewCell.swift in Sources */,
-				942294CC25F8461400911800 /* OtherAccessoriesViewController.swift in Sources */,
 				263D0D6C25C5B5E900F0173A /* ImagesCollectionVC.swift in Sources */,
 				26CF176B25D90FD5007A6B6A /* UINavigationControllerExtension.swift in Sources */,
 				263D0D7825C71ACB00F0173A /* DetailImageViewController.swift in Sources */,

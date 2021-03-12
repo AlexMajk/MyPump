@@ -22,19 +22,13 @@ class MarkImageTableViewCell: UITableViewCell {
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        
-        
         collectionView.register(UINib(nibName: String(describing: MarkImageItemCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: MarkImageItemCollectionViewCell.self))
     }
     
     func configure(number: Int) {
 
-        let cellSize = CGSize(width: frame.size.width * 2, height: frame.size.height)//frame.size
-
-        //get current content Offset of the Collection view
+        let cellSize = CGSize(width: frame.size.width, height: frame.size.height)
         let contentOffset = collectionView.contentOffset
-        print(collectionView.contentOffset)
-
         if collectionView.contentSize.width <= collectionView.contentOffset.x + cellSize.width
         {
             let r = CGRect(x: 0, y: contentOffset.y, width: cellSize.width, height: cellSize.height)
@@ -44,8 +38,6 @@ class MarkImageTableViewCell: UITableViewCell {
             let r = CGRect(x: contentOffset.x + cellSize.width, y: contentOffset.y, width: cellSize.width, height: cellSize.height)
             collectionView.scrollRectToVisible(r, animated: true);
         }
-        
-        print(collectionView.contentOffset)
     }
 }
 

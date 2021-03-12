@@ -10,35 +10,27 @@ import UIKit
 class MarkPumpsViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
-    
-    enum SectionType: Int {
-        case photo
-        case moreInformation
-        case pumpsModelList
-        case description
-        case otherInformation
-        case accessoriesPumps
-    }
-    
+        
     private var timer: Timer?
     private var tableSections: [SectionType] = []
-    private var isShowModels = true
-    private var isShowAccessories = true
+    private var isShowModels = false
+    private var isShowAccessories = false
     private var count = 0
+    
+    var markPumps: MarksPumps?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableSections = [.photo,
-                         .moreInformation,
-                         .pumpsModelList,
-                         .accessoriesPumps]
+        if let screenType = markPumps?.screenType {
+            tableSections = screenType.getSection()
+        }
         setupUITableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if timer == nil {
-            timer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(targetTimer), userInfo: nil, repeats: true)
+            timer = Timer.scheduledTimer(timeInterval: 7.0, target: self, selector: #selector(targetTimer), userInfo: nil, repeats: true)
         }
     }
     
@@ -54,6 +46,7 @@ class MarkPumpsViewController: UIViewController {
     }
     
     private func setupUITableView() {
+        
         tableView.register(UINib(nibName: String(describing: MarkImageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MarkImageTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: ReadMoreTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ReadMoreTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: ModelsPupmTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ModelsPupmTableViewCell.self))
@@ -134,31 +127,35 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionType = tableSections[indexPath.section]
+        var returnedCell = UITableViewCell()
         switch sectionType {
         case .photo:
             if let cell = tableView.dequeueReusableCell(withIdentifier:String(describing: MarkImageTableViewCell.self), for: indexPath) as? MarkImageTableViewCell {
                 cell.configure(number: count)
-                return cell
-            } else {
-                return UITableViewCell()
+                returnedCell = cell
             }
         case .moreInformation:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReadMoreTableViewCell.self), for: indexPath) as! ReadMoreTableViewCell
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReadMoreTableViewCell.self), for: indexPath) as? ReadMoreTableViewCell {
+                return cell
+            }
         case .description:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReadMoreTableViewCell.self), for: indexPath) as! ReadMoreTableViewCell
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReadMoreTableViewCell.self), for: indexPath) as? ReadMoreTableViewCell{
+                returnedCell = cell
+            }
         case .otherInformation:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReadMoreTableViewCell.self), for: indexPath) as! ReadMoreTableViewCell
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ReadMoreTableViewCell.self), for: indexPath) as? ReadMoreTableViewCell {
+                returnedCell = cell
+            }
         case .pumpsModelList:
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ModelsPupmTableViewCell.self), for: indexPath) as! ModelsPupmTableViewCell
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ModelsPupmTableViewCell.self), for: indexPath) as? ModelsPupmTableViewCell {
+                returnedCell = cell
+            }
         case .accessoriesPumps:
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ModelsPupmTableViewCell.self), for: indexPath) as! ModelsPupmTableViewCell
-            return cell
+            if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ModelsPupmTableViewCell.self), for: indexPath) as? ModelsPupmTableViewCell {
+                returnedCell = cell
+            }
         }
+        return returnedCell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
