@@ -146,6 +146,8 @@
 			isa = PBXGroup;
 			children = (
 				2642F91025A1F0D3003CB42A /* AppDelegate.swift */,
+				263D0D6625C5B49A00F0173A /* Extensions */,
+				262D059925A600370028FFF1 /* Managers */,
 				9471E59E25A51DF800519C77 /* MVC */,
 				94D4270F25A53773001DB1D7 /* Resource */,
 				2642F91E25A1F0D5003CB42A /* Info.plist */,
@@ -155,7 +157,7 @@
 			path = MyPump;
 			sourceTree = "<group>";
 		};
-		265EF04325A253B000290725 /* Controllers */ = {
+		265EF04325A253B000290725 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				94D426DB25A530AB001DB1D7 /* Tabbar */,
@@ -163,7 +165,7 @@
 				94D426EE25A53539001DB1D7 /* CalculatorViewController */,
 				94D426EF25A53552001DB1D7 /* SettingViewController */,
 			);
-			path = Controllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		26FDAC3125A36D6A00AF16FF /* Models */ = {
@@ -259,10 +261,8 @@
 		9471E59E25A51DF800519C77 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
-				263D0D6625C5B49A00F0173A /* Extensions */,
-				262D059925A600370028FFF1 /* Managers */,
 				26FDAC3125A36D6A00AF16FF /* Models */,
-				265EF04325A253B000290725 /* Controllers */,
+				265EF04325A253B000290725 /* ViewControllers */,
 			);
 			path = MVC;
 			sourceTree = "<group>";

@@ -47,9 +47,7 @@ class ContainerGeneralViewController: UIViewController {
     }
     
     private func setupSideMenu() {
-//        let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
         let sideMenuViewController = SideMenuViewController(name: "")
-//            storyboard.instantiateViewController(identifier: "SideMenuViewController") as! SideMenuViewController
         menu = SideMenuNavigationController(rootViewController: sideMenuViewController)
         menu?.blurEffectStyle = .dark
         menu?.leftSide = true
@@ -77,7 +75,9 @@ class ContainerGeneralViewController: UIViewController {
     }
     
     @IBAction func MenuButtonPressed(_ sender: UIBarButtonItem) {
-        present(menu!, animated: true)
+        if let menu = menu {
+        present(menu, animated: true)
+        }
     }
     
     private func setupCollectionViewUI() {
@@ -91,7 +91,6 @@ extension ContainerGeneralViewController: UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: MarkPumpsCollectionViewCell.self), for: indexPath) as! MarkPumpsCollectionViewCell
         cell.configure(title: marksPumpsList[indexPath.item].name, isSelected: indexPath.item == selectedCurrencyIndex)
         return cell
