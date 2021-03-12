@@ -1,13 +1,13 @@
 //
-//  MarkPumpsViewController.swift
+//  MarkPumpViewController.swift
 //  MyPump
 //
-//  Created by пользователь on 3/8/21.
+//  Created by пользователь on 3/12/21.
 //
 
 import UIKit
 
-class MarkPumpsViewController: UIViewController {
+class MarkPumpViewController: UIViewController {
     
     @IBOutlet private weak var tableView: UITableView!
         
@@ -16,8 +16,12 @@ class MarkPumpsViewController: UIViewController {
     private var isShowModels = false
     private var isShowAccessories = false
     private var count = 0
+    private var markPumps: MarksPumps?
     
-    var markPumps: MarksPumps?
+    convenience init(markPump: MarksPumps) {
+        self.init()
+        self.markPumps = markPump
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +57,7 @@ class MarkPumpsViewController: UIViewController {
     }
 }
 
-extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
+extension MarkPumpViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let sectionType = tableSections[indexPath.section]
@@ -160,12 +164,12 @@ extension MarkPumpsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let vc = PumpsDetailViewController(name: "")
-        navigationController?.pushViewController(vc, animated: true)
+        let viewController = PumpsDetailViewController(name: "")
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
-extension MarkPumpsViewController: ModelsListPumpsHeaderViewDelegate {
+extension MarkPumpViewController: ModelsListPumpsHeaderViewDelegate {
     func hiddenButtonPressed(section: Int) {
         
         let sectionType = tableSections[section]

@@ -22,7 +22,7 @@ class ContainerGeneralViewController: UIViewController {
     
     private var menu: SideMenuNavigationController?
     private var selectedCurrencyIndex = 0
-    private let marksPumpsList = [MarksPumps(name: "putzmeister",
+    private let marksPumpsList = [MarksPumps(name: "Putzmeister",
                                              description: "Good Pumps",
                                              screenType: .pumpsScreen),
                                   MarksPumps(name: "Brinkmann",
@@ -47,8 +47,9 @@ class ContainerGeneralViewController: UIViewController {
     }
     
     private func setupSideMenu() {
-        let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
-        let sideMenuViewController = storyboard.instantiateViewController(identifier: "SideMenuViewController") as! SideMenuViewController
+//        let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
+        let sideMenuViewController = SideMenuViewController(name: "")
+//            storyboard.instantiateViewController(identifier: "SideMenuViewController") as! SideMenuViewController
         menu = SideMenuNavigationController(rootViewController: sideMenuViewController)
         menu?.blurEffectStyle = .dark
         menu?.leftSide = true
@@ -62,16 +63,13 @@ class ContainerGeneralViewController: UIViewController {
     
     private func setupPageMaster() {
         self.pageMaster.pageDelegate = self
-        var vcList: [UIViewController] = []
-        let storyboard = UIStoryboard(name: "MainViewController", bundle: nil)
-        
+        var viewControllers: [UIViewController] = []
         for pumps in marksPumpsList {
-            let vc = storyboard.instantiateViewController(identifier: "MarkPumpsViewController") as! MarkPumpsViewController
-            vc.markPumps = pumps
-            vcList.append(vc)
+            let viewController = MarkPumpViewController(markPump: pumps)
+            viewControllers.append(viewController)
         }
         
-        self.pageMaster.setup(vcList)
+        self.pageMaster.setup(viewControllers)
         self.addChild(self.pageMaster)
         containerView.addSubview(self.pageMaster.view)
         self.pageMaster.view.frame = containerView.bounds

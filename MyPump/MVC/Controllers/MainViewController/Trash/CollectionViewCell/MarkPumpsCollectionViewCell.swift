@@ -9,10 +9,9 @@ import UIKit
 
 class MarkPumpsCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var separatorView: UIView!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var separatorView: UIView!
     
-
     func configure(title: String, isSelected: Bool) {
         titleLabel.text = title
         separatorView.backgroundColor = isSelected ? #colorLiteral(red: 1, green: 0.7725490196, blue: 0, alpha: 1) : .clear
