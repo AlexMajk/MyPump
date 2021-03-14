@@ -34,14 +34,45 @@
                     <view key="view" contentMode="scaleToFill" id="mWG-Fo-xc1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fL1-eM-zkW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hdH-1f-44K">
+                                    <size key="itemSize" width="187" height="183"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" red="0.17254901959999999" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="P6g-gv-DFJ" id="o6g-Za-XES"/>
+                                    <outlet property="delegate" destination="P6g-gv-DFJ" id="Mgq-Tk-SFL"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="7vv-9C-32i"/>
                         <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fL1-eM-zkW" firstAttribute="leading" secondItem="7vv-9C-32i" secondAttribute="leading" id="96J-g2-M5h"/>
+                            <constraint firstItem="7vv-9C-32i" firstAttribute="trailing" secondItem="fL1-eM-zkW" secondAttribute="trailing" id="P35-sf-Yt7"/>
+                            <constraint firstItem="fL1-eM-zkW" firstAttribute="top" secondItem="7vv-9C-32i" secondAttribute="top" id="WLl-mE-fwS"/>
+                            <constraint firstItem="7vv-9C-32i" firstAttribute="bottom" secondItem="fL1-eM-zkW" secondAttribute="bottom" id="t2U-d9-2Ny"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rDe-Ab-rMy"/>
+                    <connections>
+                        <outlet property="collectionView" destination="fL1-eM-zkW" id="AQc-5z-Rfd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQL-q8-DwO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170" y="-64"/>
+            <point key="canvasLocation" x="-171.01449275362319" y="-64.285714285714278"/>
         </scene>
     </scenes>
     <resources>

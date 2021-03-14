@@ -14,12 +14,10 @@ class PumpsDetailViewController: UIViewController {
     convenience init (name: String) {
         self.init()
         title = "Марка Бетононасоса"
-        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 }
 
@@ -31,5 +29,4 @@ extension PumpsDetailViewController : UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return UITableViewCell()
     }
-
 }

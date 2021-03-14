@@ -50,7 +50,6 @@ class MarkPumpViewController: UIViewController {
     }
     
     private func setupUITableView() {
-        
         tableView.register(UINib(nibName: String(describing: MarkImageTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: MarkImageTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: ReadMoreTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ReadMoreTableViewCell.self))
         tableView.register(UINib(nibName: String(describing: ModelsPupmTableViewCell.self), bundle: nil), forCellReuseIdentifier: String(describing: ModelsPupmTableViewCell.self))
@@ -171,7 +170,6 @@ extension MarkPumpViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MarkPumpViewController: ModelsListPumpsHeaderViewDelegate {
     func hiddenButtonPressed(section: Int) {
-        
         let sectionType = tableSections[section]
         switch sectionType {
         case.accessoriesPumps:

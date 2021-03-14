@@ -30,6 +30,9 @@
 		94636DE225FB8F3D008B35FE /* SideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94636DE125FB8F3D008B35FE /* SideMenuViewController.xib */; };
 		94636DE725FB9118008B35FE /* SideMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94636DE525FB9118008B35FE /* SideMenuTableViewCell.swift */; };
 		94636DE825FB9118008B35FE /* SideMenuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94636DE625FB9118008B35FE /* SideMenuTableViewCell.xib */; };
+		94636DF825FD4B4C008B35FE /* OblectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94636DF625FD4B4C008B35FE /* OblectCollectionViewCell.swift */; };
+		94636DF925FD4B4C008B35FE /* OblectCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94636DF725FD4B4C008B35FE /* OblectCollectionViewCell.xib */; };
+		94636DFD25FD564C008B35FE /* CornerRadius + Shadow Layer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94636DFC25FD564C008B35FE /* CornerRadius + Shadow Layer.swift */; };
 		94755F0C25F57FC4008A3DB3 /* ContainerGeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94755F0B25F57FC4008A3DB3 /* ContainerGeneralViewController.swift */; };
 		94755F1425F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94755F1225F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.swift */; };
 		94755F1525F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94755F1325F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.xib */; };
@@ -75,6 +78,9 @@
 		94636DE125FB8F3D008B35FE /* SideMenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuViewController.xib; sourceTree = "<group>"; };
 		94636DE525FB9118008B35FE /* SideMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewCell.swift; sourceTree = "<group>"; };
 		94636DE625FB9118008B35FE /* SideMenuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SideMenuTableViewCell.xib; sourceTree = "<group>"; };
+		94636DF625FD4B4C008B35FE /* OblectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OblectCollectionViewCell.swift; sourceTree = "<group>"; };
+		94636DF725FD4B4C008B35FE /* OblectCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OblectCollectionViewCell.xib; sourceTree = "<group>"; };
+		94636DFC25FD564C008B35FE /* CornerRadius + Shadow Layer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CornerRadius + Shadow Layer.swift"; sourceTree = "<group>"; };
 		94755F0B25F57FC4008A3DB3 /* ContainerGeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerGeneralViewController.swift; sourceTree = "<group>"; };
 		94755F1225F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkPumpsCollectionViewCell.swift; sourceTree = "<group>"; };
 		94755F1325F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MarkPumpsCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 				263D0D6725C5B4F300F0173A /* ScrollViewManager.swift */,
 				2686CC7425D7E4CC0014366E /* AppColors.swift */,
 				26CF176A25D90FD5007A6B6A /* UINavigationControllerExtension.swift */,
+				94636DFC25FD564C008B35FE /* CornerRadius + Shadow Layer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +265,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		94636DF425FD490B008B35FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				94636DF625FD4B4C008B35FE /* OblectCollectionViewCell.swift */,
+				94636DF725FD4B4C008B35FE /* OblectCollectionViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9471E59E25A51DF800519C77 /* MVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +322,7 @@
 		94D426EE25A53539001DB1D7 /* CalculatorViewController */ = {
 			isa = PBXGroup;
 			children = (
+				94636DF425FD490B008B35FE /* Views */,
 				94D4270225A535DB001DB1D7 /* CalculatorViewController.swift */,
 				262D060F25A6670F0028FFF1 /* Calculator.storyboard */,
 			);
@@ -423,6 +440,7 @@
 				94755F2725F6E1B8008A3DB3 /* ModelsPupmTableViewCell.xib in Resources */,
 				94755F1A25F6D7A5008A3DB3 /* MarkImageTableViewCell.xib in Resources */,
 				262D061025A6670F0028FFF1 /* Calculator.storyboard in Resources */,
+				94636DF925FD4B4C008B35FE /* OblectCollectionViewCell.xib in Resources */,
 				94755F2225F6DD62008A3DB3 /* ReadMoreTableViewCell.xib in Resources */,
 				94755F1525F6C3A0008A3DB3 /* MarkPumpsCollectionViewCell.xib in Resources */,
 			);
@@ -507,7 +525,9 @@
 				94755F5725F6F0E3008A3DB3 /* SideMenuViewController.swift in Sources */,
 				94755F4825F6E7A9008A3DB3 /* ModelsListPumpsHeaderView.swift in Sources */,
 				94755F2125F6DD62008A3DB3 /* ReadMoreTableViewCell.swift in Sources */,
+				94636DFD25FD564C008B35FE /* CornerRadius + Shadow Layer.swift in Sources */,
 				94636DBC25FB8A56008B35FE /* MarkPumpViewController.swift in Sources */,
+				94636DF825FD4B4C008B35FE /* OblectCollectionViewCell.swift in Sources */,
 				262D059B25A6004B0028FFF1 /* NetworkManager.swift in Sources */,
 				263D0D6825C5B4F300F0173A /* ScrollViewManager.swift in Sources */,
 				94636D4925FABA3E008B35FE /* MarkImageItemCollectionViewCell.swift in Sources */,
