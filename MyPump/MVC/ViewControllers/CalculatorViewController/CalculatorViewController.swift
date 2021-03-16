@@ -38,6 +38,6 @@ extension CalculatorViewController: UICollectionViewDelegate, UICollectionViewDa
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         let  size = self.view.frame.width / 2 
-        return CGSize(width: size, height: size)
+        return CGSize(width: size, height: size + 35)
     }
 }
