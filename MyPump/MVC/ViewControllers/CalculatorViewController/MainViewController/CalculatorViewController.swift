@@ -27,14 +27,22 @@ class CalculatorViewController: UIViewController {
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        spareList = [SpareModel(name: "Запчасти", subtitle: "для бетононасосов", imageName: "zapchasti-groups"),
-                     SpareModel(name: "Запчасти", subtitle: "для штукатурных станций", imageName: "fitinfyv"),
-                     SpareModel(name: "Запчасти", subtitle: "для затировочных машин", imageName: "fitinfyv"),
-                     SpareModel(name: "Фитинги", subtitle: "муфты и соединения", imageName: "fitinfyv"),
-                     SpareModel(name: "Рукава", subtitle: "шланги и гасители", imageName: "new-trubasd"),
-                     SpareModel(name: "Масла и смазки", subtitle: "для ДВС и компрессора", imageName: "masla-1"),
-                     SpareModel(name: "Инструменты", subtitle: "и спецодежда", imageName: "fitinfyv"),
-                     SpareModel(name: "Измерительное оборудование", subtitle: "лазеры, нивилиры", imageName: "shtyksad")]
+        spareList = [SpareModel(name: "Запчасти", subtitle: "для бетононасосов",
+                                imageName: "zapchasti-groups"),
+                     SpareModel(name: "Запчасти", subtitle: "для штукатурных станций",
+                                imageName: "fitinfyv"),
+                     SpareModel(name: "Запчасти", subtitle: "для затировочных машин",
+                                imageName: "fitinfyv"),
+                     SpareModel(name: "Фитинги", subtitle: "муфты и соединения",
+                                imageName: "fitinfyv"),
+                     SpareModel(name: "Рукава", subtitle: "шланги и гасители",
+                                imageName: "new-trubasd"),
+                     SpareModel(name: "Масла и смазки", subtitle: "для ДВС и компрессора",
+                                imageName: "masla-1"),
+                     SpareModel(name: "Инструменты", subtitle: "и спецодежда",
+                                imageName: "fitinfyv"),
+                     SpareModel(name: "Измерительное оборудование", subtitle: "лазеры, нивилиры",
+                                imageName: "shtyksad")]
         
         self.title = "Калькулятор"
         collectionView.register(UINib(nibName: String(describing: OblectCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: OblectCollectionViewCell.self))
@@ -54,9 +62,9 @@ class CalculatorViewController: UIViewController {
     }
     @IBAction func watchListButtonPressed(_ sender: UIBarButtonItem) {
         let watchListViewController = WatchListViewController(name: "")
-        navigationController?.pushViewController(watchListViewController, animated: true)
+        watchListViewController.modalTransitionStyle = .flipHorizontal
+        present(watchListViewController, animated: true, completion: nil)
     }
-    
 }
 
 extension CalculatorViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

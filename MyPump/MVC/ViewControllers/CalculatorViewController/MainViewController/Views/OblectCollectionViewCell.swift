@@ -11,8 +11,8 @@ class OblectCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var containerView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var subTitleLabel: UILabel!
+    @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var subTitleLabel: UILabel!
     
     func configure(data: SpareModel) {
         configureUI()
@@ -29,24 +29,8 @@ class OblectCollectionViewCell: UICollectionViewCell {
         titleLabel.text = data.name
         subTitleLabel.text = data.subtitle
         if let imageName = data.imageName {
-            let image = UIImage(named: imageName)//?.imageResize(sizeChange: CGSize(width: 100, height: 100))
+            let image = UIImage(named: imageName)
            imageView.image = image
         }
     }
-}
-
-extension UIImage {
-
-    func imageResize (sizeChange:CGSize)-> UIImage{
-
-        let hasAlpha = true
-        let scale: CGFloat = 0.0 // Use scale factor of main screen
-
-        UIGraphicsBeginImageContextWithOptions(sizeChange, !hasAlpha, scale)
-        self.draw(in: CGRect(origin: CGPoint.zero, size: sizeChange))
-
-        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
-        return scaledImage!
-    }
-
 }
