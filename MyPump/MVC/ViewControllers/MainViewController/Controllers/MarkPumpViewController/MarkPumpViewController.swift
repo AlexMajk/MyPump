@@ -66,7 +66,7 @@ extension MarkPumpViewController: UITableViewDelegate, UITableViewDataSource {
         case .description:
             return 1
         case .moreInformation:
-            return 20
+            return 30
         case .otherInformation:
             return 1
         case .pumpsModelList:

@@ -35,10 +35,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="large-logo" translatesAutoresizingMaskIntoConstraints="NO" id="ExV-VO-PuU">
+                                <rect key="frame" x="77" y="250.5" width="260" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YJp-5U-jjq"/>
+                                    <constraint firstAttribute="width" constant="260" id="bKJ-qT-CTy"/>
+                                </constraints>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fL1-eM-zkW">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.92946249250000001" green="0.93322592969999996" blue="0.94118607040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hdH-1f-44K">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.18823529411764706" alpha="0.70847602739726023" colorSpace="custom" customColorSpace="displayP3"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hdH-1f-44K">
                                     <size key="itemSize" width="187" height="183"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -61,11 +68,19 @@
                         <constraints>
                             <constraint firstItem="fL1-eM-zkW" firstAttribute="leading" secondItem="7vv-9C-32i" secondAttribute="leading" id="96J-g2-M5h"/>
                             <constraint firstItem="7vv-9C-32i" firstAttribute="trailing" secondItem="fL1-eM-zkW" secondAttribute="trailing" id="P35-sf-Yt7"/>
-                            <constraint firstItem="fL1-eM-zkW" firstAttribute="top" secondItem="7vv-9C-32i" secondAttribute="top" id="WLl-mE-fwS"/>
+                            <constraint firstItem="fL1-eM-zkW" firstAttribute="top" secondItem="mWG-Fo-xc1" secondAttribute="top" id="WLl-mE-fwS"/>
+                            <constraint firstItem="ExV-VO-PuU" firstAttribute="centerY" secondItem="7vv-9C-32i" secondAttribute="centerY" constant="-100" id="ltl-us-y9c"/>
                             <constraint firstItem="7vv-9C-32i" firstAttribute="bottom" secondItem="fL1-eM-zkW" secondAttribute="bottom" id="t2U-d9-2Ny"/>
+                            <constraint firstItem="ExV-VO-PuU" firstAttribute="centerX" secondItem="7vv-9C-32i" secondAttribute="centerX" id="v9U-fc-Dhk"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="rDe-Ab-rMy"/>
+                    <navigationItem key="navigationItem" id="rDe-Ab-rMy">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="iga-Ps-ODZ">
+                            <connections>
+                                <action selector="watchListButtonPressed:" destination="P6g-gv-DFJ" id="4aL-kG-g4I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="fL1-eM-zkW" id="AQc-5z-Rfd"/>
                     </connections>
@@ -77,5 +92,6 @@
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="large-logo" width="250" height="120"/>
     </resources>
 </document>

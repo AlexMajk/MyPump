@@ -17,13 +17,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bxC-P1-XIQ">
-                        <rect key="frame" x="10" y="10" width="293" height="122"/>
+                        <rect key="frame" x="2" y="2" width="309" height="138"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Iu-2k-WeB">
-                                <rect key="frame" x="0.0" y="0.0" width="143" height="122"/>
+                                <rect key="frame" x="0.0" y="0.0" width="159" height="138"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Putzmeister" translatesAutoresizingMaskIntoConstraints="NO" id="BbI-e2-uuz">
-                                        <rect key="frame" x="0.0" y="0.0" width="143" height="122"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="159" height="138"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -35,10 +35,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KP7-hy-vbN">
-                                <rect key="frame" x="143" y="0.0" width="150" height="122"/>
+                                <rect key="frame" x="159" y="0.0" width="150" height="138"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNB-xP-RoA">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="122"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="138"/>
                                         <string key="text">Средней мощности, оснащен прямоточной гидравлической системой FFH замкнутого типа, которая позволяет добиваться высокой производительности при высокой нагрузке. Благодаря мощному электродвигателю насос подходит для работ в тоннелях и при необходимости может быть установлен на рельсовое транспортное средство. Активно используются на Заводах по изготовлению железно-бетонных изделий. Обеспечивает подачу бетона с фракцией 25- 40 мм на высоту до 100-120 метров или по горизонту до 200- 250 метров.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                         <nil key="textColor"/>
@@ -73,19 +73,19 @@
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="bxC-P1-XIQ" secondAttribute="bottom" constant="10" id="DX4-go-k3N"/>
-                <constraint firstItem="bxC-P1-XIQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="Tc0-jM-OE1"/>
-                <constraint firstItem="bxC-P1-XIQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="awz-x5-nzU"/>
-                <constraint firstAttribute="trailing" secondItem="bxC-P1-XIQ" secondAttribute="trailing" constant="10" id="tg0-YF-n1Z"/>
+                <constraint firstAttribute="bottom" secondItem="bxC-P1-XIQ" secondAttribute="bottom" constant="2" id="DX4-go-k3N"/>
+                <constraint firstItem="bxC-P1-XIQ" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="2" id="Tc0-jM-OE1"/>
+                <constraint firstItem="bxC-P1-XIQ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="2" id="awz-x5-nzU"/>
+                <constraint firstAttribute="trailing" secondItem="bxC-P1-XIQ" secondAttribute="trailing" constant="2" id="tg0-YF-n1Z"/>
             </constraints>
             <size key="customSize" width="313" height="142"/>
             <point key="canvasLocation" x="267.39130434782612" y="101.78571428571428"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="Putzmeister" width="600" height="400"/>
+        <image name="Putzmeister" width="1200" height="800"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

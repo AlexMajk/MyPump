@@ -9,8 +9,15 @@ import UIKit
 
 class ReadMoreTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var separatorView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        separatorView.clipsToBounds = true
+        separatorView.layer.cornerRadius = 10
+        separatorView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        
+        
         // Initialization code
     }
 
