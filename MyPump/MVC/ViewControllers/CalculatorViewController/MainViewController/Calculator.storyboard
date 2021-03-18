@@ -44,7 +44,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fL1-eM-zkW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
-                                <color key="backgroundColor" red="0.17254901960784313" green="0.17254901960784313" blue="0.18823529411764706" alpha="0.70847602739726023" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="hdH-1f-44K">
                                     <size key="itemSize" width="187" height="183"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -64,7 +64,7 @@
                             </collectionView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="7vv-9C-32i"/>
-                        <color key="backgroundColor" red="0.92946249250000001" green="0.93322592969999996" blue="0.94118607040000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="0.17254901959999999" green="0.17254901959999999" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fL1-eM-zkW" firstAttribute="leading" secondItem="7vv-9C-32i" secondAttribute="leading" id="96J-g2-M5h"/>
                             <constraint firstItem="7vv-9C-32i" firstAttribute="trailing" secondItem="fL1-eM-zkW" secondAttribute="trailing" id="P35-sf-Yt7"/>
