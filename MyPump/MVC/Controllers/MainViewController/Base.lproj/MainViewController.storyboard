@@ -336,6 +336,36 @@
             </objects>
             <point key="canvasLocation" x="3233" y="-29"/>
         </scene>
+        <!--Shopping Bag View Controller-->
+        <scene sceneID="NVx-DD-2sX">
+            <objects>
+                <viewController id="1Xu-cu-4kM" customClass="ShoppingBagViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tgP-Fi-PEo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HtT-hC-cQd">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="G8F-Fo-gHj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HtT-hC-cQd" firstAttribute="top" secondItem="G8F-Fo-gHj" secondAttribute="top" id="FKf-pY-Oug"/>
+                            <constraint firstItem="G8F-Fo-gHj" firstAttribute="bottom" secondItem="HtT-hC-cQd" secondAttribute="bottom" id="FjA-sd-6mk"/>
+                            <constraint firstItem="HtT-hC-cQd" firstAttribute="leading" secondItem="G8F-Fo-gHj" secondAttribute="leading" id="NHh-lS-mSz"/>
+                            <constraint firstItem="G8F-Fo-gHj" firstAttribute="trailing" secondItem="HtT-hC-cQd" secondAttribute="trailing" id="TJK-TH-ud3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="HtT-hC-cQd" id="FP0-68-WWO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yz9-F1-W4W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3245" y="681"/>
+        </scene>
         <!--Каталог-->
         <scene sceneID="Twc-WY-GAK">
             <objects>
