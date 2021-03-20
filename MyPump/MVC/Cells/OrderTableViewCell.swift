@@ -1,18 +1,16 @@
 //
-//  PartsTableViewCell.swift
-//  MyPump
+//  OrderTableViewCell.swift
+//  
 //
-//  Created by Александр Майко on 13.02.2021.
+//  Created by Александр Майко on 07.03.2021.
 //
 
 import UIKit
 
-class PartsTableViewCell: UITableViewCell {
-    @IBOutlet weak var goToNextVcImage: UIImageView!
-    
+class OrderTableViewCell: UITableViewCell {
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.goToNextVcImage.tintColor = AppColors.detailsColor
         // Initialization code
     }
 
@@ -21,5 +19,5 @@ class PartsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

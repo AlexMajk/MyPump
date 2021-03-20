@@ -26,7 +26,7 @@ class DetailImageViewController: UIViewController {
     
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
-        backButton.title = "к выбору схемы"
+        backButton.title = "назад"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
@@ -45,9 +45,9 @@ class DetailImageViewController: UIViewController {
         imageScrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         imageScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     }
-//    deinit {
-//        print("\(image?.cacheCost)")
-//        self.image = nil
-//        print ("\(image?.cacheCost)")
-//    }
+    deinit {
+        print("\(image?.cacheCost)")
+        self.image = nil
+        print ("\(image?.cacheCost)")
+    }
 }

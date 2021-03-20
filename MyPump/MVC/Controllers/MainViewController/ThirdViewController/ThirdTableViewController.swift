@@ -7,10 +7,10 @@
 
 import UIKit
 
-class PartsTableViewController: UITableViewController {
+class ThirdTableViewController: UITableViewController {
 
-    var downloadedItems = [CatalogueThirdList]()
-    var selectedItemsUrls = [String]()
+    var downloadedThirdCataloguePartsList = [ThirdCataloguePartsList]()
+    var selectedObjectFromPartsCatalogueList = [ObjectFromPartsCatalogueList]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -19,7 +19,7 @@ class PartsTableViewController: UITableViewController {
     
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
-        backButton.title = "к выбору модели"
+        backButton.title = "назад"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
@@ -37,31 +37,31 @@ class PartsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return downloadedItems.count
+        return downloadedThirdCataloguePartsList.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath)
-        cell.textLabel?.text = downloadedItems[indexPath.row].thirdListTitle
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell3", for: indexPath) as! ThirdTableViewCell
+        cell.configureCell(data: downloadedThirdCataloguePartsList[indexPath.row])
+
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.selectedItemsUrls = downloadedItems[indexPath.row].photo!
+        self.selectedObjectFromPartsCatalogueList = downloadedThirdCataloguePartsList[indexPath.row].objectFromPartsCatalogueList!
         performSegue(withIdentifier: "getImagesVC", sender: self)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let imagesVC = segue.destination as? ImagesCollectionVC
+        guard let imagesVC = segue.destination as? ObjectCollectionView
         else { return }
         
         switch segue.identifier {
         
         case "getImagesVC":
-            imagesVC.partListImageRef = selectedItemsUrls
+            imagesVC.dawnloadedObjectFromPartsCatalogueList = selectedObjectFromPartsCatalogueList
             
         default:
             break

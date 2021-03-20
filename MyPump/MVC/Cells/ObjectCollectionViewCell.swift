@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ImagesCollectionViewCell: UICollectionViewCell {
+class ObjectCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imageFromCell: UIImageView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -16,10 +16,11 @@ class ImagesCollectionViewCell: UICollectionViewCell {
     
 //    let fbManager = FBDataManager.shared
     
-    func configure(url: String) {
+    func configure(data: ObjectFromPartsCatalogueList) {
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
-        guard let url = URL(string: url) else { return }
+        self.ImageNameLabel.text = data.objectFromPartsCatalogueListName
+        guard let url = URL(string: data.objectFromPartsCatalogueListURLImage!) else { return }
         DispatchQueue.main.async {
             self.imageFromCell.kf.setImage(
                 with: url,

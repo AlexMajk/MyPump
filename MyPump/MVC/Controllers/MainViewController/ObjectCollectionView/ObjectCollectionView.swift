@@ -3,10 +3,11 @@
 import UIKit
 import Kingfisher
 
-class ImagesCollectionVC: UICollectionViewController {
+class ObjectCollectionView: UICollectionViewController {
     
     var agregateTitle: String?
-    var partListImageRef = [String]()
+    var dawnloadedObjectFromPartsCatalogueList = [ObjectFromPartsCatalogueList]()
+    var selectedObjectFromPartsCatalogueList : ObjectFromPartsCatalogueList?
 
     
     override func viewDidLoad() {
@@ -18,44 +19,47 @@ class ImagesCollectionVC: UICollectionViewController {
     
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
-        backButton.title = "к выбору узла"
+        backButton.title = "назад"
         title = agregateTitle
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return partListImageRef.count
+        return dawnloadedObjectFromPartsCatalogueList.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell4", for: indexPath) as! ImagesCollectionViewCell
-        cell.configure(url: partListImageRef[indexPath.row])
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell4", for: indexPath) as! ObjectCollectionViewCell
+        cell.configure(data: dawnloadedObjectFromPartsCatalogueList[indexPath.row])
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "getDetailVC", sender: self)
+        let selectedObject = dawnloadedObjectFromPartsCatalogueList[indexPath.row]
+        self.selectedObjectFromPartsCatalogueList = selectedObject
+        performSegue(withIdentifier: "getOrderVC", sender: self)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailImageVC = segue.destination as? DetailImageViewController
-        else { return }
-        switch segue.identifier {
-        case "getDetailVC":
-            let indexPathFromSelectedItem = collectionView.indexPathsForSelectedItems?.first
-            let cell = collectionView.cellForItem(at: indexPathFromSelectedItem!) as? ImagesCollectionViewCell
-            detailImageVC.image = cell?.imageFromCell.image
-        default:
-            break
-        }
-    }
+
     
     deinit {
         print("deinit")
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let orderVC = segue.destination as? OrderViewController
+        else { return }
+        
+        switch segue.identifier {
+        
+        case "getOrderVC":
+            orderVC.selectedObject = selectedObjectFromPartsCatalogueList
+            
+        default:
+            break
+        }
+    }
 }
 
-extension ImagesCollectionVC: UICollectionViewDelegateFlowLayout {
+extension ObjectCollectionView: UICollectionViewDelegateFlowLayout {
 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -63,8 +67,7 @@ extension ImagesCollectionVC: UICollectionViewDelegateFlowLayout {
         let paddingWidth = 5 * (itemsPerRow + 1)
         let avilableWith = collectionView.frame.width - paddingWidth // доступная ширина для нашего использования
         let itemWidth = avilableWith / itemsPerRow
-////        let itemHight = itemWidth
-//        let itemHight =
+
         return CGSize(width: itemWidth, height: (itemWidth + 20))
     }
     

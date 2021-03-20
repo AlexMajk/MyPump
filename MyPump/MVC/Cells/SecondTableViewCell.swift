@@ -8,25 +8,26 @@
 import UIKit
 
 class SecondTableViewCell: UITableViewCell {
-    @IBOutlet weak var secondCellImage: UIImageView!
-    @IBOutlet weak var secondCellNameLabel: UILabel!
-    @IBOutlet weak var secondCellDescriptionLabel: UILabel!
+
+    @IBOutlet weak var secondCataloguePartsListCellNameLabel: UILabel!
+    @IBOutlet weak var secondCataloguePartsListCellDescriptionLabel: UILabel!
+    @IBOutlet weak var secondCataloguePartsListCellImage: UIImageView!
 //    @IBOutlet weak var goToNextVcImage: UIImageView!
 //    @IBOutlet weak var modelNameLabel: UILabel!
 //    @IBOutlet weak var modelDescriptionLabel: UILabel!
     
-    func configureCell(data: CatalogueSecondList) {
-        self.secondCellNameLabel.textColor = .white
+    func configureCell(data: SecondCataloguePartsList) {
+        self.secondCataloguePartsListCellNameLabel.textColor = .black
 //        self.activityIndicator.startAnimating()
 //        self.activityIndicator.isHidden = false
-        guard let secondListTitle = data.secondListTitle else {return}
-        self.secondCellNameLabel.text = secondListTitle
-        guard let secondCellDescription = data.description else {return}
-        self.secondCellDescriptionLabel.text = secondCellDescription
+        guard let secondListTitle = data.secondCataloguePartsListName else {return}
+        self.secondCataloguePartsListCellNameLabel.text = secondListTitle
+        guard let secondCellDescription = data.secondCataloguePartsListDescription else {return}
+        self.secondCataloguePartsListCellDescriptionLabel.text = secondCellDescription
 
-        guard let url = URL(string: data.catalogueSecondListImageUrl!) else { return }
+        guard let url = URL(string: data.secondCataloguePartsListImageURL!) else { return }
         DispatchQueue.main.async {
-            self.secondCellImage.kf.setImage(
+            self.secondCataloguePartsListCellImage.kf.setImage(
                 with: url,
                 options: [
                     .loadDiskFileSynchronously,

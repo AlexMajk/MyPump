@@ -11,19 +11,21 @@ import FirebaseDatabase
 import FirebaseStorage
 
 class MainViewController: UITableViewController {
-    var downloadedCatalogueMainList = [CatalogueMainList]()
-    var selectedCatalogueMainItem = [CatalogueSecondList]()
+    //    var downloadedCatalogueMainList = [CatalogueMainList]()
+    var selectedSecondCataloguePartsList = [SecondCataloguePartsList]()
+    var dawnloadedCatalogueParts = [CatalogueParts]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        NetworkManager.FirstLaunchFetchData() { [weak self] (data) in
+        NetworkManager.FirstLaunchFetchData1 { [weak self] (data) in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.downloadedCatalogueMainList = data[0].catalogueMainList!
+                self.dawnloadedCatalogueParts = data[0].catalogueParts!
                 self.tableView.reloadData()
             }
         }
+        
         configureTableView()
         configureNavigationController()
         configureTabBar()
@@ -40,7 +42,7 @@ class MainViewController: UITableViewController {
         let lineView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 3))
         lineView.backgroundColor = AppColors.detailsColor
         self.tabBarController?.tabBar.addSubview(lineView)
-        //как вынести код выше в другой(соответствующий класс иил extension)
+        //как вынести код выше в другой(соответствующий класс или extension)
     }
     
     func configureNavigationController() {
@@ -54,19 +56,19 @@ class MainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return downloadedCatalogueMainList.count
+        return dawnloadedCatalogueParts.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let arrayOfItems = downloadedCatalogueMainList[indexPath.row]
+        let dataForCell = dawnloadedCatalogueParts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MainTableViewCell
-        cell.configureCell(data: arrayOfItems)
+        cell.configureCell(data: dataForCell)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard downloadedCatalogueMainList[indexPath.row].catalogueSecondList != nil else {return}
-        self.selectedCatalogueMainItem = downloadedCatalogueMainList[indexPath.row].catalogueSecondList!
+        guard dawnloadedCatalogueParts[indexPath.row].secondCataloguePartsList != nil else {return}
+        self.selectedSecondCataloguePartsList = dawnloadedCatalogueParts[indexPath.row].secondCataloguePartsList!
         performSegue(withIdentifier: "getSecondVC", sender: self)
     }
     
@@ -76,7 +78,7 @@ class MainViewController: UITableViewController {
         switch segue.identifier {
         
         case "getSecondVC":
-            secondVC.downloadedCatalogueSecondList = selectedCatalogueMainItem
+            secondVC.downloadedSecondCataloguePartsList = selectedSecondCataloguePartsList
             
         default:
             break

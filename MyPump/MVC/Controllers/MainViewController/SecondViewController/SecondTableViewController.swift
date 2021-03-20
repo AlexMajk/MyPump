@@ -8,8 +8,9 @@
 import UIKit
 
 class SecondTableViewController: UITableViewController {
-    var downloadedCatalogueSecondList = [CatalogueSecondList]()
-    var downloadedCatalogueThirdList = [CatalogueThirdList]()
+    var downloadedSecondCataloguePartsList = [SecondCataloguePartsList]()
+    var selectedThirdCataloguePartsList = [ThirdCataloguePartsList]()
+
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -18,7 +19,7 @@ class SecondTableViewController: UITableViewController {
     
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
-        backButton.title = "к выбору марки"
+        backButton.title = "назад"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
     
@@ -36,13 +37,13 @@ class SecondTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return downloadedCatalogueSecondList.count
+        return downloadedSecondCataloguePartsList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let arrayOfItems = downloadedCatalogueSecondList[indexPath.row]
+        let dataForSecondVewCell = downloadedSecondCataloguePartsList[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell2", for: indexPath) as! SecondTableViewCell
-        cell.configureCell(data:arrayOfItems)
+        cell.configureCell(data:dataForSecondVewCell)
 //        cell.secondCellNameLabel.text = downloadedCatalogueSecondList[indexPath.row].secondListTitle
 //        cell.secondCellDescriptionLabel.text = downloadedCatalogueSecondList[indexPath.row].description
 //        cell.modelNameLabel.text = modelsDownloaded[indexPath.row].name
@@ -54,18 +55,18 @@ class SecondTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let selectedItem = downloadedCatalogueSecondList[indexPath.row]
-        downloadedCatalogueThirdList = selectedItem.catalogueThirdList!
+        let selectedItem = downloadedSecondCataloguePartsList[indexPath.row]
+        selectedThirdCataloguePartsList = selectedItem.thirdCataloguePartsList!
         performSegue(withIdentifier: "getParts", sender: self)
         
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let thirdVC = segue.destination as? PartsTableViewController        else { return }
+        guard let thirdVC = segue.destination as? ThirdTableViewController        else { return }
         
         switch segue.identifier {
         
         case "getParts":
-            thirdVC.downloadedItems = downloadedCatalogueThirdList
+            thirdVC.downloadedThirdCataloguePartsList = selectedThirdCataloguePartsList
             
         default:
             break

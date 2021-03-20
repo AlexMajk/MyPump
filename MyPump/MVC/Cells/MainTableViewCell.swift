@@ -11,22 +11,23 @@ import Kingfisher
 class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
-    @IBOutlet weak var markNameLabel: UILabel!
-    @IBOutlet weak var markDescriptionLabel: UILabel!
-    @IBOutlet weak var markImage: UIImageView!
+    @IBOutlet weak var mainCataloguePartsListCellNameLabel: UILabel!
+    @IBOutlet weak var mainCataloguePartsListCellDescriptionLabel: UILabel!
+    @IBOutlet weak var mainCataloguePartsListCellImage: UIImageView!
 
-    func configureCell(data: CatalogueMainList) {
-        self.markNameLabel.textColor = .white
+    func configureCell(data: CatalogueParts) {
+        self.mainCataloguePartsListCellNameLabel.textColor = .black
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
-        guard let markName = data.mainListTitle else {return}
-        self.markNameLabel.text = markName
-        guard let markDescription = data.description else {return}
-        self.markDescriptionLabel.text = markDescription
+        guard let mainCataloguePartsListName = data.mainCataloguePartsListName else {return}
+//        guard let markName = data.mainListTitle else {return}
+        self.mainCataloguePartsListCellNameLabel.text = mainCataloguePartsListName
+        guard let mainCataloguePartsListDescription = data.mainCataloguePartsListDescription else {return}
+        self.mainCataloguePartsListCellDescriptionLabel.text = mainCataloguePartsListDescription
 
-        guard let url = URL(string: data.catalogueMainListImageUrl!) else { return }
+        guard let url = URL(string: data.mainCataloguePartsListImageUrl!) else { return }
         DispatchQueue.main.async {
-            self.markImage.kf.setImage(
+            self.mainCataloguePartsListCellImage.kf.setImage(
                 with: url,
                 options: [
                     .loadDiskFileSynchronously,

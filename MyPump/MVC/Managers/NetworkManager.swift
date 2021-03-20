@@ -10,114 +10,158 @@ import Firebase
 import ObjectMapper
 import Alamofire
 import FirebaseStorage
+import Kingfisher
 
 class NetworkManager {
-//    static func sendRequest(url: String, completion : @escaping(_ courses1: [Course])->()) {
-//        guard let url = URL(string: url) else { return }
-//        AF.request(url, method: .get).validate().responseJSON { (response) in //встроеный метод request отправояет запрос, а responseJSON говорит о том, что ответ нам нужен в формате JSON, validate говорит о том, что свойство success будет срабатывать только при условии получения кода от 200 до 299
-//
-//            switch response.result {
-//
-//            case .success(let value):
-//                var courses = [Course]()
-//                courses = Course.getArray(from: value)!
-//                completion(courses)//вызываем клоужер, чтобы в него передать значение массива полученных данных, чтобы далее в классе coursesVC вызвать этот метод и переданный массив применить к тэйбл вью
-//            print(courses)
-//            case .failure(let error):
-//                print(error)
-//            }
-//        }
-//    }
+
+// как запускать метод без создания экземпляра? т.е. сделать его static
+    
+    
+    private let allowedDiskSize = 100 * 1024 * 1024
+    private lazy var cache: URLCache = {
+        return URLCache(memoryCapacity: 0, diskCapacity: allowedDiskSize, diskPath: "gifCache")
+    }()
+    
+    typealias DownloadCompletionHandler = (Result<[Main],Error>) -> ()
+    
+    func createAndRetrieveURLSession() -> URLSession {
+        let sessionConfiguration = URLSessionConfiguration.default
+        sessionConfiguration.requestCachePolicy = .returnCacheDataElseLoad
+        sessionConfiguration.urlCache = cache
+        return URLSession(configuration: sessionConfiguration)
+    }
+    
+    
+    
+    
+    func downloadContent(completionHandler: @escaping DownloadCompletionHandler) {
+        let baseUrl = "https://mypump-c4d75-default-rtdb.firebaseio.com/.json"
+        
+        guard let downloadUrl = URL(string: baseUrl) else { return }
+        let urlRequest = URLRequest(url: downloadUrl)
+        
+        // First try to fetching cached data if exist
+        if let cachedData = self.cache.cachedResponse(for: urlRequest) {
+            print("Cached data in bytes:", cachedData.data)
+            guard let downloadedMarks = Mapper<Main>().mapArray(JSONString: String(data: cachedData.data, encoding: .utf8)!) else {return}
+            
+            completionHandler(.success(downloadedMarks))
+            
+        } else {
+            // No cached data, download content than cache the data
+            createAndRetrieveURLSession().dataTask(with: urlRequest) { (data, response, error) in
+                
+                if let error = error {
+                    completionHandler(.failure(error))
+                } else {
+                    guard let data = data.self else { return }
+                    guard let downloadedMarks = Mapper<Main>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else {return}
+                    let cachedData = CachedURLResponse(response: response!, data: data)
+                    self.cache.storeCachedResponse(cachedData, for: urlRequest)
+                    
+                    completionHandler(.success(downloadedMarks))
+                }
+            }.resume()
+        }
+    }
+    
+    func getData(completion : @escaping(_ : [Main])->()){
+        self.downloadContent(completionHandler: { (result) in
+            
+            switch result {
+            
+            case .success(let yourData):
+                completion(yourData)
+                print(yourData)
+                
+            case .failure(let error):
+                debugPrint(error.localizedDescription)
+            }
+        })
+    }
+   
+    
+    //!!!!!!!!!!!!!!!!! Работающий метод!!!!!!!!!!!!!!!
+    
+    
     static func FirstLaunchFetchData(completion : @escaping(_ : [Main])->()) {
         let baseUrl = "https://mypump-c4d75-default-rtdb.firebaseio.com/.json"
         guard let url = URL(string: baseUrl ) else {return}
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+        URLSession.shared.dataTask(with: url) {(data, response, error) in
             guard let data = data.self else { return }
             guard let downloadedMarks = Mapper<Main>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else {return}
             
             completion(downloadedMarks)
         }
-        task.resume()
+        .resume()
     }
-//  static  func fetchDataWithAlamofire(url: String,  completion: @escaping (_ image: UIImage)->()){
-//        
-//        AF.request(url).responseData { (responseData) in
-//            switch responseData.result {
-//            
-//            case .success(let data):
-//                guard let image = UIImage(data: data) else { return }
-//                completion(image)
-//                
-//            case .failure(let error):
-//                print(error)
-//                
-//            }
-//        }
-//        
-//    }
-//    
-//    static func downloadImage(url: String, completion: @escaping (_ image: UIImage)->()) {
-//        guard let url = URL(string: url) else { return }
-//        let session = URLSession.shared
-//        
-//        session.dataTask(with: url) { (data, response, error) in
-//            if let data = data, let image = UIImage(data: data) {
-//                DispatchQueue.main.async {
-//                    completion(image)
-//    
-//
-//                }
-//            }
-//        } .resume()
-//    }
     
+    static func FirstLaunchFetchData1(completion : @escaping(_ : [Main1])->()) {
+        let baseUrl = "https://mypump-c4d75-default-rtdb.firebaseio.com/.json"
+        guard let url = URL(string: baseUrl ) else {return}
+        URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data.self else { return }
+            guard let downloadedMarks1 = Mapper<Main1>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else {return}
+            
+            completion(downloadedMarks1)
+        }
+        .resume()
+    }
     
-//    static func FetchMarks(completion : @escaping(_ array: [String]) -> Void) {
-//        let ref = Database.database().reference()
-//        ref.child("Marks").observeSingleEvent(of: .value) { (snapshot) in
-//            var key: [String] = []
-//            for child in snapshot.children {
-//                let data = child as! DataSnapshot
-//                key.append(data.key)
-//            }
-//            completion(key)
-//                        guard let data = snapshot.value  else {return}
-//                        if let data = data as? [String:Any] {
-//                            if let marksJSON = Mapper<Mark>().map(JSONObject: data) {
-//                                print(marksJSON.headerTitle ?? "")
-//                            }
-//                        }
-//        }
-//    }
-//    static func FetchModels(ref: DatabaseReference, completion : @escaping(_ array: [String]) -> Void) {
-//
-//        ref.observeSingleEvent(of: .value) { (snapshot) in
-//            var key: [String] = []
-//            for child in snapshot.children {
-//                let data = child as! DataSnapshot
-//                key.append(data.key)
-//            }
-//            completion(key)
-//            //            guard let data = snapshot.value  else {return}
-//            //            if let data = data as? [String:Any] {
-//            //                if let marksJSON = Mapper<Mark>().map(JSONObject: data) {
-//            //                    print(marksJSON.headerTitle ?? "")
-//            //                    completion(marksJSON)
-//            //                }
-//            //            }
-//        }
-//    }
-//
-//    static func FetchBrinkmanModelsTest(completion : @escaping(_ photoOfUnit: Model) -> Void) {
-//        let ref = Database.database().reference()
-//        ref.child("Model").observeSingleEvent(of: .value) { (snapshot) in
-//            guard let data = snapshot.value  else {return}
-//            if let data = data as? [String: Any] {
-//                if let modelJSON = Mapper<Model>().map(JSONObject: data) {
-//                    print(modelJSON.headerTitle ?? "")
-//                    completion(modelJSON)
-//                }
-//            }
-//        }
-//    }
 }
+
+
+
+
+
+//private let allowedDiskSize = 100 * 1024 * 1024
+//private lazy var cache: URLCache = {
+//    return URLCache(memoryCapacity: 0, diskCapacity: allowedDiskSize, diskPath: "gifCache")
+//}()
+//
+//typealias DownloadCompletionHandler = (Result<Data,Error>) -> ()
+//
+//private func createAndRetrieveURLSession() -> URLSession {
+//    let sessionConfiguration = URLSessionConfiguration.default
+//    sessionConfiguration.requestCachePolicy = .returnCacheDataElseLoad
+//    sessionConfiguration.urlCache = cache
+//    return URLSession(configuration: sessionConfiguration)
+//}
+//
+//private func downloadContent(fromUrlString: String, completionHandler: @escaping DownloadCompletionHandler) {
+//
+//    guard let downloadUrl = URL(string: fromUrlString) else { return }
+//    let urlRequest = URLRequest(url: downloadUrl)
+//    // First try to fetching cached data if exist
+//    if let cachedData = self.cache.cachedResponse(for: urlRequest) {
+//        print("Cached data in bytes:", cachedData.data)
+//        completionHandler(.success(cachedData.data))
+//
+//    } else {
+//        // No cached data, download content than cache the data
+//        createAndRetrieveURLSession().dataTask(with: urlRequest) { (data, response, error) in
+//
+//            if let error = error {
+//                completionHandler(.failure(error))
+//            } else {
+//
+//                let cachedData = CachedURLResponse(response: response!, data: data!)
+//                self.cache.storeCachedResponse(cachedData, for: urlRequest)
+//
+//                completionHandler(.success(data!))
+//            }
+//        }.resume()
+//    }
+//}
+
+
+//self.downloadContent(fromUrlString: ANY_URL, completionHandler: { (result) in
+//
+//            switch result {
+//            case .success(let yourData):
+//                // handle data
+//
+//            case .failure(let error):
+//                debugPrint(error.localizedDescription)
+//            }
+// })
