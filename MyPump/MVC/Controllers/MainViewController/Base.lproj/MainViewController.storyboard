@@ -326,7 +326,13 @@
                             <constraint firstItem="Hco-I1-Owd" firstAttribute="bottom" secondItem="J7V-ka-m7g" secondAttribute="bottom" id="IDu-zF-McI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="TaD-AA-VEp"/>
+                    <navigationItem key="navigationItem" id="TaD-AA-VEp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="R3L-4e-YX0">
+                            <connections>
+                                <action selector="addToShoppingBagButton:" destination="gyR-kP-tW0" id="BOd-Bg-dDZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="OrderTableView" destination="Hco-I1-Owd" id="Zdn-Bc-wyj"/>
                         <segue destination="J3w-Jx-grm" kind="push" identifier="getDetailVC" id="Pl4-oa-8ki"/>
