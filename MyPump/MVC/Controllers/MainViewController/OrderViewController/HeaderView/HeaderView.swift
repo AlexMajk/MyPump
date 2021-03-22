@@ -7,7 +7,12 @@
 
 import UIKit
 
+
+
 class HeaderView: UIView {
+    
+
+    
     
     var dataForHeaderCollectionViewCell : ObjectFromPartsCatalogueList?
     @IBOutlet weak var orderViewHeaderCollectionView: UICollectionView!
@@ -17,6 +22,9 @@ class HeaderView: UIView {
         orderViewHeaderCollectionView.dataSource = self
         orderViewHeaderCollectionView.register(UINib(nibName: "HeaderCollectinViewCell", bundle: nil), forCellWithReuseIdentifier: "HeaderCollectinViewCell")
     }
+    
+
+
   
 }
 

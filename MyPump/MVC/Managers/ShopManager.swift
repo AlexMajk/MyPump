@@ -13,8 +13,8 @@ class ShopManager {
     
     private var watchList: [ObjectFromPartsCatalogueList] = []
     
-    func addWatchList(product: ObjectFromPartsCatalogueList ) {
-        watchList.append(product)
+    func addWatchList(object: ObjectFromPartsCatalogueList ) {
+        watchList.append(object)
     }
     
     func removeWatchList() {

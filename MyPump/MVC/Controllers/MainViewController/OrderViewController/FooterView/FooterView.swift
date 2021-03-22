@@ -7,10 +7,18 @@
 
 import UIKit
 
+protocol ButtonDelegate: class {
+    func addToShoppingBagTapped(sender: UIButton)
+}
+
 class FooterView: UIView {
+    
+    weak var delegate: ButtonDelegate?
+    
     @IBOutlet weak var ButtonOutlet: UIButton!
+    
     @IBAction func AddToCardButton(_ sender: UIButton) {
-        print("AddToCardButton tapped")
+        addToShoppingBagTapped(sender: ButtonOutlet)
     }
     
     
@@ -18,14 +26,10 @@ class FooterView: UIView {
         super.awakeFromNib()
         tintColor = .white
         backgroundColor = .systemBlue
-//        self.ButtonOutlet.backgroundColor = .red
     }
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+    
+    func addToShoppingBagTapped(sender: UIButton) {
+           delegate?.addToShoppingBagTapped(sender: ButtonOutlet)
+       }
 
 }

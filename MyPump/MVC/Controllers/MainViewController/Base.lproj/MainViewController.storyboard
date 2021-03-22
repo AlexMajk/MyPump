@@ -327,7 +327,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TaD-AA-VEp">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="R3L-4e-YX0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="R3L-4e-YX0">
                             <connections>
                                 <action selector="addToShoppingBagButton:" destination="gyR-kP-tW0" id="BOd-Bg-dDZ"/>
                             </connections>
@@ -336,6 +336,7 @@
                     <connections>
                         <outlet property="OrderTableView" destination="Hco-I1-Owd" id="Zdn-Bc-wyj"/>
                         <segue destination="J3w-Jx-grm" kind="push" identifier="getDetailVC" id="Pl4-oa-8ki"/>
+                        <segue destination="1Xu-cu-4kM" kind="push" identifier="getShoppingBag" id="GtT-W3-CZg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxl-tx-oP1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -347,11 +348,11 @@
             <objects>
                 <viewController id="1Xu-cu-4kM" customClass="ShoppingBagViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tgP-Fi-PEo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HtT-hC-cQd">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -364,6 +365,7 @@
                             <constraint firstItem="G8F-Fo-gHj" firstAttribute="trailing" secondItem="HtT-hC-cQd" secondAttribute="trailing" id="TJK-TH-ud3"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="t2u-dc-Tq2"/>
                     <connections>
                         <outlet property="tableView" destination="HtT-hC-cQd" id="FP0-68-WWO"/>
                     </connections>
@@ -402,6 +404,7 @@
     </scenes>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
+        <image name="cart" catalog="system" width="128" height="102"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

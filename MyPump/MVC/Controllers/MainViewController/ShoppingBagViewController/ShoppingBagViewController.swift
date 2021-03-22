@@ -37,7 +37,7 @@ extension ShoppingBagViewController: UITableViewDataSource, UITableViewDelegate 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: ShoppingBagTableViewCell.self), for: indexPath) as! ShoppingBagTableViewCell
-//        cell.configure(data: watchList[indexPath.row], isHiddenAddButton: true)
+        cell.configure(data: watchList[indexPath.row])
         return cell
     }
     

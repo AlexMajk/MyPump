@@ -7,15 +7,20 @@
 
 import UIKit
 
-class OrderViewController: UIViewController {
+class OrderViewController: UIViewController, ButtonDelegate {
+    
 
+    
+
+    let shopManager = ShopManager.shared
     
     var selectedObject: ObjectFromPartsCatalogueList?
     
     @IBOutlet weak var OrderTableView: UITableView!
     
     @IBAction func addToShoppingBagButton(_ sender: UIBarButtonItem) {
-        ShopManager.addWatchList(selectedObject!)
+        performSegue(withIdentifier: "getShoppingBag", sender: self)
+
     }
     
     override func viewDidLoad() {
@@ -23,12 +28,30 @@ class OrderViewController: UIViewController {
         OrderTableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderTableViewCell")
         configureNavigationController()
     }
+    
+    func addToShoppingBagTapped(sender: UIButton) {
+        showAlertWithConfirmationInformation(object: selectedObject!)
+    }
+    
+    private func showAlertWithConfirmationInformation(object: ObjectFromPartsCatalogueList) {
+            let alert = UIAlertController(title: "Вы хотите добавить выбранный товар в корзину?", message: nil, preferredStyle: .alert)
+            let okButton = UIAlertAction(title: "Да", style: .default) { (_) in
+                self.shopManager.addWatchList(object: object)
+            }
+            let noButton = UIAlertAction(title: "Нет", style: .cancel)
+            
+            alert.addAction(okButton)
+            alert.addAction(noButton)
+            present(alert, animated: true, completion: nil)
+        }
+
+    
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
         backButton.title = "назад"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
-    
+
 }
 
 extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
@@ -41,13 +64,17 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
         headerView.configureView()
         return headerView
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+        
+    }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
-        let headerView = UINib(nibName: "FooterView",
+        let footerView = UINib(nibName: "FooterView",
                                bundle: .main).instantiate(withOwner: nil, options: nil).first as! FooterView
-        //        headerView.configureView()
-        return headerView
+        footerView.delegate = self
+        return footerView
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
@@ -66,7 +93,6 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
         return cell
     }
-    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
