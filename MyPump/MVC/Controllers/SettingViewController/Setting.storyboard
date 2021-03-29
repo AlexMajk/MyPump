@@ -28,7 +28,7 @@
         <scene sceneID="ceb-n4-0Xx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0vw-6r-gsY" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="руководство" image="book" catalog="system" selectedImage="book" id="cdU-km-j10"/>
+                    <tabBarItem key="tabBarItem" title="руководство" image="book.fill" catalog="system" selectedImage="book" id="cdU-km-j10"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dDu-3u-pQm">
@@ -47,6 +47,7 @@
     </scenes>
     <resources>
         <image name="book" catalog="system" width="128" height="102"/>
+        <image name="book.fill" catalog="system" width="128" height="102"/>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

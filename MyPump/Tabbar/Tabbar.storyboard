@@ -35,10 +35,10 @@
             </objects>
             <point key="canvasLocation" x="492" y="-355"/>
         </scene>
-        <!--Calculator-->
+        <!--Machinery-->
         <scene sceneID="fJJ-b6-e18">
             <objects>
-                <viewControllerPlaceholder storyboardName="Calculator" id="qFT-LN-I5M" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="Machinery" id="qFT-LN-I5M" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="TsV-Gf-cey"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNB-Qx-4zp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
