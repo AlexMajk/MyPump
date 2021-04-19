@@ -2,8 +2,8 @@ type_body_length:
     - 500 # warning
   
 file_length:
-    warning: 800
-    error: 1600
+    warning: 400
+    error: 800
   
 opt_in_rules:
     - anyobject_protocol
