@@ -74,11 +74,63 @@
                     <navigationItem key="navigationItem" id="rDe-Ab-rMy"/>
                     <connections>
                         <outlet property="machineryMainCollectionView" destination="7FQ-1B-H1h" id="Mp7-W8-qGo"/>
+                        <segue destination="X2P-El-jD9" kind="push" id="mMM-bb-obD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tQL-q8-DwO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171.01449275362319" y="-64.285714285714278"/>
+            <point key="canvasLocation" x="-322" y="-64"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="MK3-VX-ist">
+            <objects>
+                <viewController id="X2P-El-jD9" customClass="SecondViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Idu-fv-e4z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="YkJ-bM-o1G">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="nOd-Dv-8yE">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="K6K-Yk-vFv">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="yh3-xa-IRS">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="X2P-El-jD9" id="0FQ-Zp-mR7"/>
+                                    <outlet property="delegate" destination="X2P-El-jD9" id="0gj-kJ-yOX"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aL1-QI-Pil"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aL1-QI-Pil" firstAttribute="bottom" secondItem="YkJ-bM-o1G" secondAttribute="bottom" id="8CE-iE-y2h"/>
+                            <constraint firstItem="YkJ-bM-o1G" firstAttribute="top" secondItem="aL1-QI-Pil" secondAttribute="top" id="dSb-PT-0ix"/>
+                            <constraint firstItem="YkJ-bM-o1G" firstAttribute="leading" secondItem="aL1-QI-Pil" secondAttribute="leading" id="u6N-r5-dbc"/>
+                            <constraint firstItem="aL1-QI-Pil" firstAttribute="trailing" secondItem="YkJ-bM-o1G" secondAttribute="trailing" id="vvT-ue-MTn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ige-Zk-zhb"/>
+                    <connections>
+                        <outlet property="secondViewControllerCollectionView" destination="YkJ-bM-o1G" id="KHn-oS-k00"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69G-0z-YtG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="387" y="-64"/>
         </scene>
     </scenes>
     <resources>

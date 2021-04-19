@@ -14,17 +14,17 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var mainCataloguePartsListCellNameLabel: UILabel!
     @IBOutlet weak var mainCataloguePartsListCellDescriptionLabel: UILabel!
     @IBOutlet weak var mainCataloguePartsListCellImage: UIImageView!
-
+    
     func configureCell(data: CatalogueParts) {
         self.mainCataloguePartsListCellNameLabel.textColor = .black
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
         guard let mainCataloguePartsListName = data.mainCataloguePartsListName else {return}
-//        guard let markName = data.mainListTitle else {return}
+        //        guard let markName = data.mainListTitle else {return}
         self.mainCataloguePartsListCellNameLabel.text = mainCataloguePartsListName
         guard let mainCataloguePartsListDescription = data.mainCataloguePartsListDescription else {return}
         self.mainCataloguePartsListCellDescriptionLabel.text = mainCataloguePartsListDescription
-
+        
         guard let url = URL(string: data.mainCataloguePartsListImageUrl!) else { return }
         DispatchQueue.main.async {
             self.mainCataloguePartsListCellImage.kf.setImage(
@@ -40,6 +40,6 @@ class MainTableViewCell: UITableViewCell {
                     self.activityIndicator.isHidden = true
                 })
         }
-
+        
     }
 }

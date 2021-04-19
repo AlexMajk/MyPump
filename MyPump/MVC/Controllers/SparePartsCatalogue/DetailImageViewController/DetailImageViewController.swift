@@ -11,14 +11,13 @@ import Kingfisher
 class DetailImageViewController: UIViewController {
     
     @IBAction func actionButtonTapped(_ sender: Any) {
-        print("Button tapped")
-        let shareController = UIActivityViewController(activityItems: [image!], applicationActivities: nil)
+        let shareController = UIActivityViewController(activityItems: [imageWasSelectedToShowInDetailVC!], applicationActivities: nil)
         present(shareController, animated: true, completion: nil)
     }
     
     var imageScrollView: ScrollViewManager!
-    var image: UIImage?
-    var testImage: UIImageView?
+    var imageWasSelectedToShowInDetailVC: UIImage?
+    // var testImage: UIImageView?
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,12 +31,12 @@ class DetailImageViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         imageScrollView = ScrollViewManager(frame: view.bounds)
         view.addSubview(imageScrollView)
         setupImageScrollView()
-        self.imageScrollView.set(image: image!)
+        self.imageScrollView.set(image: imageWasSelectedToShowInDetailVC!)
     }
     
     func setupImageScrollView() {
@@ -48,8 +47,6 @@ class DetailImageViewController: UIViewController {
         imageScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
     }
     deinit {
-        print("\(image?.cacheCost)")
-        self.image = nil
-        print ("\(image?.cacheCost)")
+        self.imageWasSelectedToShowInDetailVC = nil
     }
 }

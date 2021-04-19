@@ -14,7 +14,7 @@ class ObjectCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var ImageNameLabel: UILabel!
     
-//    let fbManager = FBDataManager.shared
+    //    let fbManager = FBDataManager.shared
     
     func configure(data: ObjectFromPartsCatalogueList) {
         self.activityIndicator.startAnimating()
@@ -35,6 +35,6 @@ class ObjectCollectionViewCell: UICollectionViewCell {
                     self.activityIndicator.isHidden = true
                 })
         }
-
+        
     }
 }

@@ -12,20 +12,23 @@ import FirebaseStorage
 
 class MainViewController: UITableViewController {
     var selectedSecondCataloguePartsList = [SecondCataloguePartsList]()
-    var dawnloadedCatalogueParts = [CatalogueParts]()
+    var downloadedCatalogueParts = [CatalogueParts]()
     
-    func getNextVC(){
-        let vc = SecondTableViewController()
+    func showSecondVC(){        
+        let storybord = UIStoryboard(name: "MainViewController", bundle: nil)
+//        let vc = SecondTableViewController()
+        let vc = storybord.instantiateViewController(identifier: "secondVC") as! SecondTableViewController
         vc.downloadedSecondCataloguePartsList  = selectedSecondCataloguePartsList
         navigationController?.pushViewController(vc, animated: true)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        NetworkManager.FirstLaunchFetchData { [weak self] (data) in
+        NetworkManager.FirstLaunchCataloguePartsFetchData { [weak self] (data) in
             guard let self = self else { return }
             DispatchQueue.main.async {
-                self.dawnloadedCatalogueParts = data
+                self.downloadedCatalogueParts = data
                 self.tableView.reloadData()
             }
         }
@@ -60,24 +63,25 @@ class MainViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dawnloadedCatalogueParts.count
+        return downloadedCatalogueParts.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let dataForCell = dawnloadedCatalogueParts[indexPath.row]
+        let dataForCell = downloadedCatalogueParts[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! MainTableViewCell
         cell.configureCell(data: dataForCell)
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard dawnloadedCatalogueParts[indexPath.row].secondCataloguePartsList != nil else {return}
-        self.selectedSecondCataloguePartsList = dawnloadedCatalogueParts[indexPath.row].secondCataloguePartsList!
-        performSegue(withIdentifier: "getSecondVC", sender: self)
+        guard downloadedCatalogueParts[indexPath.row].secondCataloguePartsList != nil else {return}
+        selectedSecondCataloguePartsList = downloadedCatalogueParts[indexPath.row].secondCataloguePartsList!
+        showSecondVC()
+        //performSegue(withIdentifier: "getSecondVC", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let secondVC = segue.destination as? SecondTableViewController        else { return }
+        guard let secondVC = segue.destination as? SecondTableViewController else { return }
         
         switch segue.identifier {
         

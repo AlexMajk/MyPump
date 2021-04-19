@@ -7,11 +7,20 @@
 
 import UIKit
 
+protocol CartTableViewCellDelegate: class {
+    func deleteButton(row: Int)
+}
+
 class CartTableViewCell: UITableViewCell {
-    @IBOutlet weak var cartTableViewCellLabel: UILabel!
+    
+    weak var delegate: CartTableViewCellDelegate?
+    
+    @IBOutlet weak var cartTableViewCellObjectName: UILabel!
     @IBOutlet weak var cartTableViewCellImage: UIImageView!
+    @IBOutlet weak var cartTableViewCellObjectCode: UILabel!
+    @IBOutlet weak var cartTableViewCellObjectCount: UILabel!
     
-    
+    var indexOfCell = 0
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,10 +32,21 @@ class CartTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    func configure(data: ObjectFromPartsCatalogueList) {
+    @IBAction func deleteButtonTapped(_ sender: UIButton) {
+        delegate?.deleteButton(row:indexOfCell)//передаем при нажатии значение ячейки (оно присваивается ячейке при инициализации, представляет собой порядковый номер)
+        
+    }
+    func configure(data: ObjectFromPartsCatalogueList, row: Int) {
 //        self.activityIndicator.startAnimating()
 //        self.activityIndicator.isHidden = false
-        self.cartTableViewCellLabel.text = data.objectFromPartsCatalogueListName
+        self.indexOfCell = row// здесь мы сетаем в значение ячейки row значение порядкового номера при инициализации ячейки
+        if let name = data.objectFromPartsCatalogueListName {
+            self.cartTableViewCellObjectName.text = name }
+        if let code = data.objectFromPartsCatalogueListCode {
+            self.cartTableViewCellObjectCode.text = "Артикул: \(code)"
+        }
+
+        self.cartTableViewCellObjectCount.text = "\(data.countOfCurrentObjectInShoppingCart)"
         guard let url = URL(string: data.objectFromPartsCatalogueListUrlImage!) else { return }
         DispatchQueue.main.async {
             self.cartTableViewCellImage.kf.setImage(

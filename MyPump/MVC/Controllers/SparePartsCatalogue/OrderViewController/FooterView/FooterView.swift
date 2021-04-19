@@ -15,12 +15,19 @@ class FooterView: UIView {
     
     weak var delegate: ButtonDelegate?
     
+    @IBOutlet weak var footerButton: UIButton!
     @IBAction func AddToCardButton(_ sender: UIButton) {
         delegate?.addToCartTapped(sender: sender)
     }
     
     func configure() {
-        self.backgroundColor = .red
+        footerButton.layer.cornerRadius = 10
+        footerButton.backgroundColor = AppColors.detailsColor
+        footerButton.layer.borderWidth = 2
+        footerButton.layer.borderColor = AppColors.mainThemeColor.cgColor
+        footerButton.setTitle("Добавить в корзину", for: .normal)
+        footerButton.titleLabel?.tintColor = AppColors.mainThemeColor
+        self.backgroundColor = .clear
     }
-
+    
 }
