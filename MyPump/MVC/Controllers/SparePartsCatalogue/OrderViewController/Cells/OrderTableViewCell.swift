@@ -8,7 +8,7 @@
 import UIKit
 
 class OrderTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var orderTableViewCellLabel: UILabel!
     
     override func awakeFromNib() {
@@ -20,10 +20,10 @@ class OrderTableViewCell: UITableViewCell {
     func configure(data: String){
         orderTableViewCellLabel.text = data
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
     

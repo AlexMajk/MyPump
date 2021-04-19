@@ -12,11 +12,18 @@ class OrderViewController: UIViewController{
     let shopManager = ShopManager.shared
     var selectedObject: ObjectFromPartsCatalogueList?
     var viewModel: ViewModel?
-    var image: UIImage?
+    var imageSelectedToShowInDetailVC: UIImage?
+    
+    @IBOutlet weak var addToCartButtonOutlet: UIButton!
+    
+    @IBAction func addToCartButtonTapped(_ sender: UIButton) {
+        showPreorderView(object: selectedObject!)
+    }
     
     @IBOutlet weak var OrderTableView: UITableView!
     @IBAction func getCartViewController(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "getCartViewController", sender: self)
+        showCartVC()
+        //performSegue(withIdentifier: "getCartViewController", sender: self)
     }
     
     override func viewDidLoad() {
@@ -24,16 +31,15 @@ class OrderViewController: UIViewController{
         OrderTableView.register(UINib(nibName: "OrderTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderTableViewCell")
         self.viewModel = ViewModel(data: selectedObject!)
         configureNavigationController()
-        configureUITableViewHeader()
-        configureUITableViewFooter()
-
+        configureButton()
+        
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
+    override func viewDidAppear(_ animated: Bool) {
+        configureUITableViewHeader()
+        //        configureUITableViewFooter()
     }
-        
+    
     private func configureUITableViewHeader() {
         let headerView  = UINib(nibName: "HeaderView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! HeaderView
         headerView.delegate = self
@@ -43,31 +49,39 @@ class OrderViewController: UIViewController{
         OrderTableView.tableHeaderView = headerView
     }
     
-    private func configureUITableViewFooter(){
-        let footerView = UINib(nibName: "FooterView",
-                               bundle: .main).instantiate(withOwner: nil, options: nil).first as! FooterView
-        footerView.delegate = self
-        //footerView.frame = CGRect(x: 0, y: 0, width:self.view.bounds.width, height: 200)
-        footerView.configure()
-        OrderTableView.tableFooterView = footerView
-        OrderTableView.tableFooterView?.frame.size.height = 100
-        //OrderTableView.tableFooterView?.frame.size.height = 2000
-//        OrderTableView.tableFooterView?.backgroundColor = .red
+    func configureButton(){
+        addToCartButtonOutlet.layer.cornerRadius = 10
+        addToCartButtonOutlet.backgroundColor = AppColors.detailsColor
+        addToCartButtonOutlet.layer.borderWidth = 2
+        addToCartButtonOutlet.layer.borderColor = AppColors.mainThemeColor.cgColor
+        addToCartButtonOutlet.setTitle("Добавить в корзину", for: .normal)
+        addToCartButtonOutlet.titleLabel?.tintColor = AppColors.mainThemeColor
+    }
+    
+    func showCartVC(){
+        let storybord = UIStoryboard(name: "MainViewController", bundle: nil)
+        let vc = storybord.instantiateViewController(identifier: "cartVC") as! CartViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    func showDetailVC(){
+        let storybord = UIStoryboard(name: "MainViewController", bundle: nil)
+        let vc = storybord.instantiateViewController(identifier: "detailVC") as! DetailImageViewController
+        vc.imageWasSelectedToShowInDetailVC = imageSelectedToShowInDetailVC
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func showPreorderView(object: ObjectFromPartsCatalogueList) {
+        let object = shopManager.choosingSourceForObject(object: object)
+        let preorderVC = ChildViewController(object: object)
+        preorderVC.delegate = self
+        preorderVC.modalTransitionStyle = .coverVertical
+        preorderVC.modalPresentationStyle = .overFullScreen
+        //navigationController?.pushViewController(preorderVC, animated: true) show not modal
+        present(preorderVC, animated: false, completion: nil)
         
     }
     
-    private func showAlertWithConfirmationInformation(object: ObjectFromPartsCatalogueList) {
-            let alert = UIAlertController(title: "Вы хотите добавить выбранный товар в корзину?", message: nil, preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "Да", style: .default) { (_) in
-                self.shopManager.addWatchList(object: object)
-            }
-            let noButton = UIAlertAction(title: "Нет", style: .cancel)
-            
-            alert.addAction(okButton)
-            alert.addAction(noButton)
-            present(alert, animated: true, completion: nil)
-        }
-
     
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
@@ -78,35 +92,29 @@ class OrderViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailImageViewController
         else { return }
-
+        
         switch segue.identifier {
-
+        
         case "getDetailVC":
-            detailVC.image = self.image
-
-
+            detailVC.imageWasSelectedToShowInDetailVC = imageSelectedToShowInDetailVC
+            
         default:
             break
         }
     }
-
-}
-
-extension OrderViewController:  ButtonDelegate {
-    func addToCartTapped(sender: UIButton) {
-        showAlertWithConfirmationInformation(object: selectedObject!)
-    }
+    
 }
 
 extension OrderViewController: GetDetailVCDelegate {
     func getDetailVC(image: UIImage?) {
-        self.image = image
-        performSegue(withIdentifier: "getDetailVC", sender: self)
+        self.imageSelectedToShowInDetailVC = image
+        showDetailVC()
+        //performSegue(withIdentifier: "getDetailVC", sender: self)
     }
 }
 
 extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         if let count = viewModel?.items.count {
             return count
@@ -117,7 +125,7 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return viewModel?.items[section].sectionTitle
     }
-
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
@@ -129,32 +137,41 @@ extension OrderViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let sectionType = viewModel!.items[indexPath.section].type
-       switch sectionType {
-       
-       case .objectFromPartsCatalogueListName:
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
-        cell.configure(data: (selectedObject?.objectFromPartsCatalogueListName)!)
-        return cell
-       
-       case .objectFromPartsCatalogueListCode:
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
-        cell.configure(data: (selectedObject?.objectFromPartsCatalogueListCode)!)
-        return cell
+        switch sectionType {
         
-       case .objectFromPartsCatalogueListDescription:
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
-        cell.configure(data: (selectedObject?.objectFromPartsCatalogueListDescription)!)
-        return cell
-        
-       case .objectFromPartsCatalogueListOEMCode:
-        let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
-        cell.configure(data: (selectedObject?.objectFromPartsCatalogueListOEMCode)!)
-        return cell
-       }
+        case .objectFromPartsCatalogueListName:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
+            cell.configure(data: (selectedObject?.objectFromPartsCatalogueListName)!)
+            return cell
+            
+        case .objectFromPartsCatalogueListCode:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
+            cell.configure(data: (selectedObject?.objectFromPartsCatalogueListCode)!)
+            return cell
+            
+        case .objectFromPartsCatalogueListDescription:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
+            cell.configure(data: (selectedObject?.objectFromPartsCatalogueListDescription)!)
+            return cell
+            
+        case .objectFromPartsCatalogueListOEMCode:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OrderTableViewCell", for: indexPath) as! OrderTableViewCell
+            cell.configure(data: (selectedObject?.objectFromPartsCatalogueListOEMCode)!)
+            return cell
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
 }
 
+extension OrderViewController: ChildViewControllerDelegate{
+    func showConfirmingAlert(){
+        let alert = UIAlertController(title: "Добавлено", message:"в корзину", preferredStyle: .alert)
+        
+        present(alert, animated: true) {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+} 
 

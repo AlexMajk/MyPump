@@ -8,22 +8,6 @@
 import Foundation
 import ObjectMapper
 
-
-// MARK: - Main
-//class MainCataloguePartsModel: Mappable, Decodable {
-//
-//    var catalogueParts: [CatalogueParts]?
-//
-//
-//    required init?(map: Map) {
-//    }
-//
-//    func mapping(map: Map) {
-//        catalogueParts <- map["CatalogueParts"]
-//    }
-//
-//}
-
 // MARK: - CatalogueParts
 class CatalogueParts: Mappable, Decodable {
     
@@ -92,6 +76,7 @@ class ObjectFromPartsCatalogueList: Mappable, Decodable {
     var objectFromPartsCatalogueListCode: String?
     var objectFromPartsCatalogueListOEMCode: String?
     var objectFromPartsCatalogueListUrlImage: String?
+    var countOfCurrentObjectInShoppingCart: Int = 1
     
     required init?(map: Map) {
     }
@@ -105,6 +90,7 @@ class ObjectFromPartsCatalogueList: Mappable, Decodable {
     }
 
 }
+
 
 
 

@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="large-logo" translatesAutoresizingMaskIntoConstraints="NO" id="lfu-DN-K5J">
-                                <rect key="frame" x="15" y="59" width="384" height="788"/>
+                                <rect key="frame" x="53" y="277" width="308" height="342"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="lfu-DN-K5J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="6ZQ-Gb-4wI"/>
-                            <constraint firstItem="lfu-DN-K5J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="XrJ-K6-rKu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lfu-DN-K5J" secondAttribute="bottom" constant="15" id="rP8-Gi-fjz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfu-DN-K5J" secondAttribute="trailing" constant="15" id="xvp-ty-nxn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfu-DN-K5J" secondAttribute="trailing" constant="53" id="Pwm-tn-65j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lfu-DN-K5J" secondAttribute="bottom" constant="243" id="TW4-nC-O2j"/>
+                            <constraint firstItem="lfu-DN-K5J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="egz-uN-SJm"/>
+                            <constraint firstItem="lfu-DN-K5J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="233" id="w5I-MU-K7v"/>
                         </constraints>
                     </view>
                 </viewController>

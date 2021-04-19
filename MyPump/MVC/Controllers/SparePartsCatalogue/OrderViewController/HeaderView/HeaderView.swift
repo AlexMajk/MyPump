@@ -13,8 +13,8 @@ protocol GetDetailVCDelegate: class {
 }
 class HeaderView: UIView {
     
-   weak var delegate: GetDetailVCDelegate?
-
+    weak var delegate: GetDetailVCDelegate?
+    
     var dataForHeaderCollectionViewCell : ObjectFromPartsCatalogueList?
     @IBOutlet weak var orderViewHeaderCollectionView: UICollectionView!
     
@@ -24,7 +24,7 @@ class HeaderView: UIView {
         orderViewHeaderCollectionView.register(UINib(nibName: "HeaderCollectinViewCell", bundle: nil), forCellWithReuseIdentifier: "HeaderCollectinViewCell")
     }
     
-  
+    
 }
 
 extension HeaderView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -38,7 +38,7 @@ extension HeaderView: UICollectionViewDelegate, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.frame.width, height: self.frame.height)
-        }
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 2
