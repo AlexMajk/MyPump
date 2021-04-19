@@ -11,16 +11,16 @@ class ThirdTableViewCell: UITableViewCell {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var thirdCataloguePartsListCellImage: UIImageView!
     @IBOutlet weak var thirdCataloguePartsListCellNameLabel: UILabel!
-    
+
     func configureCell(data: ThirdCataloguePartsList) {
-        //self.secondCataloguePartsListCellNameLabel.textColor = .black
+        // self.secondCataloguePartsListCellNameLabel.textColor = .black
         //        self.activityIndicator.startAnimating()
         //        self.activityIndicator.isHidden = false
-        //guard let secondListTitle = data.secondCataloguePartsListName else {return}
+        // guard let secondListTitle = data.secondCataloguePartsListName else {return}
         // self.secondCataloguePartsListCellNameLabel.text = secondListTitle
-        //guard let secondCellDescription = data.secondCataloguePartsListDescription else {return}
-        //self.secondCataloguePartsListCellDescriptionLabel.text = secondCellDescription
-        
+        // guard let secondCellDescription = data.secondCataloguePartsListDescription else {return}
+        // self.secondCataloguePartsListCellDescriptionLabel.text = secondCellDescription
+
         guard let url = URL(string: data.thirdCataloguePartsListImageUrl!) else { return }
         self.activityIndicator.startAnimating()
         self.activityIndicator.isHidden = false
@@ -31,15 +31,13 @@ class ThirdTableViewCell: UITableViewCell {
                 options: [
                     .loadDiskFileSynchronously,
                     .cacheOriginalImage,
-                    .transition(.fade(0.25)),
+                    .transition(.fade(0.25))
                 ],
-                progressBlock: { receivedSize, totalSize in},
-                completionHandler: { result in
+                progressBlock: { _, _ in },
+                completionHandler: { _ in
                     self.activityIndicator.stopAnimating()
                     self.activityIndicator.isHidden = true
                 })
         }
-        
     }
-    
 }

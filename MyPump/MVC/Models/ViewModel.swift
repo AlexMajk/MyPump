@@ -15,12 +15,10 @@ enum ViewModelItemType {
 }
 
 protocol ViewModelItem {
-    var type : ViewModelItemType { get }
-    var rowCount : Int { get }
-    var sectionTitle : String { get }
-    
+    var type: ViewModelItemType { get }
+    var rowCount: Int { get }
+    var sectionTitle: String { get }
 }
-
 
 extension ViewModelItem {// делаем данные по умолчанию, чтобы не менять если они равны необходимым данным
     var rowCount: Int { // почему с ретёрн, а не просто указать значение?
@@ -28,40 +26,39 @@ extension ViewModelItem {// делаем данные по умолчанию, �
     }
 }
 
-class ViewModelNameItem : ViewModelItem {
+class ViewModelNameItem: ViewModelItem {
     var type: ViewModelItemType {
-       return .objectFromPartsCatalogueListName
+       .objectFromPartsCatalogueListName
     }
-    
+
     var sectionTitle: String {
-        return "Наименование:"
+        "Наименование:"
      }
     var name: String
     init (name: String) {
        self.name = name
     }
-    
 }
 
 class ViewModelDescriptionItem: ViewModelItem {
    var type: ViewModelItemType {
-      return .objectFromPartsCatalogueListDescription
+      .objectFromPartsCatalogueListDescription
    }
    var sectionTitle: String {
-    return "Описание:"
+    "Описание:"
    }
    var description: String
-  
+
    init(description: String) {
       self.description = description
    }
 }
 class ViewModelCodeItem: ViewModelItem {
    var type: ViewModelItemType {
-      return .objectFromPartsCatalogueListCode
+      .objectFromPartsCatalogueListCode
    }
    var sectionTitle: String {
-    return "Артикул:"
+    "Артикул:"
    }
    var code: String
    init(code: String) {
@@ -71,14 +68,14 @@ class ViewModelCodeItem: ViewModelItem {
 
 class ViewModelOEMCodeItem: ViewModelItem {
    var type: ViewModelItemType {
-      return .objectFromPartsCatalogueListOEMCode
+      .objectFromPartsCatalogueListOEMCode
    }
    var sectionTitle: String {
-    return "Оригинальный номер:"
+    "Оригинальный номер:"
    }
- 
+
    var rowCount: Int {
-      return 1
+      1
    }
    var oemCode: String
    init(oemCode: String) {
@@ -91,13 +88,13 @@ class ViewModel: NSObject {
 
     init(data: ObjectFromPartsCatalogueList) {
           super.init()
-        
+
         if let name = data.objectFromPartsCatalogueListName {
          let nameItem = ViewModelNameItem(name: name)
          items.append(nameItem)
       }
         if let description = data.objectFromPartsCatalogueListDescription {
-        let descriptionItem = ViewModelDescriptionItem(description:description)
+        let descriptionItem = ViewModelDescriptionItem(description: description)
          items.append(descriptionItem)
       }
         if let code = data.objectFromPartsCatalogueListCode {
@@ -110,4 +107,3 @@ class ViewModel: NSObject {
       }
    }
 }
-

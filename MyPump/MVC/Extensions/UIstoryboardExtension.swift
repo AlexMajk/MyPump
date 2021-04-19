@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension UIViewController : StoryboardIdentifiable { }
+extension UIViewController: StoryboardIdentifiable { }
 
 protocol StoryboardIdentifiable {
     static var storyboardIdentifier: String { get }
@@ -16,16 +16,15 @@ protocol StoryboardIdentifiable {
 
 extension StoryboardIdentifiable where Self: UIViewController {
     static var storyboardIdentifier: String {
-        return String(describing: self)
+        String(describing: self)
     }
 }
 
 extension UIStoryboard {
-    
     enum Storyboard: String {
         case main
         var filename: String {
-            return rawValue.capitalized
+            rawValue.capitalized
         }
     }
 
@@ -34,10 +33,10 @@ extension UIStoryboard {
     }
 
     class func storyboard(_ storyboard: Storyboard, bundle: Bundle? = nil) -> UIStoryboard {
-        return UIStoryboard(name: storyboard.filename, bundle: bundle)
+        UIStoryboard(name: storyboard.filename, bundle: bundle)
     }
 
-    func instantiateViewController<T: UIViewController>() -> T where T : StoryboardIdentifiable {
+    func instantiateViewController<T: UIViewController>() -> T where T: StoryboardIdentifiable {
         guard let viewController = self.instantiateViewController(withIdentifier: T.storyboardIdentifier) as? T else {
             fatalError("Couldn't instantiate view controller with identifier \(T.storyboardIdentifier) ")
         }

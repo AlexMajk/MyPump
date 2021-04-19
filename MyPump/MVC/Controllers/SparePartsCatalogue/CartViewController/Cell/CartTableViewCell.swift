@@ -7,21 +7,20 @@
 
 import UIKit
 
-protocol CartTableViewCellDelegate: class {
+protocol CartTableViewCellDelegate: AnyObject {
     func deleteButton(row: Int)
 }
 
 class CartTableViewCell: UITableViewCell {
-    
     weak var delegate: CartTableViewCellDelegate?
-    
+
     @IBOutlet weak var cartTableViewCellObjectName: UILabel!
     @IBOutlet weak var cartTableViewCellImage: UIImageView!
     @IBOutlet weak var cartTableViewCellObjectCode: UILabel!
     @IBOutlet weak var cartTableViewCellObjectCount: UILabel!
-    
+
     var indexOfCell = 0
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -33,8 +32,8 @@ class CartTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     @IBAction func deleteButtonTapped(_ sender: UIButton) {
-        delegate?.deleteButton(row:indexOfCell)//передаем при нажатии значение ячейки (оно присваивается ячейке при инициализации, представляет собой порядковый номер)
-        
+        delegate?.deleteButton(row: indexOfCell)// передаем при нажатии значение ячейки (оно присваивается ячейке при инициализации, представляет собой порядковый номер)
+
     }
     func configure(data: ObjectFromPartsCatalogueList, row: Int) {
 //        self.activityIndicator.startAnimating()
@@ -54,15 +53,13 @@ class CartTableViewCell: UITableViewCell {
                 options: [
                     .loadDiskFileSynchronously,
                     .cacheOriginalImage,
-                    .transition(.fade(0.25)),
+                    .transition(.fade(0.25))
                 ],
-                progressBlock: { receivedSize, totalSize in},
-                completionHandler: { result in
+                progressBlock: { _, _ in },
+                completionHandler: { _ in
 //                    self.activityIndicator.stopAnimating()
 //                    self.activityIndicator.isHidden = true
                 })
         }
-
     }
-    
 }

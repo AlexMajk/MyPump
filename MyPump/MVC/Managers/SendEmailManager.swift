@@ -9,8 +9,6 @@ import Foundation
 import MessageUI
 
 class SendEmailManager {
-    
-    
 static func createEmailUrl(to: String, subject: String, body: String) -> URL? {
             let subjectEncoded = subject.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
             let bodyEncoded = body.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
@@ -33,7 +31,4 @@ static func createEmailUrl(to: String, subject: String, body: String) -> URL? {
 
             return defaultUrl
         }
-
-
-
 }

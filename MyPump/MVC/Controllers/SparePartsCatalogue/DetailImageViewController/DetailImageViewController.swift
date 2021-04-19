@@ -5,40 +5,38 @@
 //  Created by Александр Майко on 31.01.2021.
 //
 
-import UIKit
 import Kingfisher
+import UIKit
 
 class DetailImageViewController: UIViewController {
-    
     @IBAction func actionButtonTapped(_ sender: Any) {
         let shareController = UIActivityViewController(activityItems: [imageWasSelectedToShowInDetailVC!], applicationActivities: nil)
         present(shareController, animated: true, completion: nil)
     }
-    
+
     var imageScrollView: ScrollViewManager!
     var imageWasSelectedToShowInDetailVC: UIImage?
     // var testImage: UIImageView?
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNavigationController()
     }
-    
+
     private func configureNavigationController() {
         let backButton = UIBarButtonItem()
         backButton.title = "назад"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
-    
+
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         imageScrollView = ScrollViewManager(frame: view.bounds)
         view.addSubview(imageScrollView)
         setupImageScrollView()
         self.imageScrollView.set(image: imageWasSelectedToShowInDetailVC!)
     }
-    
+
     func setupImageScrollView() {
         imageScrollView.translatesAutoresizingMaskIntoConstraints = false
         imageScrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true

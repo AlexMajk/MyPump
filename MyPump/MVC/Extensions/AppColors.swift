@@ -8,9 +8,8 @@
 import Foundation
 import UIKit
 
-
 class AppColors {
-    static let detailsColor = UIColor(hex:"#ffc500")
+    static let detailsColor = UIColor(hex: "#ffc500")
     static let mainThemeColor = UIColor(hex: "#2f4f4f")//
     static let secondThemeColor = UIColor(hex: "#FFFFFF")
 }
@@ -34,19 +33,19 @@ extension UIColor {
                   alpha: alpha)
     }
     func toHexString() -> String {
-        var r:CGFloat = 0
-        var g:CGFloat = 0
-        var b:CGFloat = 0
-        var a:CGFloat = 0
+        var r: CGFloat = 0
+        var g: CGFloat = 0
+        var b: CGFloat = 0
+        var a: CGFloat = 0
         getRed(&r, green: &g, blue: &b, alpha: &a)
-        let rgb:Int = (Int)(r*255)<<16 | (Int)(g*255)<<8 | (Int)(b*255)<<0
-        return String(format:"#%06x", rgb)
+        let rgb: Int = (Int)(r * 255) << 16 | (Int)(g * 255) << 8 | (Int)(b * 255) << 0
+        return String(format: "#%06x", rgb)
     }
 }
 
 extension UIColor {
     func image(_ size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
-        return UIGraphicsImageRenderer(size: size).image { rendererContext in
+        UIGraphicsImageRenderer(size: size).image { rendererContext in
             self.setFill()
             rendererContext.fill(CGRect(origin: .zero, size: size))
         }

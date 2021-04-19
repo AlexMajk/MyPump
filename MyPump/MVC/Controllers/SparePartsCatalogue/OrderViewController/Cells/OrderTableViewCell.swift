@@ -8,23 +8,21 @@
 import UIKit
 
 class OrderTableViewCell: UITableViewCell {
-    
     @IBOutlet weak var orderTableViewCellLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+
         // Initialization code
     }
-    
-    func configure(data: String){
+
+    func configure(data: String) {
         orderTableViewCellLabel.text = data
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+
         // Configure the view for the selected state
     }
-    
 }

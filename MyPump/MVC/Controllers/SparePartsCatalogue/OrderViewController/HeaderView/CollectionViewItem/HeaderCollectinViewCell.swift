@@ -9,7 +9,7 @@ import UIKit
 
 class HeaderCollectinViewCell: UICollectionViewCell {
     @IBOutlet weak var headerCollectionViewCellImage: UIImageView!
-    
+
     func configure(data: ObjectFromPartsCatalogueList) {
         //        self.activityIndicator.startAnimating()
         //        self.activityIndicator.isHidden = false
@@ -21,17 +21,16 @@ class HeaderCollectinViewCell: UICollectionViewCell {
                 options: [
                     .loadDiskFileSynchronously,
                     .cacheOriginalImage,
-                    .transition(.fade(0.25)),
+                    .transition(.fade(0.25))
                 ],
-                progressBlock: { receivedSize, totalSize in},
-                completionHandler: { result in
+                progressBlock: { _, _ in },
+                completionHandler: { _ in
                     //                    self.activityIndicator.stopAnimating()
                     //                    self.activityIndicator.isHidden = true
                 })
         }
-        
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
     }

@@ -5,15 +5,14 @@
 //  Created by Александр Майко on 06.01.2021.
 //
 
-import Foundation
-import Firebase
-import ObjectMapper
 import Alamofire
+import Firebase
 import FirebaseStorage
+import Foundation
 import Kingfisher
+import ObjectMapper
 
 class NetworkManager {
-    
     // как запускать метод без создания экземпляра? т.е. сделать его static
     //
     //
@@ -79,58 +78,50 @@ class NetworkManager {
     //            }
     //        })
     //    }
-    
-    
-    //!!!!!!!!!!!!!!!!! Работающий метод!!!!!!!!!!!!!!!
-    
-    
-    
-    static func FirstLaunchCataloguePartsFetchData(completion : @escaping(_ : [CatalogueParts])->()) {
+
+    // !!!!!!!!!!!!!!!!! Работающий метод!!!!!!!!!!!!!!!
+
+    static func FirstLaunchCataloguePartsFetchData(completion : @escaping(_ : [CatalogueParts]) -> Void) {
         let baseUrl = "https://mypump-c4d75-default-rtdb.firebaseio.com/CatalogueParts.json"
         // let baseUrl = "https://mypump-c4d75-default-rtdb.firebaseio.com/.json"
-        guard let url = URL(string: baseUrl ) else {return}
-        URLSession.shared.dataTask(with: url) {(data, response, error) in
+        guard let url = URL(string: baseUrl ) else { return }
+        URLSession.shared.dataTask(with: url) {data, _, _ in
             guard let data = data.self else { return }
-            guard let downloadedMarks = Mapper<CatalogueParts>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else {return}
-            
+            guard let downloadedMarks = Mapper<CatalogueParts>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else { return }
+
             completion(downloadedMarks)
         }
         .resume()
     }
-    
-    
-    static func FirstLaunchCatalogueMachineryFetchData(completion : @escaping(_ : [CatalogueMachinery])->()) {
+
+    static func FirstLaunchCatalogueMachineryFetchData(completion : @escaping(_ : [CatalogueMachinery]) -> Void) {
         let baseUrl = "https://mypump-c4d75-default-rtdb.firebaseio.com/CatalogueMachinery.json"
-        guard let url = URL(string: baseUrl ) else {return}
-        URLSession.shared.dataTask(with: url) {(data, response, error) in
+        guard let url = URL(string: baseUrl ) else { return }
+        URLSession.shared.dataTask(with: url) {data, _, _ in
             guard let data = data.self else { return }
-            guard let downloadedMachines = Mapper<CatalogueMachinery>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else {return}
-            
+            guard let downloadedMachines = Mapper<CatalogueMachinery>().mapArray(JSONString: String(data: data, encoding: .utf8)!) else { return }
+
             completion(downloadedMachines)
         }
         .resume()
     }
-    
 }
 
-
-
-
-//private let allowedDiskSize = 100 * 1024 * 1024
-//private lazy var cache: URLCache = {
+// private let allowedDiskSize = 100 * 1024 * 1024
+// private lazy var cache: URLCache = {
 //    return URLCache(memoryCapacity: 0, diskCapacity: allowedDiskSize, diskPath: "gifCache")
-//}()
+// }()
 //
-//typealias DownloadCompletionHandler = (Result<Data,Error>) -> ()
+// typealias DownloadCompletionHandler = (Result<Data,Error>) -> ()
 //
-//private func createAndRetrieveURLSession() -> URLSession {
+// private func createAndRetrieveURLSession() -> URLSession {
 //    let sessionConfiguration = URLSessionConfiguration.default
 //    sessionConfiguration.requestCachePolicy = .returnCacheDataElseLoad
 //    sessionConfiguration.urlCache = cache
 //    return URLSession(configuration: sessionConfiguration)
-//}
+// }
 //
-//private func downloadContent(fromUrlString: String, completionHandler: @escaping DownloadCompletionHandler) {
+// private func downloadContent(fromUrlString: String, completionHandler: @escaping DownloadCompletionHandler) {
 //
 //    guard let downloadUrl = URL(string: fromUrlString) else { return }
 //    let urlRequest = URLRequest(url: downloadUrl)
@@ -154,10 +145,9 @@ class NetworkManager {
 //            }
 //        }.resume()
 //    }
-//}
+// }
 
-
-//self.downloadContent(fromUrlString: ANY_URL, completionHandler: { (result) in
+// self.downloadContent(fromUrlString: ANY_URL, completionHandler: { (result) in
 //
 //            switch result {
 //            case .success(let yourData):

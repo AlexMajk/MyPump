@@ -7,19 +7,18 @@
 
 import UIKit
 
-protocol ButtonDelegate: class {
+protocol ButtonDelegate: AnyObject {
     func addToCartTapped(sender: UIButton)
 }
 
 class FooterView: UIView {
-    
     weak var delegate: ButtonDelegate?
-    
+
     @IBOutlet weak var footerButton: UIButton!
     @IBAction func AddToCardButton(_ sender: UIButton) {
         delegate?.addToCartTapped(sender: sender)
     }
-    
+
     func configure() {
         footerButton.layer.cornerRadius = 10
         footerButton.backgroundColor = AppColors.detailsColor
@@ -29,5 +28,4 @@ class FooterView: UIView {
         footerButton.titleLabel?.tintColor = AppColors.mainThemeColor
         self.backgroundColor = .clear
     }
-    
 }

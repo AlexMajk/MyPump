@@ -10,20 +10,20 @@ import UIKit
 class MainMachineryCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var mainMachineryNameLabel: UILabel!
     @IBOutlet weak var mainMachineryImage: UIImageView!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     func configureCell(data: CatalogueMachinery) {
         self.mainMachineryNameLabel.textColor = .black
-        //self.activityIndicator.startAnimating()
-        //self.activityIndicator.isHidden = false
-        guard let mainMachineryNameLabel = data.mainCatalogueMachineryName else {return}
+        // self.activityIndicator.startAnimating()
+        // self.activityIndicator.isHidden = false
+        guard let mainMachineryNameLabel = data.mainCatalogueMachineryName else { return }
 //        guard let markName = data.mainListTitle else {return}
         self.mainMachineryNameLabel.text = mainMachineryNameLabel
-        //guard let mainCataloguePartsListDescription = data.mainCataloguePartsListDescription else {return}
-        //self.mainCataloguePartsListCellDescriptionLabel.text = mainCataloguePartsListDescription
+        // guard let mainCataloguePartsListDescription = data.mainCataloguePartsListDescription else {return}
+        // self.mainCataloguePartsListCellDescriptionLabel.text = mainCataloguePartsListDescription
 
         guard let url = URL(string: data.mainCatalogueMachineryImageURL!) else { return }
         DispatchQueue.main.async {
@@ -32,16 +32,13 @@ class MainMachineryCollectionViewCell: UICollectionViewCell {
                 options: [
                     .loadDiskFileSynchronously,
                     .cacheOriginalImage,
-                    .transition(.fade(0.25)),
+                    .transition(.fade(0.25))
                 ],
-                progressBlock: { receivedSize, totalSize in},
-                completionHandler: { result in
+                progressBlock: { _, _ in },
+                completionHandler: { _ in
                    // self.activityIndicator.stopAnimating()
-                    //self.activityIndicator.isHidden = true
+                    // self.activityIndicator.isHidden = true
                 })
         }
-
     }
-    
-
 }

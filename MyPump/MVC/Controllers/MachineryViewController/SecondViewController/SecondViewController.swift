@@ -9,14 +9,13 @@ import UIKit
 
 class SecondViewController: UIViewController {
     @IBOutlet weak var secondViewControllerCollectionView: UICollectionView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
- 
 }
 //
-//extension SecondViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+// extension SecondViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 //    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 //    }
 //    
@@ -24,4 +23,4 @@ class SecondViewController: UIViewController {
 //    }
 //    
 //    
-//}
+// }

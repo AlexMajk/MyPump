@@ -8,7 +8,6 @@
 import UIKit
 
 class CustomViewController: UIView {
-
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -16,5 +15,4 @@ class CustomViewController: UIView {
         // Drawing code
     }
     */
-
 }
