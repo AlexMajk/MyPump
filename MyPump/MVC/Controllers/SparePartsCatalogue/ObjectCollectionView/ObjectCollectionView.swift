@@ -2,6 +2,10 @@ import Kingfisher
 import UIKit
 
 class ObjectCollectionView: UICollectionViewController {
+    @IBAction func getCartViewController(_ sender: UIBarButtonItem) {
+        showCartVC()
+    }
+    
     var agregateTitle: String?
     var dawnloadedObjectFromPartsCatalogueList = [ObjectFromPartsCatalogueList]()
     var selectedObjectFromPartsCatalogueList: ObjectFromPartsCatalogueList?
@@ -18,6 +22,11 @@ class ObjectCollectionView: UICollectionViewController {
         backButton.title = "назад"
         title = agregateTitle
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+    }
+    func showCartVC() {
+        let storybord = UIStoryboard(name: "MainViewController", bundle: nil)
+        let vc = storybord.instantiateViewController(identifier: "cartVC") as! CartViewController
+        navigationController?.pushViewController(vc, animated: true)
     }
 
     func showOrderVC() {

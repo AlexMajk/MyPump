@@ -16,30 +16,41 @@
                 <rect key="frame" x="0.0" y="0.0" width="332" height="225"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-Uh-5Ew">
+                        <rect key="frame" x="0.0" y="0.0" width="332" height="201"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cL-rM-klP">
-                        <rect key="frame" x="0.0" y="0.0" width="332" height="45"/>
+                        <rect key="frame" x="0.0" y="201" width="332" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZPi-Uh-5Ew">
-                        <rect key="frame" x="0.0" y="53" width="332" height="172"/>
-                    </imageView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="6cL-rM-klP" secondAttribute="trailing" id="7ge-VN-Ajz"/>
-                <constraint firstAttribute="trailing" secondItem="ZPi-Uh-5Ew" secondAttribute="trailing" id="EBG-VP-xB3"/>
-                <constraint firstItem="6cL-rM-klP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Ilg-0s-H02"/>
-                <constraint firstItem="ZPi-Uh-5Ew" firstAttribute="top" secondItem="6cL-rM-klP" secondAttribute="bottom" constant="8" symbolic="YES" id="LBa-w1-GDU"/>
-                <constraint firstItem="6cL-rM-klP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Oef-yN-w1h"/>
-                <constraint firstItem="ZPi-Uh-5Ew" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="gdc-Ui-WY6"/>
-                <constraint firstAttribute="bottom" secondItem="ZPi-Uh-5Ew" secondAttribute="bottom" id="ovQ-w1-awU"/>
-                <constraint firstItem="6cL-rM-klP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ttc-r0-wyB"/>
-                <constraint firstItem="6cL-rM-klP" firstAttribute="height" secondItem="ZPi-Uh-5Ew" secondAttribute="height" multiplier="0.261628" id="uqf-ML-krS"/>
+                <constraint firstAttribute="bottom" secondItem="6cL-rM-klP" secondAttribute="bottom" id="0uh-dh-0wg"/>
+                <constraint firstItem="6cL-rM-klP" firstAttribute="top" secondItem="ZPi-Uh-5Ew" secondAttribute="bottom" id="374-aQ-H1g"/>
+                <constraint firstItem="6cL-rM-klP" firstAttribute="height" secondItem="ZPi-Uh-5Ew" secondAttribute="height" multiplier="0.12" id="HWQ-2s-ssg"/>
+                <constraint firstItem="6cL-rM-klP" firstAttribute="top" secondItem="ZPi-Uh-5Ew" secondAttribute="bottom" id="OAb-3r-vrb"/>
+                <constraint firstAttribute="trailing" secondItem="6cL-rM-klP" secondAttribute="trailing" id="ZYg-7I-bcg"/>
+                <constraint firstItem="6cL-rM-klP" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bE6-KX-PBd"/>
+                <constraint firstItem="ZPi-Uh-5Ew" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mXI-ds-dYt"/>
+                <constraint firstAttribute="trailing" secondItem="ZPi-Uh-5Ew" secondAttribute="trailing" id="tjI-Gw-oMk"/>
+                <constraint firstItem="ZPi-Uh-5Ew" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="u7b-Aq-3MP"/>
             </constraints>
             <size key="customSize" width="332" height="225"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                    <size key="value" width="0.0" height="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                    <real key="value" value="0.0"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="mainMachineryImage" destination="ZPi-Uh-5Ew" id="bc7-wx-WX0"/>
                 <outlet property="mainMachineryNameLabel" destination="6cL-rM-klP" id="aVQ-Sd-glv"/>

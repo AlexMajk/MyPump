@@ -1014,8 +1014,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
-            landmarkName = "OrderViewController"
-            landmarkType = "3">
+            landmarkName = "configureButton()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1094,7 +1094,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "83"
             endingLineNumber = "83"
-            landmarkName = "orderButtonTapped(_:)"
+            landmarkName = "init(object:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1110,8 +1110,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
             endingLineNumber = "44"
-            landmarkName = "closeChildVcButtonTapped(_:)"
-            landmarkType = "7">
+            landmarkName = "ChildViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1205,7 +1205,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "orderButtonTapped(_:)"
+            landmarkName = "init(object:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1221,7 +1221,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "144"
             endingLineNumber = "144"
-            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1237,7 +1237,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "142"
             endingLineNumber = "142"
-            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1269,7 +1269,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "131"
             endingLineNumber = "131"
-            landmarkName = "deleteButton(row:)"
+            landmarkName = "tableView(_:commit:forRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1285,131 +1285,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "143"
             endingLineNumber = "143"
-            landmarkName = "tableView(_:commit:forRowAt:)"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "11"
-            endingLineNumber = "11"
-            landmarkName = "SecondTableViewController"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570 - 11d1a326b7f330d0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPump.SecondTableViewController.downloadedSecondCataloguePartsList.getter : Swift.Array&lt;MyPump.SecondCataloguePartsList&gt;"
-                  moduleName = "MyPump"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmajko/Desktop/MyPumps/MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "122">
-               </Location>
-               <Location
-                  uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570 - f0bf1f555531e4e4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPump.SecondTableViewController.downloadedSecondCataloguePartsList.setter : Swift.Array&lt;MyPump.SecondCataloguePartsList&gt;"
-                  moduleName = "MyPump"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmajko/Desktop/MyPumps/MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "148">
-               </Location>
-               <Location
-                  uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570 - 99458f3b2acfda40"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPump.SecondTableViewController.downloadedSecondCataloguePartsList.modify : Swift.Array&lt;MyPump.SecondCataloguePartsList&gt;"
-                  moduleName = "MyPump"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmajko/Desktop/MyPumps/MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "18">
-               </Location>
-               <Location
-                  uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570 - 6f297df2078f523a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPump.SecondTableViewController.downloadedSecondCataloguePartsList.modify : Swift.Array&lt;MyPump.SecondCataloguePartsList&gt; with unmangled suffix &quot;.resume.0&quot;"
-                  moduleName = "MyPump"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmajko/Desktop/MyPumps/MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570 - f959b708ac82b656"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPump.SecondTableViewController.init(style: __C.UITableViewStyle) -&gt; MyPump.SecondTableViewController"
-                  moduleName = "MyPump"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmajko/Desktop/MyPumps/MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "81">
-               </Location>
-               <Location
-                  uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570 - 713403477e3f2218"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPump.SecondTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MyPump.SecondTableViewController"
-                  moduleName = "MyPump"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmajko/Desktop/MyPumps/MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "188">
-               </Location>
-               <Location
-                  uuid = "4E443B91-DE3C-4F4C-B542-BA0B555AF570 - 956597368c35d1f2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyPump.SecondTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MyPump.SecondTableViewController&gt;"
-                  moduleName = "MyPump"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmajko/Desktop/MyPumps/MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "11"
-                  endingLineNumber = "11"
-                  offsetFromSymbolStart = "123">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1422,8 +1299,8 @@
             filePath = "MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1438,8 +1315,8 @@
             filePath = "MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1454,8 +1331,8 @@
             filePath = "MyPump/MVC/Controllers/SparePartsCatalogue/SecondViewController/SecondTableViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1470,9 +1347,57 @@
             filePath = "MyPump/MVC/Controllers/SparePartsCatalogue/ObjectCollectionView/ObjectCollectionView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "showOrderVC()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "55AD3A1A-C05E-47D2-836A-436A431CD6B6"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPump/MVC/Controllers/MachineryViewController/SecondViewController/SecondViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D08FDE11-8355-4B74-9AFA-E8A368801614"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPump/MVC/Controllers/MachineryViewController/SecondViewController/SecondViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D3E21F3-F3FB-4FA2-B4B1-C1B0604A1327"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyPump/MVC/Controllers/MachineryViewController/SecondViewController/SecondViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "collectionView(_:layout:sizeForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

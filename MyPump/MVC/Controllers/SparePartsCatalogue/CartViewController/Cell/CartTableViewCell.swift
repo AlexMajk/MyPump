@@ -45,7 +45,7 @@ class CartTableViewCell: UITableViewCell {
             self.cartTableViewCellObjectCode.text = "Артикул: \(code)"
         }
 
-        self.cartTableViewCellObjectCount.text = "\(data.countOfCurrentObjectInShoppingCart)"
+        self.cartTableViewCellObjectCount.text = "Количество: \(data.countOfCurrentObjectInShoppingCart)"
         guard let url = URL(string: data.objectFromPartsCatalogueListUrlImage!) else { return }
         DispatchQueue.main.async {
             self.cartTableViewCellImage.kf.setImage(

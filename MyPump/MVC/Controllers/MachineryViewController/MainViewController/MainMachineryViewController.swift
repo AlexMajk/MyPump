@@ -9,6 +9,8 @@ import UIKit
 
 class MainMachineryViewController: UIViewController {
     var downloadedCatalogueMachinery = [CatalogueMachinery]()
+  //  var selectedData = [SecondCatalogueMachineryList]()
+    
     @IBOutlet weak var machineryMainCollectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -21,8 +23,21 @@ class MainMachineryViewController: UIViewController {
         }
         machineryMainCollectionView.register(UINib(nibName: "MainMachineryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "MainMachineryCollectionViewCell")
     }
+    
+    
+    func showSecondVC(selectedData:SecondCatalogueMachineryList) {
+        let storybord = UIStoryboard(name:"Machinery", bundle: nil)
+//        let vc = SecondTableViewController()
+        let vc = storybord.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
+        vc.dataForSecond = selectedData
+        //vc.downloadedSecondCataloguePartsList = selectedSecondCataloguePartsList
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
 }
-
+//MainMachineryViewController
 extension MainMachineryViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         downloadedCatalogueMachinery.count
@@ -32,11 +47,16 @@ extension MainMachineryViewController: UICollectionViewDelegate, UICollectionVie
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MainMachineryCollectionViewCell", for: indexPath) as! MainMachineryCollectionViewCell
         let dataForCell = downloadedCatalogueMachinery[indexPath.row]
         cell.configureCell(data: dataForCell)
-        cell.backgroundColor = .lightGray
+        //cell.backgroundColor = .lightGray
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         CGSize(width: view.frame.width - 20, height: view.frame.height / 3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let selectedData = downloadedCatalogueMachinery[indexPath.row].secondCatalogueMachineryList?.first else { return }
+        showSecondVC(selectedData: selectedData)
     }
 }

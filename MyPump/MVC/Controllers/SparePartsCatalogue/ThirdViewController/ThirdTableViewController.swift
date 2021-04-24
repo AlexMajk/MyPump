@@ -8,6 +8,9 @@
 import UIKit
 
 class ThirdTableViewController: UITableViewController {
+    @IBAction func getCartViewController(_ sender: UIBarButtonItem) {
+        showCartVC()
+    }
     var downloadedThirdCataloguePartsList = [ThirdCataloguePartsList]()
     var selectedObjectFromPartsCatalogueList = [ObjectFromPartsCatalogueList]()
 
@@ -21,7 +24,11 @@ class ThirdTableViewController: UITableViewController {
         backButton.title = "назад"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
     }
-
+    func showCartVC() {
+        let storybord = UIStoryboard(name: "MainViewController", bundle: nil)
+        let vc = storybord.instantiateViewController(identifier: "cartVC") as! CartViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
     func showObjectVC() {
         let storybord = UIStoryboard(name: "MainViewController", bundle: nil)
 //        let vc = SecondTableViewController()

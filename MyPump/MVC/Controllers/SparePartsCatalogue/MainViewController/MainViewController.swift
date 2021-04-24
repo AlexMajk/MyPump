@@ -11,6 +11,14 @@ import ObjectMapper
 import UIKit
 
 class MainViewController: UITableViewController {
+    @IBAction func getCartViewController(_ sender: UIBarButtonItem) {
+        showCartVC()
+    }
+    func showCartVC() {
+        let storybord = UIStoryboard(name: "MainViewController", bundle: nil)
+        let vc = storybord.instantiateViewController(identifier: "cartVC") as! CartViewController
+        navigationController?.pushViewController(vc, animated: true)
+    }
     var selectedSecondCataloguePartsList = [SecondCataloguePartsList]()
     var downloadedCatalogueParts = [CatalogueParts]()
 

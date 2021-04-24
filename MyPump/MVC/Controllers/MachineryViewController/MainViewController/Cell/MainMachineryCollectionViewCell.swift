@@ -15,7 +15,23 @@ class MainMachineryCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+//    func configureOrderButton() {
+//        orderButtonOutlet.layer.cornerRadius = 10// ????????
+//        orderButtonOutlet.layer.borderWidth = 2
+//        orderButtonOutlet.clipsToBounds = true
+//        orderButtonOutlet.setBackgroundImage(AppColors.detailsColor.image(), for: .normal)
+//        orderButtonOutlet.layer.borderColor = AppColors.mainThemeColor.cgColor
+//        orderButtonOutlet.setBackgroundImage(UIColor.lightGray.image(), for: .disabled)
+//        orderButtonOutlet.setTitle("добавить", for: .normal)
+//    }
     func configureCell(data: CatalogueMachinery) {
+//        self.mainMachineryView.layer.cornerRadius = 10
+//        self.mainMachineryView.layer.borderWidth = 0.5
+//        self.mainMachineryView.clipsToBounds = true
+//        self.mainMachineryView.layer.borderColor = AppColors.mainThemeColor.cgColor
+//        self.mainMachineryView.layer.shadowOpacity = 5
+//        self.mainMachineryView.layer.shadowRadius = 5
+//        self.mainMachineryView.layer.shadowColor = AppColors.detailsColor.cgColor
         self.mainMachineryNameLabel.textColor = .black
         // self.activityIndicator.startAnimating()
         // self.activityIndicator.isHidden = false

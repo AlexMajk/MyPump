@@ -75,7 +75,13 @@
                             <outlet property="delegate" destination="aX1-FX-6MD" id="OFM-fO-Ve7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="GJc-hQ-O3O"/>
+                    <navigationItem key="navigationItem" id="GJc-hQ-O3O">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="R0F-zF-Eee">
+                            <connections>
+                                <action selector="getCartViewController:" destination="aX1-FX-6MD" id="LjE-hc-9w9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="sSf-lt-wzZ" kind="push" identifier="getSecondVC" id="1FT-a6-kNz"/>
                     </connections>
@@ -150,7 +156,13 @@
                             <outlet property="delegate" destination="sSf-lt-wzZ" id="FTg-BM-gAM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="lEK-N5-s6k"/>
+                    <navigationItem key="navigationItem" id="lEK-N5-s6k">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="zRL-9p-KQW">
+                            <connections>
+                                <action selector="getCartViewController:" destination="sSf-lt-wzZ" id="cDW-Nz-04E"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="mOR-4M-li3" kind="push" identifier="getParts" id="6Tj-RS-jC3"/>
                     </connections>
@@ -213,7 +225,13 @@
                             <outlet property="delegate" destination="mOR-4M-li3" id="uL2-dk-vHn"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="XWj-k8-CsD"/>
+                    <navigationItem key="navigationItem" id="XWj-k8-CsD">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="rQ4-n4-MAG">
+                            <connections>
+                                <action selector="getCartViewController:" destination="mOR-4M-li3" id="pQH-8K-Bpu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="LSr-HB-2jz" kind="push" identifier="getImagesVC" id="Tzv-wx-Y17"/>
                     </connections>
@@ -285,7 +303,13 @@
                             <outlet property="delegate" destination="LSr-HB-2jz" id="BYX-Ci-GgI"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="3tB-mv-Qc3"/>
+                    <navigationItem key="navigationItem" id="3tB-mv-Qc3">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="cart" catalog="system" id="NaM-Vw-5aJ">
+                            <connections>
+                                <action selector="getCartViewController:" destination="LSr-HB-2jz" id="YPo-Mh-8p7"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="gyR-kP-tW0" kind="push" identifier="getOrderVC" id="UpV-VP-AAN"/>
                     </connections>
@@ -299,7 +323,7 @@
             <objects>
                 <viewController storyboardIdentifier="detailVC" id="J3w-Jx-grm" customClass="DetailImageViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bSd-Pn-kN8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="JiZ-Ab-ow7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -321,11 +345,11 @@
             <objects>
                 <viewController storyboardIdentifier="orderVC" id="gyR-kP-tW0" customClass="OrderViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mTv-8j-7W6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Hco-I1-Owd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -338,7 +362,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tpi-MJ-Y9U">
-                                <rect key="frame" x="20" y="763" width="374" height="40"/>
+                                <rect key="frame" x="20" y="680" width="374" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.33772509140000001" blue="0.28933322290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -382,15 +406,15 @@
             <objects>
                 <viewController storyboardIdentifier="cartVC" id="1Xu-cu-4kM" customClass="CartViewController" customModule="MyPump" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tgP-Fi-PEo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HtT-hC-cQd">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="675"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IuZ-we-l9b">
-                                <rect key="frame" x="20" y="763" width="374" height="40"/>
+                                <rect key="frame" x="20" y="680" width="374" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.33772509140000001" blue="0.28933322290000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ueq-H5-eyY"/>
@@ -454,7 +478,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="VCt-L2-YnL"/>
+        <segue reference="UpV-VP-AAN"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="cart" catalog="system" width="128" height="102"/>
